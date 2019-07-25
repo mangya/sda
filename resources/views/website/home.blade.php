@@ -151,7 +151,7 @@
   </section>
   <!-- ##### Services Area End ##### -->
 
-  @include('includes.testimonials')
+  @include('includes.quotes')
 
   @include('includes.contact_form')
 @endsection

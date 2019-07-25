@@ -1,3 +1,19 @@
+
+<style type="text/css">
+	  .brand-name {
+	      font-size: 27px !important;
+	      font-weight: 800 !important;
+	      color: #77b122 !important;
+	      font-family: Karla,sans-serif !important;
+	      margin-left: 10px !important;
+	  }
+	  @media only screen and (max-width: 767px) {
+	  	.brand-name {
+	      font-size: 19px !important;
+	    }
+	  }
+</style>
+
 <!-- ##### Header Area Start ##### -->
 <header class="header-area">
 <!-- Navbar Area -->
@@ -7,7 +23,7 @@
 	  <!-- Menu -->
 	  <nav class="classy-navbar justify-content-between" id="famieNav">
 		<!-- Nav Brand -->
-		<a href="{{route('home')}}" class="nav-brand"><img src="{{asset('website/img/core-img/logo.png')}}" alt=""><img src="{{asset('website/img/core-img/logo_text.png')}}" alt=""></a>
+		<a href="{{route('home')}}"><img src="{{asset('website/img/core-img/logo.jpg')}}" alt=""><span class="brand-name">Swachha Dombivli Abhiyaan</span></a>
 		<!-- Navbar Toggler -->
 		<div class="classy-navbar-toggler">
 		  <span class="navbarToggler"><span></span><span></span><span></span></span>

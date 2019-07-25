@@ -34,9 +34,9 @@
 </head>
 <body>
 	<!-- Preloader -->
-	<div class="preloader d-flex align-items-center justify-content-center">
+	<!-- <div class="preloader d-flex align-items-center justify-content-center">
 		<div class="spinner"></div>
-	</div>
+	</div> -->
 	@include('includes.navbar')
 	@yield('page_content')
 	@include('includes.footer')

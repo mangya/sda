@@ -14,8 +14,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
               <div class="footer-nav">
                 <nav>
                   <ul>
-                    <li><a href="https://www.facebook.com/swachhadombivliabhiyan" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span> Facebook</span></a></li>
-                    <li><a href="https://twitter.com/SwachhaDombivli" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span> Twitter</span></a></li>
+                    <li>
+                      <a href="https://www.facebook.com/swachhadombivliabhiyan" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/SwachhaDombivli" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/swachhadombivliabhiyan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span> Instagram</span></a>
+                    </li>
+                    
                   </ul>
                 </nav>
               </div>

@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="/public/img/logo-big.svg">
+    <img src="/public/img/logo.jpg">
 </div>
 
 ## Installation
