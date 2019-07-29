@@ -3,6 +3,8 @@
 namespace SDA\Http\Controllers;
 
 use Mail;
+use Auth;
+use SDA\Quotes;
 use SDA\Mail\ContactMessage;
 use Illuminate\Http\Request;
 
@@ -10,7 +12,15 @@ class HomeController extends Controller
 {
     public function showHome()
     {
-    	return view('website.home');
+        if (Auth::check()) {
+            if(auth()->user()->role == "System Administrator" || auth()->user()->role == "Administrator") {
+                return redirect()->route('show.app.modules');
+            }
+        }
+
+        $quotes = Quotes::where('is_active',1)->get();
+
+        return view('website.home', compact('quotes'));
     }
 
     public function showAbout()

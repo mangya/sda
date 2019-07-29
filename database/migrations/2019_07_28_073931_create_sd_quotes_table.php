@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubcategoryTable extends Migration
+class CreateSdQuotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateSubcategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('sd_sub_category', function (Blueprint $table) {
+        Schema::create('sd_quotes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('avatar')->nullable();
+            $table->text('quote');
             $table->string('name', 150);
-            $table->string('slug', 200)->unique();
-            $table->integer('category_id')->unsigned();
+            $table->string('info', 255);
             $table->boolean('is_active')->default('0');
-            $table->string('approved_by')->nullable();
-            $table->boolean('is_approved')->default('0');
             $table->string('owner');
             $table->string('last_updated_by');
             $table->timestamps();
@@ -34,6 +33,6 @@ class CreateSubcategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sd_sub_category');
+        Schema::dropIfExists('sd_quotes');
     }
 }

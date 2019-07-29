@@ -51,7 +51,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['middleware' => 'auth'], function () {
 
         // App routes...
-        Route::get('/home', ['as' => 'home', 'uses' => 'AppController@showHome']);
 
         // App Home page module routes...
         Route::get('/app/modules', ['as' => 'show.app.modules', 'uses' => 'ModuleController@show']);

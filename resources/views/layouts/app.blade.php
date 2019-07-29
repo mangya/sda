@@ -14,7 +14,7 @@
             </script>
         @show
     </head>
-    <body data-url="{{ route('home') }}" data-base-url="{{ route('home') }}" class="hold-transition {{ session('app_settings')['theme'] ?? 'skin-blue' }} fixed sidebar-mini{{ (session('app_settings')['display_type'] == "cozy") ? ' sidebar-collapse' : '' }}">
+    <body data-url="{{ route('home') }}" data-base-url="{{ route('show.website') }}" class="hold-transition {{ session('app_settings')['theme'] ?? 'skin-blue' }} fixed sidebar-mini{{ (session('app_settings')['display_type'] == "cozy") ? ' sidebar-collapse' : '' }}">
         <div class="wrapper">
             @include('templates.navbar')
             @include('templates.vertical_nav')
