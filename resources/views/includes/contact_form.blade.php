@@ -24,7 +24,7 @@
                     <input type="email" class="form-control" name="email" required placeholder="Your Email">
                   </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="phone" maxlength="10" placeholder="Your Contact no">
+                    <input type="text" class="form-control" name="contact_no" maxlength="10" placeholder="Your Contact no">
                   </div>
                   <div class="col-12">
                     <textarea name="message" class="form-control" cols="30" rows="5" required maxlength="300" required placeholder="Your Message"></textarea>

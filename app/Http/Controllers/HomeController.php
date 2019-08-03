@@ -4,7 +4,9 @@ namespace SDA\Http\Controllers;
 
 use Mail;
 use Auth;
+use SDA\Team;
 use SDA\Quotes;
+use SDA\Messages;
 use SDA\Mail\ContactMessage;
 use Illuminate\Http\Request;
 
@@ -25,7 +27,9 @@ class HomeController extends Controller
 
     public function showAbout()
     {
-    	return view('website.about');
+        $team = Team::where('is_active',1)->get();
+
+    	return view('website.about', compact('team'));
     }
 
     public function showEvents()
@@ -65,13 +69,16 @@ class HomeController extends Controller
 
     public function sendContactMessage(Request $request)
     {
-        $data['email'] = $request->get('email');
-        $data['name'] = $request->get('name');
-        $data['subject'] = $request->get('subject');
-        $data['message'] = $request->get('message');
+        $email = $data['email'] = trim($request->get('email'));
+        $name = $data['name'] = trim($request->get('name'));
+        $contact_no = $data['contact_no'] = trim($request->get('contact_no'));
+        $message_txt = $data['message'] = trim($request->get('message'));
 
         Mail::to('mangesh.ghadigaonkar@gmail.com')
             ->send(new ContactMessage($data));
+
+        $message = new Messages();
+        $message->create($name, $email, $contact_no, $message_txt);
 
         return redirect()->back();
     }

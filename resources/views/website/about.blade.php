@@ -61,7 +61,7 @@
   <!-- ##### About Us Area End ##### -->
 
   @include('includes.testimonials')
-
+  @if(count($team) > 0)
   <!-- ##### Team Member Area Start ##### -->
   <section class="team-member-area section-padding-100-0">
     <div class="container">
@@ -78,93 +78,23 @@
 
       <div class="row">
 
-        <!-- Single Team Member -->
+        @foreach($team as $member)
         <div class="col-12 col-sm-6 col-lg-6">
           <div class="post-author-area d-flex align-items-center">
             <div class="post-author-img">
-              <img src="https://media.licdn.com/dms/image/C4E03AQEkyXegJTEHQg/profile-displayphoto-shrink_800_800/0?e=1568246400&v=beta&t=4UskLuyje-7ykHIAweJhEBDaxTRnVZFCfWbqpbvOk9U" alt="">
+              <img src="{{ getImage($member->avatar, 100, 100) }}" alt="">
             </div>
             <div class="post-author-description">
-              <h5>Nandakumar Palkar</h5>
-              <p>A very enthusiastic and result driven person, Nandakumar Palkar, is the mastermind of the project. He has been involved in various projects of VSM since the inception in 1989. A Regional Head of Quality Assurance by profession, he not only provides guidance to the team but also is actively involved working with the team on-field.</p>
+              <h5>{{ $member->name }}</h5>
+              <p>{{ $member->info }}</p>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="img/bg-img/anilmokal.jpg" alt="">
-            </div>
-            <div class="post-author-description">
-              <h5>Anil Mokal</h5>
-              <p>Anil Sir, the most senior member of the team, who has very well proved that “age is just a number”.He is not only an inspiration to the team but also the most energetic member and solution oriented member of the team. A retired employee from the Vigilance department of Air India, he has been the most active member of SDA, who joined us through our cleanliness drive in Oct, 2018.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="img/bg-img/smit.jpeg" alt="">
-            </div>
-            <div class="post-author-description">
-                <h5>Smit Prabhukhanolkar</h5>
-              <p>An IT engineer by profession, Smit is a dynamic, energetic and the creative brain of SDA. From handling campaigning of the project till implementation of ideas, he has been a key contributor in the overall management of the project. Initially, involved within different activities of VSM, Smit has joined SDA since its initiation in 2018.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="https://media.licdn.com/dms/image/C4E03AQHUL9pEgKTeBQ/profile-displayphoto-shrink_800_800/0?e=1568246400&v=beta&t=oNMX_OGFkqxWJKazjTpeO4Kos9SYrh62wUuATA_bYqg" alt="">
-            </div>
-            <div class="post-author-description">
-              <h5>Chinmay Pimpalkhare</h5>
-              <p>Chinmay, a software engineer by profession, is a powerful speaker who is also known for his quick wittedness. He joined SDA during tree plantation drive in Aug, 2018, and has now become a key member of the team.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="img/bg-img/swaroop.jpg" alt="">
-            </div>
-            <div class="post-author-description">
-              <h5>Swaroop Bhagwat</h5>
-              <p>Swaroop is a high spirited and a passionate member of SDA. A computer engineer by profession, he has been with the team since tree plantation drive in July, 2018.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="img/bg-img/pranita.jpg" alt="">
-            </div>
-            <div class="post-author-description">
-              <h5>Pranita Bauskar</h5>
-              <p>An articulate person, Pranita, is known for her creative writing skills and documentation has been with VSM since 2015. A Risk management professional, she was initially working for education of underprivileged children, she joined SDA since its commencement in April, 2018. </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-6">
-          <div class="post-author-area d-flex align-items-center">
-            <div class="post-author-img">
-              <img src="https://media.licdn.com/dms/image/C5103AQHM2Yh7SSyEGw/profile-displayphoto-shrink_200_200/0?e=1568246400&v=beta&t=c62Nl-Rxb081AukculbHugzzvpXS5K7jRQ5phZJf_uI" alt="">
-            </div>
-            <div class="post-author-description">
-              <h5>Mangesh Ghadigaonkar</h5>
-              <p>A tea lover, reserved yet strong player of the team, Mangesh, is an IT engineer who looks after the website and IT related activities of SDA. He has been actively involved in the project since the formation of SDA. </p>
-            </div>
-          </div>
-        </div>
+        @endforeach
 
       </div>
     </div>
   </section>
   <!-- ##### Team Member Area End ##### -->
+  @endif
 @endsection

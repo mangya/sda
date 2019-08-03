@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 trait PermController
 {
     // get array of all app modules
-    public $modules = [];
+    public $modules = ['User','Event','Directory','Quotes','Team'];
 
     // restrict data to this roles
     public $roles = ['Administrator', 'Guest'];
