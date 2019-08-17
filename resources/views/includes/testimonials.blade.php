@@ -1,5 +1,5 @@
   <!-- ##### Testimonial Area Start ##### -->
-  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url('img/bg-img/15.jpg');">
+  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url('img/bg-img/quotes_bg.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-12">

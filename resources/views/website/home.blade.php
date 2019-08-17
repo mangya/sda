@@ -121,7 +121,7 @@
 
         <div class="row">
           <div class="col-12 mb-50">
-            <p>Understanding the problems and requirements of the city the team derived at the key cause of pollution – no proper waste management.  In order to create awareness among the people and provide different solutions to them the team focused on main two categories of waste management.</p>
+            <p>Understanding the problems and requirements of the city the team derived at the key cause of pollution – NO PROPER WASTE MANAGEMENT.  In order to create awareness among the people and provide different solutions to them the team focused on main two categories of waste management.</p>
           </div>
 
           <!-- Single Service Area -->
@@ -131,7 +131,7 @@
               <div class="service-title mb-3 d-flex align-items-center">
                 <h5>Wet Waste Management</h5>
               </div>
-              <p>The team guides and helps the individuals to segregate the wet and dry waste at the inception level and promotes to decompose the wet waste collected at the house level and society level. </p>
+              <p>Wet waste can be easily broken down and eliminated at its formation itself. Team SDA, strives to provide guidance through its seminars and individual consulting at different levels of the society. </p>
             </div>
           </div>
 
@@ -142,7 +142,7 @@
               <div class="service-title mb-3 d-flex align-items-center">
                 <h5>Dry waste management</h5>
               </div>
-              <p>The team conduct seminars that provide easy solutions for segregation of different types of household waste and its proper management. A key step towards dry waste manage is forming a chain of Scrap collector/ recyclers (Bhangarwala).</p>
+              <p>The team conduct seminars that provide easy solutions for segregation of different types of dry household waste and its proper management. A key step towards dry waste manage is forming a chain of Scrap collector/ recyclers (Bhangarwala).</p>
             </div>
           </div>
         </div>

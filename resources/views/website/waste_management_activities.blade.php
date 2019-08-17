@@ -60,7 +60,7 @@
 
             <p>SDA commenced its work in July, 2018 towards making the City green by involving the residence in a tree plantation drive along with creating awareness regarding the climate change.</p>
 
-            <p><strong>Seedball Trainings:</strong> The team conducted seedball training workshops for the resident of the society. Seed balls are a planting method that protects the seeds until the time is right for them to grow.</p>
+            <p><strong>Seedball Trainings:</strong> The team conducted seed ball training workshops for the resident of the society. Seed balls are a planting method that protects the seeds until the time is right for them to grow.</p>
           </div>
         </div>
         <div class="col-12 col-lg-5">
