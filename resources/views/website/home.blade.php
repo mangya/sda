@@ -1,4 +1,25 @@
 @extends('layouts.website_layout')
+@push('styles')
+<style type="text/css">
+	.sponsor-area {
+		margin: auto;
+		text-align: center;
+	}
+	.sponsor-area span{
+		font-family: "Times New Roman", Times, serif;
+		font-size: 36px;
+		letter-spacing: 2px;
+		word-spacing: 2px;
+		color: #FF5900;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: none;
+	}
+	.sponsor-area p{
+		font-size: 20px;
+	}
+</style>
+@endpush
 @section('title','Home')
 @section('page_content')
   <!-- ##### Hero Area Start ##### -->
@@ -152,6 +173,16 @@
   <!-- ##### Services Area End ##### -->
 
   @include('includes.quotes')
+
+<section class="bg-img section-padding-40-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 sponsor-area">
+				<p>An initiative by</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt=""><span>Vivekanand Seva Mandal, Dombivli</span></a>
+			</div>
+		</div>
+	</div>
+</section>
 
   @include('includes.contact_form')
 @endsection

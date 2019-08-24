@@ -9,7 +9,7 @@
 	  }
 	  @media only screen and (max-width: 767px) {
 	  	.brand-name {
-	      font-size: 19px !important;
+	      font-size: 16px !important;
 	    }
 	  }
 </style>
