@@ -5,12 +5,10 @@
       <div class="container">
         <div class="copywrite-text">
           <div class="row align-items-center">
-            <div class="col-md-6">
-              <p>
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyaan
-</p>
+            <div class="col-md-8 sponsor-area">
+              <a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt=""><span>&nbsp;Vivekanand Seva Mandal, Dombivli</span></a><p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyaan</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div class="footer-nav">
                 <nav>
                   <ul>

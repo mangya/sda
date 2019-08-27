@@ -7,7 +7,7 @@
 	}
 	.sponsor-area span{
 		font-family: "Times New Roman", Times, serif;
-		font-size: 36px;
+		font-size: 32px;
 		letter-spacing: 2px;
 		word-spacing: 2px;
 		color: #FF5900;
@@ -18,6 +18,10 @@
 	.sponsor-area p{
 		font-size: 20px;
 	}
+  @media only screen and (max-width: 767px) {
+  .sponsor-area span{
+    display: block;
+  }
 </style>
 @endpush
 @section('title','Home')
@@ -173,16 +177,6 @@
   <!-- ##### Services Area End ##### -->
 
   @include('includes.quotes')
-
-<section class="bg-img section-padding-40-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-12 sponsor-area">
-				<p>An initiative by</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt=""><span>Vivekanand Seva Mandal, Dombivli</span></a>
-			</div>
-		</div>
-	</div>
-</section>
 
   @include('includes.contact_form')
 @endsection

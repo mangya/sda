@@ -22,7 +22,7 @@
 
         <!-- Contact Content -->
         <div class="col-12 col-lg-5">
-          <div class="contact-content mb-100">
+          <div class="contact-content mb-50">
             <!-- Section Heading -->
             <div class="section-heading">
               <p>Contact now</p>
@@ -56,7 +56,7 @@
 
         <!-- Contact Maps -->
         <div class="col-lg-6">
-          <div class="contact-maps mb-100">
+          <div class="contact-maps mb-50">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.6187253792546!2d73.0867511144799!3d19.21184838701009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79589cd02f93d%3A0x1b809ed224efb4be!2sVivekanand+Seva+Mandal!5e0!3m2!1sen!2sin!4v1562511482723!5m2!1sen!2sin" allowfullscreen></iframe>
           </div>
         </div>

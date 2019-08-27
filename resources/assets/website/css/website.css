@@ -1677,8 +1677,7 @@ input:focus {
 .copywrite-area {
   position: relative;
   z-index: 1;
-  padding: 20px 0;
-  background-color: #0a0a0a; }
+  padding: 20px 0; }
   .copywrite-area .copywrite-text p {
     font-size: 14px;
     margin-bottom: 0;
