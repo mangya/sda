@@ -1,29 +1,4 @@
 @extends('layouts.website_layout')
-@push('styles')
-<style type="text/css">
-	.sponsor-area {
-		margin: auto;
-		text-align: center;
-	}
-	.sponsor-area span{
-		font-family: "Times New Roman", Times, serif;
-		font-size: 32px;
-		letter-spacing: 2px;
-		word-spacing: 2px;
-		color: #FF5900;
-		font-weight: 700;
-		text-decoration: none;
-		text-transform: none;
-	}
-	.sponsor-area p{
-		font-size: 20px;
-	}
-  @media only screen and (max-width: 767px) {
-  .sponsor-area span{
-    display: block;
-  }
-</style>
-@endpush
 @section('title','Home')
 @section('page_content')
   <!-- ##### Hero Area Start ##### -->

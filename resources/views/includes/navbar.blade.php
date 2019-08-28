@@ -1,16 +1,36 @@
 <style type="text/css">
-	  .brand-name {
-	      font-size: 27px !important;
-	      font-weight: 800 !important;
-	      color: #77b122 !important;
-	      font-family: Karla,sans-serif !important;
-	      margin-left: 10px !important;
-	  }
-	  @media only screen and (max-width: 767px) {
-	  	.brand-name {
-	      font-size: 16px !important;
-	    }
-	  }
+	.brand-name {
+	  font-size: 27px !important;
+	  font-weight: 800 !important;
+	  color: #77b122 !important;
+	  font-family: Karla,sans-serif !important;
+	  margin-left: 10px !important;
+	}
+	.sponsor-area {
+		margin: auto;
+		text-align: center;
+	}
+	.sponsor-area span{
+		font-family: "Times New Roman", Times, serif;
+		font-size: 32px;
+		letter-spacing: 2px;
+		word-spacing: 2px;
+		color: #FF5900;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: none;
+	}
+	.sponsor-area p{
+		font-size: 20px;
+	}
+	@media only screen and (max-width: 767px) {
+		.brand-name {
+		  font-size: 16px !important;
+		}
+		.sponsor-area span{
+			display: block;
+		}
+	}
 </style>
 <!-- ##### Header Area Start ##### -->
 <header class="header-area">

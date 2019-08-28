@@ -50,13 +50,14 @@
         </div>
 
         <!-- Famie Video Play -->
+        <!-- 
         <div class="col-12 col-md-4">
           <div class="famie-video-play mb-100">
             <img src="img/bg-img/6.jpg" alt="">
-            <!-- Play Icon -->
             <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-icon"><i class="fa fa-play"></i></a>
           </div>
         </div>
+        -->
 
       </div>
     </div>
