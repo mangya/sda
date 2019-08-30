@@ -101,72 +101,132 @@
 
             <!-- Single Accordian Area -->
             <div class="panel single-accordion">
-              <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Are organic products of the same quality as other food and drink ?
+              <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">What do you mean by waste segregation ?
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a></h6>
               <div id="collapseOne" class="accordion-content collapse show">
-                <p>Organic production methods differ from conventional ones – but the aim is nonetheless to produce top-quality food and drink. Organic produce has to meet the same safety standards as other foods and complies with EU General Food
-                  law. The difference is that instead of using chemical compounds to combat pests or weeds, organic farmers use multi-annual crop rotations and resistant varieties to prevent such problems from occurring in the first place.</p>
+                <p class="ml-30">Waste segregation basically means keeping wet, dry and sanitary/reject waste separately, so that dry can be recycled, wet waste can be composted and sanitary waste can be incinerated.</p>
               </div>
             </div>
 
             <!-- Single Accordian Area -->
             <div class="panel single-accordion">
               <h6>
-                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Do organic products taste different from other food and drink ?
+                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Why should I do it ?
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a>
               </h6>
               <div id="collapseTwo" class="accordion-content collapse">
-                <p>Organic production methods differ from conventional ones – but the aim is nonetheless to produce top-quality food and drink. Organic produce has to meet the same safety standards as other foods and complies with EU General Food
-                  law. The difference is that instead of using chemical compounds to combat pests or weeds, organic farmers use multi-annual crop rotations and resistant varieties to prevent such problems from occurring in the first place.</p>
+                <p class="ml-30">So that it reduces waste that reaches landfills and reduces pollution to air and water.</p>
+                <p class="ml-30">So that different processes- composting, recycling, incineration can be applied to different kinds of waste.</p>
               </div>
             </div>
 
             <!-- Single Accordian Area -->
             <div class="panel single-accordion">
               <h6>
-                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Are all of your poultry, meat and fish products raised humanely ?
+                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">What are the different types of waste ?
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a>
               </h6>
-              <div id="collapseThree" class="accordion-content collapse">
-                <p>Organic production methods differ from conventional ones – but the aim is nonetheless to produce top-quality food and drink. Organic produce has to meet the same safety standards as other foods and complies with EU General Food
-                  law. The difference is that instead of using chemical compounds to combat pests or weeds, organic farmers use multi-annual crop rotations and resistant varieties to prevent such problems from occurring in the first place.</p>
+              <div id="collapseThree" class="accordion-content content collapse">
+                <ul>
+                  <li><strong>Wet waste</strong>: Wet waste consists of kitchen waste - including vegetable and fruit peels and pieces, tea leaves, coffee grounds, eggshells, bones and entrails, fish scales, as well as cooked food (both veg and non-veg).</li>
+                  <li><strong>Dry Waste</strong>: Paper, plastics, metal, glass, rubber, thermocol, styrofoam, fabric, leather, rexine, wood – anything that can be kept for an extended period without decomposing is classified as dry waste.</li>
+                  <li><strong>Hazardous waste</strong>: Household hazardous waste (HHW) include three sub-categories – E-waste; toxic substances such as paints, cleaning agents, solvents, insecticides and their containers, other chemicals; and biomedical waste.</li>
+                  <li><strong>E-waste</strong>: E-waste or electronic waste consists of batteries, computer parts, wires, electrical equipment of any kind, electrical and electronic toys, remotes, watches, cell phones, bulbs, tube lights and CFLs. Store them in separate container which is kept closed, away from moisture and in which nothing else is put.</li>
+                  <li><strong>Biomedical waste</strong>: This includes used menstrual cloth, sanitary napkins, disposable diapers, bandages and any material that is contaminated with blood or other body fluids.</li>
+                </ul>
               </div>
             </div>
 
             <!-- Single Accordian Area -->
             <div class="panel single-accordion">
               <h6>
-                <a role="button" aria-expanded="true" aria-controls="collapseFour" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFour">Does FAMIE contain any ingredients from China or outside of North America ?
+                <a role="button" aria-expanded="true" aria-controls="collapseFour" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFour">How do I practice waste management at home ?
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a>
               </h6>
-              <div id="collapseFour" class="accordion-content collapse">
-                <p>Organic production methods differ from conventional ones – but the aim is nonetheless to produce top-quality food and drink. Organic produce has to meet the same safety standards as other foods and complies with EU General Food
-                  law. The difference is that instead of using chemical compounds to combat pests or weeds, organic farmers use multi-annual crop rotations and resistant varieties to prevent such problems from occurring in the first place.</p>
+              <div id="collapseFour" class="accordion-content content collapse">
+                <ul>
+                  <li>Keep separate containers for dry and wet waste in the kitchen.</li>
+                  <li>Keep 4 bags dry waste collection- paper, plastic, glass, metal for the rest of the household waste.</li>
+                  <li>Compost your wet waste at home.</li>
+                  <li>Home composting can easily be done in any aerated container. #MagicBucket</li>
+                  <li>Compost your wet waste at the community level</li>
+                  <li>If you live in a large apartment building, a community composting system like tank composting could be set up for all the wet waste from the residents. If not, the wet waste can be given out every day to your Municipality collection system.</li>
+                  <li>Keep a paper bag for throwing the sanitary waste.</li>
+                </ul>
               </div>
             </div>
 
             <!-- Single Accordian Area -->
             <div class="panel single-accordion">
               <h6>
-                <a role="button" aria-expanded="true" aria-controls="collapseFive" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFive">Are you a retailer interested in bringing in FARMIE products ?
+                <a role="button" aria-expanded="true" aria-controls="collapseFive" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFive">Can I compost at home ?
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a>
               </h6>
               <div id="collapseFive" class="accordion-content collapse">
-                <p>Organic production methods differ from conventional ones – but the aim is nonetheless to produce top-quality food and drink. Organic produce has to meet the same safety standards as other foods and complies with EU General Food
-                  law. The difference is that instead of using chemical compounds to combat pests or weeds, organic farmers use multi-annual crop rotations and resistant varieties to prevent such problems from occurring in the first place.</p>
+                <p class="ml-30">Of course. Home composting can be easily done in Daily Dump’s pot system, or #MagicBucket (courtesy Paryavaran Dakhshta Mandal).</p>
               </div>
             </div>
 
+            <div class="panel single-accordion">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseSix" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseSix">I don’t have time to compost at home, what are my alternatives?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseSix" class="accordion-content collapse">
+                <p class="ml-30">If you live in a large apartment building, a community composting system like tank composting  could be set up for all the wet waste from the residents.</p>
+                <p class="ml-30">If not, the wet waste can be given out every day to the "Ghantagadi" of KDMC.</p>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="panel single-accordion">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseSeven" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseSeven">How do I dispose sanitary pads, diapers, condoms/soiled cotton?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseSeven" class="accordion-content collapse">
+                <p class="ml-30">They should be wrapped in a newspaper, marked with a red cross, and given everyday to  the "Ghantagadi" of KDMC.</p>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="panel single-accordion">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseEight" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseEight">Will Dry waste smell if I store it for a week?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseEight" class="accordion-content collapse">
+                <p class="ml-30">Not if it is clean and dry. Make sure that plastic sachets of milk, curds, oil, any food item, are cleaned of all their contents and dried before being put in the dry waste bag. Then they will never stink.</p>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="panel single-accordion">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseNine" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseNine">What do I do with old clothes/ shoes/ handbags/belts/toys ?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseNine" class="accordion-content collapse">
+                <p class="ml-30">If they are still in usable condition, they should be given to some organization that collects them. If they are totally unusable, or very damaged, they are still categorized as dry waste.</p>
+                <p class="ml-30">Even your nearest "Bhangarwala / kabadiwala" will take all this dry waste (includes all above categories of dry waste).</p>
+                <p class="ml-30">One can participate in "Urja Foundation" drive wherein they collect such waste from people. Visit their centres at notified time and give all clean dry waste.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,12 +1,21 @@
   <!-- ##### Footer Area Start ##### -->
+<section class="bg-img mb-30 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 sponsor-area">
+        <p>In association with</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt="" style="max-width: 65px; margin-top: -15px"><span> Vivekanand Seva Mandal, Dombivli</span></a>
+      </div>
+    </div>
+  </div>
+</section>
   <footer class="footer-area">
     <!-- Copywrite Area  -->
     <div class="copywrite-area">
       <div class="container">
         <div class="copywrite-text">
           <div class="row align-items-center">
-            <div class="col-md-8 sponsor-area">
-              <a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt=""><span>&nbsp;Vivekanand Seva Mandal, Dombivli</span></a><p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyaan</p>
+            <div class="col-md-8">
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyaan</p>
             </div>
             <div class="col-md-4">
               <div class="footer-nav">

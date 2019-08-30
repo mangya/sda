@@ -29,6 +29,7 @@
 		}
 		.sponsor-area span{
 			display: block;
+			font-size: 21px;
 		}
 	}
 </style>

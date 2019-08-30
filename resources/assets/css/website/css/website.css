@@ -1067,7 +1067,6 @@ input:focus {
     padding: 20px 20px 20px 40px;
     position: relative;
     font-size: 20px;
-    text-transform: capitalize;
     font-weight: 700; }
     @media only screen and (max-width: 767px) {
       .single-accordion h6 a {
