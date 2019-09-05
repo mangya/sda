@@ -6,7 +6,7 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('show.website') }}"><i class="fa fa-home"></i> Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Our Activities</li>
         </ol>
       </nav>
@@ -34,7 +34,7 @@
       <div class="row align-items-center mb-30">
         <div class="col-12 col-lg-5">
           <div class="about-us-thumbnail mb-15">
-            <img src="{{asset('img/bg-img/24.jpg')}}" alt="">
+            <img src="{{asset('img/bg-img/awarness_acivity.jpg')}}" alt="">
           </div>
         </div>
         <div class="col-12 col-lg-7">
@@ -65,7 +65,7 @@
         </div>
         <div class="col-12 col-lg-5">
           <div class="about-us-thumbnail mb-15">
-            <img src="{{asset('img/bg-img/24.jpg')}}" alt="">
+            <img src="{{asset('img/bg-img/greening_activity.jpg')}}" alt="">
           </div>
         </div>
       </div>

@@ -23,6 +23,9 @@
 	.sponsor-area p{
 		font-size: 20px;
 	}
+	.breakpoint-off .classynav ul li .dropdown {
+		width: 235px !important;
+	}
 	@media only screen and (max-width: 767px) {
 		.brand-name {
 		  font-size: 16px !important;
@@ -58,10 +61,12 @@
 			<ul>
 			  <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('show.website')}}">Home</a></li>
 			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
-			  <li class="{{ Request::is('projects/waste-management/*') ? 'active' : '' }}"><a href="#">Campaign</a>
+			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
 				<ul class="dropdown">
-				  <li class="{{ Request::is('projects/waste-management/awarness-program') ? 'active' : '' }}"><a href="{{route('waste_management_awareness')}}">Waste Management</a></li>
-				  <li class="{{ Request::is('projects/waste-management/activities') ? 'active' : '' }}"><a href="{{route('waste_management_activities')}}">Activities</a></li>
+				  <li class="{{ Request::is('campaigns/waste-management') ? 'active' : '' }}"><a href="{{route('waste_management')}}">Waste Management</a></li>
+				  <li class="{{ Request::is('activities') ? 'active' : '' }}"><a href="{{route('activities')}}">Activities</a></li>
+				  <li><a href="{{route('recycler_association')}}">Bhangarwala Association</a></li>
+				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>

@@ -6,7 +6,7 @@
     <div class="welcome-slides owl-carousel">
 
       <!-- Single Welcome Slides -->
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slide1.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Single Welcome Slides -->
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slide2.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/plantation_drive.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slide2.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slide2.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -104,7 +104,7 @@
   <!-- ##### Services Area Start ##### -->
   <section class="services-area d-flex flex-wrap">
     <!-- Service Thumbnail -->
-    <div class="services-thumbnail bg-img jarallax" style="background-image: url('img/bg-img/7.jpg');"></div>
+    <div class="services-thumbnail" style="margin-top: auto;"><img src="img/bg-img/area_of_work.jpg" alt=""></div>
 
     <!-- Service Content -->
     <div class="services-content section-padding-40-0 px-5">
@@ -114,7 +114,6 @@
             <!-- Section Heading -->
             <div class="section-heading">
               <h2><span>Area</span> of Work</h2>
-              <img src="website/img/core-img/decor.png" alt="">
             </div>
           </div>
         </div>
@@ -154,4 +153,14 @@
   @include('includes.quotes')
 
   @include('includes.contact_form')
+  <section class="bg-img mb-30 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 sponsor-area">
+          <p>In association with</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt="" style="max-width: 65px; margin-top: -15px"><span> Vivekanand Seva Mandal, Dombivli</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 @endsection

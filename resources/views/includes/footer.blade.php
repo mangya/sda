@@ -1,13 +1,4 @@
   <!-- ##### Footer Area Start ##### -->
-<section class="bg-img mb-30 ">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 sponsor-area">
-        <p>In association with</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt="" style="max-width: 65px; margin-top: -15px"><span> Vivekanand Seva Mandal, Dombivli</span></a>
-      </div>
-    </div>
-  </div>
-</section>
   <footer class="footer-area">
     <!-- Copywrite Area  -->
     <div class="copywrite-area">

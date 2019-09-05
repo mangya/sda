@@ -6,7 +6,7 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('show.website') }}"><i class="fa fa-home"></i> Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Waste Management</li>
         </ol>
       </nav>
@@ -14,7 +14,6 @@
   </div>
   <!-- ##### Breadcrumb Area End ##### -->
 
-  <!-- ##### About Us Area Start ##### -->
   <section class="about-us-area">
     <div class="container">
       <div class="row align-items-center">
@@ -45,7 +44,6 @@
       </div>
     </div>
   </section>
-  <!-- ##### About Us Area End ##### -->
 
   <!-- ##### FAQ Area Start ##### -->
   <section class="famie-faq-area section-padding-100">

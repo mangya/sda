@@ -52,14 +52,19 @@ class HomeController extends Controller
     	return view('website.waste_management_awareness');
     }
 
-    public function showWasteManagementCampaign()
+    public function showRecyclersAssociation()
     {
-        return view('website.waste_management_campaigns');
+        return view('website.recyclers_association');
     }
 
-    public function showWasteManagementActivities()
+    public function showTeachersAssociation()
     {
-        return view('website.waste_management_activities');
+        return view('website.teachers_association');
+    }
+
+    public function showActivities()
+    {
+        return view('website.our_activities');
     }
 
     public function showForestation()

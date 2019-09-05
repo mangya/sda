@@ -22,9 +22,15 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/directory', ['as' => 'directory', 'uses' => 'DirectoryController@showDirectory']);
     Route::post('/send-mail', ['as' => 'send_mail', 'uses' => 'HomeController@sendContactMessage']);
 
-    Route::get('/projects/waste-management/awarness-program', ['as' => 'waste_management_awareness', 'uses' => 'HomeController@showWasteManagementAwareness']);
-    Route::get('/projects/waste-management/campaigns', ['as' => 'waste_management_campaign', 'uses' => 'HomeController@showWasteManagementCampaign']);
-    Route::get('/projects/activities', ['as' => 'waste_management_activities', 'uses' => 'HomeController@showWasteManagementActivities']);
+    Route::get('/campaigns/waste-management', ['as' => 'waste_management', 'uses' => 'HomeController@showWasteManagementAwareness']);
+
+    Route::get('/campaigns/bhangarwala-association', ['as' => 'recycler_association', 'uses' => 'HomeController@showRecyclersAssociation']);
+
+    Route::get('/campaigns/teachers-association', ['as' => 'teachers_association', 'uses' => 'HomeController@showTeachersAssociation']);
+
+    Route::get('/campaigns', ['as' => 'about', 'uses' => 'HomeController@showAbout']);
+    //Route::get('/projects/waste-management/campaigns', ['as' => 'waste_management_campaign', 'uses' => 'HomeController@showWasteManagementCampaign']);
+    Route::get('/activities', ['as' => 'activities', 'uses' => 'HomeController@showActivities']);
 
     Route::get('/projects/forestation', ['as' => 'forestation', 'uses' => 'HomeController@showForestation']);
     

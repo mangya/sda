@@ -6,7 +6,7 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('show.website') }}"><i class="fa fa-home"></i> Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Waste Management</li>
         </ol>
       </nav>
@@ -22,7 +22,7 @@
         <!-- About Us Thumbnail -->
         <div class="col-12 col-lg-6">
           <div class="about-us-thumbnail">
-            <img src="{{asset('img/bg-img/24.jpg')}}" alt="">
+            <img src="{{asset('img/bg-img/area_of_work.jpg')}}" alt="">
           </div>
         </div>
 
