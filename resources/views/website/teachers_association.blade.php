@@ -1,5 +1,17 @@
 @extends('layouts.website_layout')
 @section('title','Teachers Association')
+@push('styles')
+<style type="text/css">
+  .content img {
+    float: left; padding: 20px
+  }
+  @media only screen and (min-width: 767px) {
+    .content img {
+      max-width: 50%;
+    }
+  }
+</style>
+@endpush
 @section('page_content')
   <!-- ##### Breadcrumb Area Start ##### -->
   <div class="famie-breadcrumb">
@@ -29,7 +41,8 @@
       <div class="row align-items-center">
 
         <div class="col-12 col-lg-12">
-          <div class="about-us-content mb-100">
+          <div class="about-us-content content mb-100">
+            <img src="{{asset('img/bg-img/teachers_association.jpg')}}" class="img-responsive" style="" alt="">
             <p>A major and important step towards sustainable solutions was involving the younger generation, making them understand the seriousness of the problem and guiding them with simple solutions. The crucial channel through which children can be approached are their Teachers.</p>
             <p>As it is rightly said” the influence of a good teacher can never be erased.”SDA organised a “Teachers association” on 27 July, 2019.</p>
             <p>Commencing with the problems and impact of increasing pollution problem in Dombivli, the teachers were informed about the different activities of SDA. The meet focused on explaining type of waste, segregating them and ways to dispose these household wastes. The teachers were aslo provided information about options available for managing both dry and wet waste at both home and society level. Even importance of bhangarwala channel was discussed during the meet. The teachers were also shown videos providing an easy explanation of the environmental problems along with some innovative solutions to them.</p>

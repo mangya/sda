@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSdTeamTable extends Migration
+class CreateSdTestimonialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,14 @@ class CreateSdTeamTable extends Migration
      */
     public function up()
     {
-        Schema::create('sd_team', function (Blueprint $table) {
+        Schema::create('sd_testimonials', function (Blueprint $table) {
             $table->increments('id');
             $table->string('avatar')->nullable();
+            $table->text('testimonial');
             $table->string('name', 150);
-            $table->string('email', 200)->nullable();
-            $table->string('mobile', 15)->nullable();
-            $table->string('linkedin_url', 400)->nullable();
-            $table->string('twitter_url', 400)->nullable();
-            $table->text('info');
-            $table->integer('order')->unsigned()->default('0');
-            $table->string('owner');
+            $table->string('info', 255);
             $table->boolean('is_active')->default('0');
+            $table->string('owner');
             $table->string('last_updated_by');
             $table->timestamps();
         });
@@ -37,6 +33,6 @@ class CreateSdTeamTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sd_team');
+        Schema::dropIfExists('sd_testimonials');
     }
 }

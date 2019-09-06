@@ -7,6 +7,7 @@ use Auth;
 use SDA\Team;
 use SDA\Quotes;
 use SDA\Messages;
+use SDA\Testimonials;
 use SDA\Mail\ContactMessage;
 use Illuminate\Http\Request;
 
@@ -28,8 +29,9 @@ class HomeController extends Controller
     public function showAbout()
     {
         $team = Team::where('is_active',1)->get();
+        $testimonials = Testimonials::where('is_active',1)->get();
 
-    	return view('website.about', compact('team'));
+    	return view('website.about', compact('team','testimonials'));
     }
 
     public function showEvents()

@@ -6,7 +6,6 @@
         <div class="col-12">
           <!-- Quote Slides -->
           <div class="testimonial-slides owl-carousel">
-
             @foreach($quotes as $quote)
             <div class="single-slide">
               <!-- Quote Text -->
@@ -25,7 +24,6 @@
               </div>
             </div>
             @endforeach
-
           </div>
         </div>
       </div>

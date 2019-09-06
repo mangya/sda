@@ -1,6 +1,5 @@
 @extends('layouts.website_layout')
 @section('title','Bhangarwala Association')
-@section('page_content')
 @push('styles')
 <style type="text/css">
   .content img {
@@ -13,6 +12,7 @@
   }
 </style>
 @endpush
+@section('page_content')
   <!-- ##### Breadcrumb Area Start ##### -->
   <div class="famie-breadcrumb">
     <div class="container">
