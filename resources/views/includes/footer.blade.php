@@ -6,7 +6,7 @@
         <div class="copywrite-text">
           <div class="row align-items-center">
             <div class="col-md-8">
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyaan</p>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Swachha Dombivli Abhiyan</p>
             </div>
             <div class="col-md-4">
               <div class="footer-nav">

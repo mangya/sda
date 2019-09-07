@@ -45,7 +45,7 @@
 	  <!-- Menu -->
 	  <nav class="classy-navbar justify-content-between" id="famieNav">
 		<!-- Nav Brand -->
-		<a href="{{route('show.website')}}"><img src="{{asset('website/img/core-img/logo.jpg')}}" alt=""><span class="brand-name">Swachha Dombivli Abhiyaan</span></a>
+		<a href="{{route('show.website')}}"><img src="{{asset('website/img/core-img/logo.jpg')}}" alt=""><span class="brand-name">Swachha Dombivli Abhiyan</span></a>
 		<!-- Navbar Toggler -->
 		<div class="classy-navbar-toggler">
 		  <span class="navbarToggler"><span></span><span></span><span></span></span>

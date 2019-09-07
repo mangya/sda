@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Swachha Dombivli Abhiyaan">
+	<meta name="description" content="Swachha Dombivli Abhiyan">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	@stack('meta')
 	<!-- Title -->
-	<title>Swachha Dombivli Abhiyaan | @yield('title')</title>
+	<title>Swachha Dombivli Abhiyan | @yield('title')</title>
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicons/apple-icon-57x57.png')}}">
 	<link rel="apple-touch-icon" sizes="60x60" href="{{asset('favicons/apple-icon-60x60.png')}}">
