@@ -64,6 +64,11 @@ class HomeController extends Controller
         return view('website.teachers_association');
     }
 
+    public function showRoleModel()
+    {
+        return view('website.role_model');
+    }
+
     public function showActivities()
     {
         return view('website.our_activities');

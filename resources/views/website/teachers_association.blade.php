@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-lg-8">
-          <div class="about-us-content content">
+          <div class="about-us-content">
             <!-- Section Heading -->
             <div class="section-heading">
               <h2><span>Teachers </span> Association</h2>

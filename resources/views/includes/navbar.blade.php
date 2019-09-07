@@ -67,6 +67,7 @@
 				  <li class="{{ Request::is('activities') ? 'active' : '' }}"><a href="{{route('activities')}}">Activities</a></li>
 				  <li><a href="{{route('recycler_association')}}">Bhangarwala Association</a></li>
 				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
+				  <li><a href="{{route('role_model')}}">Role Model</a></li>
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
