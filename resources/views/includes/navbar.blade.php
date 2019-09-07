@@ -81,7 +81,6 @@
 		  <!-- Navbar End -->
 		</div>
 	  </nav>
-
 	  <!-- Search Form -->
 	  <div class="search-form">
 		<form action="#" method="get">

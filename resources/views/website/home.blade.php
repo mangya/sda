@@ -4,7 +4,6 @@
   <!-- ##### Hero Area Start ##### -->
   <div class="hero-area">
     <div class="welcome-slides owl-carousel">
-
       <!-- Single Welcome Slides -->
       <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.jpg);">
         <div class="container h-100">
@@ -19,7 +18,6 @@
           </div>
         </div>
       </div>
-
       <!-- Single Welcome Slides -->
       <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/plantation_drive.jpg);">
         <div class="container h-100">
@@ -34,7 +32,6 @@
           </div>
         </div>
       </div>
-
       <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
@@ -47,7 +44,6 @@
           </div>
         </div>
       </div>
-
       <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar2.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
@@ -60,20 +56,15 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!-- ##### Hero Area End ##### -->
-
   <!-- ##### About Us Area Start ##### -->
   <section class="about-us-area section-padding-40-0">
     <div class="container">
       <div class="row align-items-center">
-
-        <!-- About Us Content -->
         <div class="col-12 col-md-8">
           <div class="about-us-content mb-100">
-            <!-- Section Heading -->
             <div class="section-heading">
               <p>About us</p>
               <h2><span>Let Us</span> Tell You Our Story</h2>
@@ -84,60 +75,37 @@
             <a href="{{ route('about') }}" class="btn famie-btn mt-30">Read More</a>
           </div>
         </div>
-
-        <!-- Famie Video Play -->
         <div class="col-12 col-md-4">
-          <!--  
-          <div class="famie-video-play mb-100">
-            <img src="website/img/bg-img/6.jpg" alt="">
-            <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-icon"><i class="fa fa-play"></i></a>
-          </div>
-          -->
           <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-
       </div>
     </div>
   </section>
-  <!-- ##### About Us Area End ##### -->
-
-  <!-- ##### Services Area Start ##### -->
   <section class="services-area d-flex flex-wrap">
-    <!-- Service Thumbnail -->
     <div class="services-thumbnail" style="margin-top: auto;"><img src="img/bg-img/area_of_work.jpg" alt=""></div>
-
-    <!-- Service Content -->
     <div class="services-content section-padding-40-0 px-5">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <!-- Section Heading -->
             <div class="section-heading">
               <h2><span>Area</span> of Work</h2>
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-12 mb-50">
             <p>Understanding the problems and requirements of the city the team derived at the key cause of pollution – NO PROPER WASTE MANAGEMENT.  In order to create awareness among the people and provide different solutions to them the team focused on main two categories of waste management.</p>
           </div>
-
-          <!-- Single Service Area -->
           <div class="col-12 col-lg-6">
             <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-              <!-- Service Title -->
               <div class="service-title mb-3 d-flex align-items-center">
                 <h5>Wet Waste Management</h5>
               </div>
               <p>Wet waste can be easily broken down and eliminated at its formation itself. Team SDA, strives to provide guidance through its seminars and individual consulting at different levels of the society. </p>
             </div>
           </div>
-
-          <!-- Single Service Area -->
           <div class="col-12 col-lg-6">
             <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-              <!-- Service Title -->
               <div class="service-title mb-3 d-flex align-items-center">
                 <h5>Dry waste management</h5>
               </div>
@@ -148,19 +116,7 @@
       </div>
     </div>
   </section>
-  <!-- ##### Services Area End ##### -->
-
   @include('includes.quotes')
-
   @include('includes.contact_form')
-  <section class="bg-img mb-30 ">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 sponsor-area">
-          <p>In association with</p><a href="http://vsmandal.org/" target="_new"><img src="{{asset('img/vsmlogo.png')}}" alt="" style="max-width: 65px; margin-top: -15px"><span> Vivekanand Seva Mandal, Dombivli</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  @include('includes.vsm_banner')
 @endsection

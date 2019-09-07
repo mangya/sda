@@ -21,7 +21,6 @@
                     <li>
                       <a href="https://www.instagram.com/swachhadombivliabhiyan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span> Instagram</span></a>
                     </li>
-                    
                   </ul>
                 </nav>
               </div>

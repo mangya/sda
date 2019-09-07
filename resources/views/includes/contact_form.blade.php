@@ -19,7 +19,6 @@
   <section class="contact-area section-padding-40-0">
     <div class="container">
       <div class="row justify-content-between">
-
         <!-- Contact Content -->
         <div class="col-12 col-lg-5">
           <div class="contact-content mb-50">
@@ -53,7 +52,6 @@
             </div>
           </div>
         </div>
-
         <!-- Contact Maps -->
         <div class="col-lg-6">
           <div class="contact-maps mb-50">
@@ -87,34 +85,29 @@
             $('#cntName').parent().append('<span class="help-txt">Name is required</span>')
             is_valid = false;
         }
-
         if($('#cntEmail').val() == '') {
             $('#cntEmail').parent().addClass('has-error');
             $('#cntEmail').focus();
             $('#cntEmail').parent().append('<span class="help-txt">Email is required</span>')
             is_valid = false;
         }
-
         if($('#cntContactNo').val() == '') {
             $('#cntContactNo').parent().addClass('has-error');
             $('#cntContactNo').focus();
             $('#cntContactNo').parent().append('<span class="help-txt">Contact no is required</span>')
             is_valid = false;
         }
-
         if($('#txtMessage').val() == '') {
             $('#txtMessage').parent().addClass('has-error');
             $('#txtMessage').focus();
             $('#txtMessage').parent().append('<span class="help-txt">Please write a message</span>')
             is_valid = false;
         }
-
         if(is_valid) {
             var form = $('#contactForm');
             var url = form.attr('action');
             $(this).html('Sending...');
             $(this).attr('disabled','disabled');
-
             $.ajax({
                 type: "POST",
                 url: url,
