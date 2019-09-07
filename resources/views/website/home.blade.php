@@ -81,10 +81,8 @@
       </div>
     </div>
   </section>
-  <section class="services-area d-flex flex-wrap">
-    <div class="services-thumbnail" style="margin-top: auto;"><img src="img/bg-img/area_of_work.jpg" alt=""></div>
-    <div class="services-content section-padding-40-0 px-5">
-      <div class="container-fluid">
+  <section class="about-us-area section-padding-40-0">
+    <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="section-heading">
@@ -114,7 +112,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
   @include('includes.quotes')
   @include('includes.contact_form')
