@@ -43,7 +43,7 @@
             <p>While conducting various activities around the city are, the team came across a group of people who not only showed their willingness to join the initiative but also enthusiastically started with the activities at their household level. Looking at their motivation and passion towards this initiative, the team came up with a plan to start a project at their locality “Sarvoday Nagar, Patharli road, Dombivli East”. The residents have initiated various programs within the premises. The key initiatives taken by 290 flats across 10 buildings in the complex of Sarvoday Nagar:</p>
             <div class="row">
               <div class="col-12 col-lg-6">
-                <p><strong>Seminars:</strong> SDA conducted a cleanliness seminar for ten residential societies in Sarvoday Nagar complex, for which we received a positive response.</p>
+                <p class="zig-zag"><strong>Seminars:</strong> SDA conducted a cleanliness seminar for ten residential societies in Sarvoday Nagar complex, for which we received a positive response.</p>
               </div>
               <div class="col-12 col-lg-6">
                 <img src="{{asset('img/bg-img/role-model/seminar.jpg')}}" class="img-responsive mb-15" style="margin: auto;" alt="">
