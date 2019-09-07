@@ -19,7 +19,7 @@
         </div>
       </div>
       <!-- Single Welcome Slides -->
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/plantation_drive.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/plantation_collage.jpg);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
