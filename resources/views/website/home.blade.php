@@ -10,7 +10,7 @@
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
               <div class="welcome-content">
-                <h2 data-animation="fadeInUp" data-delay="200ms">Installation of information booth</h2>
+                <h2 data-animation="fadeInUp" data-delay="200ms">Information booth</h2>
                 <p data-animation="fadeInUp" data-delay="400ms">The Information Booth provides information about the projects and segregation of waste, waste management (household and society level), collection of related information from the people and all other help needed by the residents.</p>
                 <!-- <a href="#" class="btn famie-btn mt-4" data-animation="bounceInUp" data-delay="600ms">Contact Us</a> -->
               </div>
