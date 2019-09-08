@@ -78,7 +78,7 @@
         </div>
         <div class="row mb-30">
           <div class="col-12 col-lg-6">
-            <p>The above is a practical application of wet waste management at household. The wet waste originating from the house is decomposed in a homemade composting bucket.</p>
+            <p>The below is a practical application of wet waste management at household. The wet waste originating from the house is decomposed in a homemade composting bucket.</p>
             <img src="{{asset('img/bg-img/home_composting.jpg')}}" class="img-responsive mb-15" style="margin: auto;" alt="">
           </div>
           <div class="col-12 col-lg-6"><p>A perfect example of how one can segregate house hold plastic waste. These images show segregation of different types of plastic waste like milk bags, wrappers of eatable items, water bottles etc. This waste is then given to the nearest Bhangarwala.</p>
