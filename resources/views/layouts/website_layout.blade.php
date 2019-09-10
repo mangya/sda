@@ -43,7 +43,7 @@
 	<!-- ##### All Javascript Files ##### -->
 	<script src="{{url(elixir('js/vendor.js'))}}"></script>
 	@stack('scripts')
-	@if (env('APP_ENV')=='production')
+	@if (App::environment()=='production')
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147507803-1"></script>
 	<script>
