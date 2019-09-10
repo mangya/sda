@@ -70,6 +70,15 @@
 				  <li><a href="{{route('role_model')}}">Role Model</a></li>
 				</ul>
 			  </li>
+			  <li class="{{ Request::is('solutions/*') ? 'active' : '' }}"><a href="#">Solutions</a>
+				<ul class="dropdown">
+				  <li class=""><a href="#">Domestic</a>
+				  	<ul class="dropdown">
+					  <li class="{{ Request::is('solutions/magic-bucket') ? 'active' : '' }}"><a href="{{route('magic_bucket')}}">Magic Bucket</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
 			</ul>
 			<!-- Search Icon -->
