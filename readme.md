@@ -43,6 +43,6 @@ Now, you've completed the configuration step :v:
   
 Administrator
 
-**Login URL**: http://localhost:8081/admin
+**Login URL**: http://localhost:8081/admin  
 **Login ID**: mangesh  
 **Password**: vsmsda@111
