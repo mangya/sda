@@ -74,9 +74,9 @@ class HomeController extends Controller
         return view('website.our_activities');
     }
 
-    public function showForestation()
+    public function showMagicBucket()
     {
-    	return view('website.forestation');
+    	return view('website.magic_bucket');
     }
 
     public function sendContactMessage(Request $request)
