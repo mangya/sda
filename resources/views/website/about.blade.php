@@ -19,22 +19,22 @@
       <div class="row align-items-center">
         <!-- About Us Content -->
         <div class="col-12 col-md-12">
-          <div class="about-us-content content mb-100">
+          <div class="about-us-content content mb-100" style="text-align: justify;">
             <!-- Section Heading -->
             <div class="section-heading">
               <h2><span>Let Us</span> Tell You Our Story</h2>
               <img src="img/core-img/decor.png" alt="">
             </div>
-            <p>Dombivli, a developing city in the Thane District of Maharashtra state, is also known for its cultural values and active youth participation. The City is known for preserving their culture and celebrating it with enthusiasm. It is also one of the 98 cities shortlisted to be developed as a ‘Smart City’ under the Smart Cities Mission of the Government of India. The City has been growing at a tremendous rate, and therefore the problem arising out of it! Although the city is benchmarked for its values and cultural activities, it is also known as one of the dirtiest and second most polluted city (2016) of Maharashtra. </p>
-            <p>Understanding the gravity of the of problem of pollution and cleanliness in the city and taking the responsibility of the mess created directly and indirectly, few youths of Dombivli joined hands together to fight against pollution and making Dombivli a clean and Green place to live. Inspired by the "Seva" (service) philosophy propagated by the great warrior monk Swami Vivekanand (1863-1902), the team has commenced with the Swachha Dombivli Abhiyan in April, 2018.  SDA was formed as step towards cleaning our area and preserving our mother nature ultimately benefitting the society. Starting from understanding the problems and focusing on the most dirtiest and important areas, the team initially commenced their activity with a cleanliness drive which has now further expanded to waste management, awareness programme, Greening programme.</p>
+            <p><span class="fs-18">Dombivli</span>, a developing city in the Thane District of Maharashtra state, is also known for its cultural values and active youth participation. The City is known for preserving their culture and celebrating it with enthusiasm. It is also one of the 98 cities shortlisted to be developed as a ‘Smart City’ under the Smart Cities Mission of the Government of India. The City has been growing at a tremendous rate, and therefore the problem arising out of it! Although the city is benchmarked for its values and cultural activities, it is also known as one of the <span class="fs-18">dirtiest and second most polluted city</span> (2016) of Maharashtra. </p>
+            <p>Understanding the gravity of the of problem of pollution and cleanliness in the city and taking the responsibility of the mess created directly and indirectly, few youths of Dombivli joined hands together to fight against pollution and making Dombivli a clean and Green place to live. Inspired by the <span class="italic">"Seva" (service) philosophy propagated by the great warrior monk Swami Vivekananda (1863-1902), the team has commenced with the Swachha Dombivli Abhiyan (SDA)</span> in April, 2018.  SDA was formed as step towards cleaning our area and preserving our mother nature ultimately benefitting the society. Starting from understanding the problems and focusing on the most dirtiest and important areas, the team initially commenced their activity with a cleanliness drive which has now further expanded to <strong>waste management, awareness programme, Greening programme.</strong></p>
 
             <p>Swachha Dombivli Abhiyan is an initiative by Vivekanand Sewa Mandal (VSM/ Mandal), an apolitical organisation which has been involved in various society welfare activities since 1991.  As a corollary to the principle of "service to poor is service to god," we at Mandal engage students in welfare activities of tribal -- the most neglected people of our society. Mandal caters to students living in other northern suburbs of Mumbai-Thane region through an 8,000-book-strong library that has been serving professional students of engineering, management and other streams since 1991. It also provides education to underprivileged students for Municipality Schools across Dombivli.</p>
 
             <h4><strong>Visions and objectives of SDA</strong></h4>
             <h6>Vision</h6>
-            <p>Imbibe the idea of cleanliness and make our city green and pollution free.</p>
+            <p><span class="fs-18">Imbibe the idea of cleanliness and make our city green and pollution free.</span></p>
             <h6>Mission</h6>
-            <p>Our mission is to propel clean and eco-friendly way of living and improve the environmental quality of the city by working together with the people by educating and providing them with appropriate and sustainable solutions.</p>
+            <p><span class="italic">Our mission is to propel clean and eco-friendly way of living and improve the environmental quality of the city by working together with the people by educating and providing them with appropriate and sustainable solutions.</span></p>
 
             <h6><strong>Objective</strong></h6>
             <ul>

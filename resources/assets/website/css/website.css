@@ -1844,3 +1844,10 @@ select.form-control {
 
 textarea.form-control {
   height: 100px; }
+
+.fs-18 {
+  font-size: 18px;
+}
+.italic {
+  font-style: italic;
+}
