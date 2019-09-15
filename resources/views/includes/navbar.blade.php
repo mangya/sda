@@ -1,4 +1,7 @@
 <style type="text/css">
+	body { 
+	   overflow-x: hidden;
+	}
 	.brand-name {
 	  font-size: 27px !important;
 	  font-weight: 800 !important;

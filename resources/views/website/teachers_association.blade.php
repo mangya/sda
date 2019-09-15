@@ -41,7 +41,7 @@
       <div class="row align-items-center">
 
         <div class="col-12 col-lg-12">
-          <div class="about-us-content content mb-100">
+          <div class="about-us-content content mb-100" style="text-align: justify;">
             <img src="{{asset('img/bg-img/teachers_association.jpg')}}" class="img-responsive" style="" alt="">
             <p>A major and important step towards sustainable solutions was involving the younger generation, making them understand the seriousness of the problem and guiding them with simple solutions. The crucial channel through which children can be approached are their Teachers.</p>
             <p>As it is rightly said” the influence of a good teacher can never be erased.”SDA organised a “Teachers association” on 27 July, 2019.</p>

@@ -42,7 +42,7 @@
 
         <!-- About Us Content -->
         <div class="col-12 col-lg-12">
-          <div class="about-us-content content mb-100">
+          <div class="about-us-content content mb-100" style="text-align: justify;">
             <img src="{{asset('img/bg-img/bhangarwala_sammelan.jpg')}}" class="img-responsive" style="" alt="">
             <p>We, humans, have a basic notion that unless we find a solution for environmental problems we will not achieve sustainable growth in the coming years. While conducting different activities relating to SDA, the team realised that an east and accessible solution is required for managing the segregated dry waste. An answer to this problem was an already existing facility which has been a catalyst in managing all types of household dry waste was nearby Bhangarwala.</p>
             <p>Bhangarwala is one-stop solution who accepts and channelises the waste properly to the recyclers.</p>
