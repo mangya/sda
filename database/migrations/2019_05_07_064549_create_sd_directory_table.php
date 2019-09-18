@@ -23,6 +23,10 @@ class CreateSdDirectoryTable extends Migration
             $table->string('contact_person')->nullable();
             $table->string('contact_no')->nullable();
             $table->text('address')->nullable();
+            $table->string('city', 100)->nullable();
+            $table->string('state', 100)->nullable();
+            $table->string('pincode', 10)->nullable();
+            $table->string('country', 100)->nullable();
             $table->text('short_info')->nullable();
             $table->boolean('is_active')->default('0');
             $table->string('approved_by')->nullable();

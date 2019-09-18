@@ -87,7 +87,7 @@
                     <div>
                         <select name="role" id="role" class="form-control" data-mandatory="yes">
                             <option value="Administrator">Administrator</option>
-                            <option value="Data Executive">Data Executive</option>
+                            <option value="Author">Author</option>
                             <option value="Guest">Guest</option>
                         </select>
                     </div>

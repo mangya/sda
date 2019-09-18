@@ -86,7 +86,7 @@ class HomeController extends Controller
         $contact_no = $data['contact_no'] = trim($request->get('contact_no'));
         $message_txt = $data['message'] = trim($request->get('message'));
 
-        Mail::to('mangesh.ghadigaonkar@gmail.com')
+        Mail::to('swachhadombivli@gmail.com')
             ->send(new ContactMessage($data));
 
         $message = new Messages();

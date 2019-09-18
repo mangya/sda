@@ -10,7 +10,7 @@ trait PermController
     public $modules = ['User','Event','Directory','Quotes','Team'];
 
     // restrict data to this roles
-    public $roles = ['Administrator', 'Guest'];
+    public $roles = ['Administrator', 'Author'];
 
     // set module actions
     public $actions = ['Read', 'Create', 'Update', 'Delete'];
