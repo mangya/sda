@@ -94,4 +94,10 @@ class HomeController extends Controller
 
         return redirect()->back();
     }
+
+    public function showWebLogin()
+    {
+        $quotes = Quotes::where('is_active',1)->get();
+        return view('website.login', compact('quotes'));
+    }
 }

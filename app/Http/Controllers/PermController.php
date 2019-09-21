@@ -34,10 +34,10 @@ trait PermController
                 'Update' => array_values(array_diff($this->modules, ['Module'])), 
                 'Delete' => array_values(array_diff($this->modules, ['Module']))
             ],
-            'Guest' => [
-                'Show' => ['User'], 
-                'Read' => ['User'],
-                'Update' => ['User']
+            'Author' => [
+                // 'Show' => ['Team'], 
+                // 'Read' => ['Team'],
+                // 'Update' => ['Team']
             ],
         ];
 
@@ -72,19 +72,19 @@ trait PermController
                 'Create' => [], 
                 'Delete' => []
             ],
-            'Guest' => [
-                'Read' => [
-                    'User' => [
-                        'login_id' => $user_login_id
-                    ]
-                ],
-                'Update' => [
-                    'User' => [
-                        'id' => $user_id,
-                        'login_id' => $user_login_id,
-                        'role' => 'Guest'
-                    ]
-                ]
+            'Author' => [
+                // 'Read' => [
+                //     'User' => [
+                //         'login_id' => $user_login_id
+                //     ]
+                // ],
+                // 'Update' => [
+                //     'User' => [
+                //         'id' => $user_id,
+                //         'login_id' => $user_login_id,
+                //         'role' => 'Guest'
+                //     ]
+                // ]
             ],
         ];
 

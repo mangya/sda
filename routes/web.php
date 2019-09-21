@@ -45,7 +45,8 @@ Route::group(['middleware' => ['web']], function () {
 
     // Authentication routes...
     Route::get('/admin', ['as' => 'show.app.login', 'uses' => 'Auth\LoginController@getLogin']);
-    Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+    //Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+    Route::get('/login', ['as' => 'login', 'uses' => 'HomeController@showWebLogin']);
     Route::post('/login', ['as' => 'submit.login', 'uses' => 'Auth\LoginController@login']);
     Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
