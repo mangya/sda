@@ -558,9 +558,10 @@ function beautifyListView(list_view) {
 	var contact_list = ['contact_no', 'phone_no', 'phone', 'mobile', 'mobile_no'];
 	var address_list = ['address', 'full_address', 'city', 'venue'];
 	var email_list = ['email_id', 'guest_id'];
-	var label_list = ['is_active', 'show_in_module_section', 'role'];
+	var label_list = ['is_active','is_approved', 'show_in_module_section', 'role'];
 	var label_bg = {
 		'is_active' : { '1' : {'value': 'Yes', 'label': 'label-success'}, '0' : {'value': 'No', 'label': 'label-danger'} }, 
+		'is_approved' : { '1' : {'value': 'Yes', 'label': 'label-success'}, '0' : {'value': 'No', 'label': 'label-danger'} }, 
 		'role' : { 'Administrator' : 'label-default', 'Guest' : 'label-info' }, 
 		'show_in_module_section' : { '1' : 'label-success', '0' : 'label-danger' }, 
 	}
