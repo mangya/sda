@@ -20,6 +20,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/events', ['as' => 'events', 'uses' => 'HomeController@showEvents']);
     Route::get('/news', ['as' => 'news', 'uses' => 'HomeController@showNews']);
     Route::get('/directory', ['as' => 'directory', 'uses' => 'DirectoryController@showDirectory']);
+
+    Route::get('/blog', ['as' => 'show.blog_list', 'uses' => 'BlogController@showBlogList']);
+
     Route::post('/send-mail', ['as' => 'send_mail', 'uses' => 'HomeController@sendContactMessage']);
 
     Route::get('/campaigns/waste-management', ['as' => 'waste_management', 'uses' => 'HomeController@showWasteManagementAwareness']);

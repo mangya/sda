@@ -36,7 +36,7 @@
               <form action="{{ route('send_mail') }}" method="post" id="loginForm" class="novalidate">
                 <div class="row">
                   <div class="col-lg-6">
-                    <input type="email" class="form-control" name="email" id="lgnEmail" placeholder="Your Email">
+                    <input type="email" class="form-control" name="email" id="lgnEmail" placeholder="Your Email" autofocus>
                   </div>
                 </div>
                 <div class="row">

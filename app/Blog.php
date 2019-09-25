@@ -12,4 +12,12 @@ class Blog extends Model
      * @var string
      */
     protected $table = 'sd_blog';
+
+    /**
+     * Get the author that owns the blog.
+     */
+    public function author()
+    {
+        return $this->belongsTo('SDA\User','user_id');
+    }
 }

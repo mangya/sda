@@ -21,11 +21,21 @@ class BlogController extends Controller
             ],
         ];
     }
+
 	public function beforeSave($request)
     {
     	if(empty($request->get('code'))){
             $request->request->add(['code' => $this->generateCode()]);
         }
+        if(empty($request->get('user_id'))){
+            $request->request->add(['user_id' => auth()->user()->id]);
+        }
+    }
+
+    public function showBlogList()
+    {
+        $blogs = Blog::where('is_active',1)->with('author')->get();
+        return view('website.blog_list',compact('blogs'));
     }
 
     public function generateCode()

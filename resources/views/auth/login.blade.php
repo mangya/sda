@@ -43,7 +43,7 @@
                             <span class="input-group-addon">
                                 <i class="fa fa-envelope"></i>
                             </span>
-                            <input type="text" name="login_id" class="form-control" placeholder="Login ID">
+                            <input type="text" name="login_id" class="form-control" placeholder="Login ID" autofocus>
                         </div>
                         <div class="text-danger alert" style="text-align: left; display: none;">
                             Please Enter Login ID
