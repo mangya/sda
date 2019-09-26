@@ -38,6 +38,12 @@ class BlogController extends Controller
         return view('website.blog_list',compact('blogs'));
     }
 
+    public function showBlog($code)
+    {
+        $blog = Blog::where('code',$code)->with('author')->first();
+        return view('website.blog',compact('blog'));
+    }
+
     public function generateCode()
 	{
 		$code = '';

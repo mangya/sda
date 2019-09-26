@@ -23,7 +23,7 @@
             @foreach($blogs as $blog)
             <div class="single-blog-post-area mb-50 wow fadeInUp" data-wow-delay="100ms">
               <h6>Post on {{ date('d M Y', strtotime($blog->created_at)) }} / {{ $blog->author->full_name }}</h6>
-              <a href="#" class="post-title">{{ $blog->title }}</a>
+              <a href="{{ route('show.blog',['code' => $blog->code]) }}" class="post-title">{{ $blog->title }}</a>
               <!-- <img src="img/bg-img/26.jpg" alt="" class="post-thumb"> -->
               <p class="post-excerpt">
                 {{ substr(strip_tags($blog->content),0,400).'...' }}

@@ -22,6 +22,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/directory', ['as' => 'directory', 'uses' => 'DirectoryController@showDirectory']);
 
     Route::get('/blog', ['as' => 'show.blog_list', 'uses' => 'BlogController@showBlogList']);
+    Route::get('/blog/{code}', ['as' => 'show.blog', 'uses' => 'BlogController@showBlog']);
 
     Route::post('/send-mail', ['as' => 'send_mail', 'uses' => 'HomeController@sendContactMessage']);
 
