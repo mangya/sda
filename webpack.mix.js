@@ -112,3 +112,7 @@ mix.scripts([
     'resources/assets/website/js/jarallax-video.min.js',
     'resources/assets/website/js/active.js',
 ], 'public/js/vendor.js').version();
+
+mix.scripts([
+    'resources/assets/website/js/common.js'
+], 'public/js/common.js').version();

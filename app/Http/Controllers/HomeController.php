@@ -86,8 +86,8 @@ class HomeController extends Controller
         $contact_no = $data['contact_no'] = trim($request->get('contact_no'));
         $message_txt = $data['message'] = trim($request->get('message'));
 
-        Mail::to('swachhadombivli@gmail.com')
-            ->send(new ContactMessage($data));
+        // Mail::to('swachhadombivli@gmail.com')
+        //     ->send(new ContactMessage($data));
 
         $message = new Messages();
         $message->create($name, $email, $contact_no, $message_txt);
@@ -99,5 +99,11 @@ class HomeController extends Controller
     {
         $quotes = Quotes::where('is_active',1)->get();
         return view('website.login', compact('quotes'));
+    }
+
+    public function showWebRegister()
+    {
+        $quotes = Quotes::where('is_active',1)->get();
+        return view('website.register', compact('quotes'));
     }
 }

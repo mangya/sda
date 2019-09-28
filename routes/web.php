@@ -49,6 +49,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/login', ['as' => 'login', 'uses' => 'HomeController@showWebLogin']);
     Route::post('/login', ['as' => 'submit.login', 'uses' => 'Auth\LoginController@login']);
     Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
+    Route::get('/register', ['as' => 'register', 'uses' => 'HomeController@showWebRegister']);
+    Route::post('/register', ['as' => 'submit.register', 'uses' => 'HomeController@register']);
 
     // Password Reset routes...
     Route::get('/password/reset', ['as' => 'password.request', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);

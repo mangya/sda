@@ -33,15 +33,21 @@
             </div>
             <!-- Contact Form Area -->
             <div class="contact-form-area">
-              <form action="{{ route('send_mail') }}" method="post" id="loginForm" class="novalidate">
+              <form action="{{ route('login') }}" method="post" id="loginForm" class="novalidate mb-30">
                 <div class="row">
                   <div class="col-lg-6">
-                    <input type="email" class="form-control" name="email" id="lgnEmail" placeholder="Your Email">
+                    <input type="email" class="form-control" name="login_id" id="lgnEmail" placeholder="Your Email">
+                    {{ csrf_field() }}
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <input type="password" class="form-control" name="password" id="lgnPassword" placeholder="Password">
+                    @if (count($errors) > 0)
+                        @foreach ($errors->all() as $error)
+                        <span class="help-txt has-error">{{ $error }}</span>
+                        @endforeach
+                    @endif
                   </div>
                 </div>
                 <div class="row">
@@ -50,6 +56,12 @@
                   </div>
                 </div>
               </form>
+              <div class="row">
+                  <div class="col-6">
+                    <p><a href="{{ route('password.request') }}">Forgot password</a></p>
+                    <p>Don't have an account? <a href="{{ route('register') }}">Click here</a> to join us</p>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -59,44 +71,37 @@
   @include('includes.quotes')
   <!-- ##### Contact Area End ##### -->
   @push('scripts')
+  <script src="{{url(elixir('js/common.js'))}}"></script>
   <script type="text/javascript">
     $('#loginForm input').on('keypress', function(){
         $(this).parent().removeClass('has-error');
         $('.help-txt').remove();
     });
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
     $('#lgnSubmit').on('click',function(){
         var is_valid = true;
-        if($('#lgnEmail').val() == '') {
-            $('#lgnEmail').parent().addClass('has-error');
-            $('#lgnEmail').focus();
-            $('#lgnEmail').parent().append('<span class="help-txt">Email is required</span>')
+        var inpEmail = $('#lgnEmail');
+        var inpPwd = $('#lgnPassword');
+        $('#loginForm input').removeClass('has-error');
+        $('.help-txt').remove();
+        
+        if(inpEmail.val() == '') {
+            inpEmail.parent().addClass('has-error');
+            inpEmail.focus();
+            inpEmail.parent().append('<span class="help-txt">Email is required</span>')
             is_valid = false;
         }
-        if($('#lgnPassword').val() == '') {
-            $('#lgnPassword').parent().addClass('has-error');
-            $('#lgnPassword').focus();
-            $('#lgnPassword').parent().append('<span class="help-txt">Password is required</span>')
+        if(inpPwd.val() == '') {
+            inpPwd.parent().addClass('has-error');
+            inpPwd.focus();
+            inpPwd.parent().append('<span class="help-txt">Password is required</span>')
             is_valid = false;
         }
         if(is_valid) {
-            var form = $('#lgnSubmit');
+            var form = $('#loginForm');
             var url = form.attr('action');
             $(this).html('Please wait...');
             $(this).attr('disabled','disabled');
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: form.serialize(), // serializes the form's elements.
-                success: function(data)
-                {
-                    $('.contact-form-area').html('<h4>Thank you we will get back to you soon!</h4>')
-                }
-            });
+            form.submit();
         } else {
             return false;
         }

@@ -39,10 +39,10 @@
                     <input type="email" class="form-control" name="email" id="cntEmail" placeholder="Your Email">
                   </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="contact_no" id="cntContactNo" maxlength="10" placeholder="Your Contact no">
+                    <input type="text" class="form-control txt-only-number" name="contact_no" id="cntContactNo" maxlength="10" placeholder="Your Contact no">
                   </div>
                   <div class="col-12">
-                    <textarea name="message" class="form-control" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
+                    <textarea name="message" class="form-control txt-message" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
                   </div>
                   <div class="col-12">
                     <button type="button" class="btn famie-btn" id="sendMsg">Send Message</button>
@@ -63,6 +63,7 @@
   </section>
   <!-- ##### Contact Area End ##### -->
   @push('scripts')
+  <script src="{{url(elixir('js/common.js'))}}"></script>
   <script type="text/javascript">
     $('#contactForm input').on('keypress', function(){
         $(this).parent().removeClass('has-error');
@@ -72,13 +73,11 @@
         $(this).parent().removeClass('has-error');
         $('.help-txt').remove();
     });
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
+    
     $('#sendMsg').on('click',function(){
         var is_valid = true;
+        $(this).parent().removeClass('has-error');
+        $('.help-txt').remove();
         if($('#cntName').val() == '') {
             $('#cntName').parent().addClass('has-error');
             $('#cntName').focus();
@@ -90,7 +89,13 @@
             $('#cntEmail').focus();
             $('#cntEmail').parent().append('<span class="help-txt">Email is required</span>')
             is_valid = false;
+        } else if(isEmail($('#cntEmail').val()) == false) {
+            $('#cntEmail').parent().addClass('has-error');
+            $('#cntEmail').focus();
+            $('#cntEmail').parent().append('<span class="help-txt"> Please enter a valid email</span>')
+            is_valid = false;
         }
+        
         if($('#cntContactNo').val() == '') {
             $('#cntContactNo').parent().addClass('has-error');
             $('#cntContactNo').focus();
