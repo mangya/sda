@@ -15,6 +15,7 @@
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
+        @if (auth()->user()->role == 'Administrator' || auth()->user()->role == 'System Administrator')
         <div class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="top-search" id="top-search" class="form-control" placeholder="Search @yield('search')..." autocomplete="off">
@@ -60,5 +61,6 @@
                 </a>
             </li>
         </ul>
+        @endif
     </section>
 </aside>

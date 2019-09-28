@@ -34,6 +34,7 @@
                         </li>
                         <li class="user-footer">
                             <div class="row">
+                                @if (auth()->user()->role == 'Administrator' || auth()->user()->role == 'System Administrator')
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <a href="{{ route('show.doc', ['slug' => 'user', 'id' => auth()->user()->id]) }}" class="btn btn-default">
                                         Profile
@@ -44,6 +45,7 @@
                                         Settings
                                     </a>
                                 </div>
+                                @endif
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <a href="{{ route('logout') }}" class="btn btn-default">
                                         Logout

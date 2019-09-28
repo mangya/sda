@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 trait PermController
 {
     // get array of all app modules
-    public $modules = ['User','Event','Directory','Quotes','Team'];
+    public $modules = ['User','Event','Directory','Quotes','Team','Blog'];
 
     // restrict data to this roles
     public $roles = ['Administrator', 'Author'];
@@ -35,9 +35,10 @@ trait PermController
                 'Delete' => array_values(array_diff($this->modules, ['Module']))
             ],
             'Author' => [
-                // 'Show' => ['Team'], 
-                // 'Read' => ['Team'],
-                // 'Update' => ['Team']
+                'Show' => ['Blog'], 
+                'Read' => ['Blog'],
+                'Create' => ['Blog'], 
+                'Update' => ['Blog']
             ],
         ];
 
@@ -73,18 +74,21 @@ trait PermController
                 'Delete' => []
             ],
             'Author' => [
-                // 'Read' => [
-                //     'User' => [
-                //         'login_id' => $user_login_id
-                //     ]
-                // ],
-                // 'Update' => [
-                //     'User' => [
-                //         'id' => $user_id,
-                //         'login_id' => $user_login_id,
-                //         'role' => 'Guest'
-                //     ]
-                // ]
+                'Create' => [
+                    'Blog' => [
+                        'owner' => $user_login_id
+                    ]
+                ],
+                'Read' => [
+                    'Blog' => [
+                        'owner' => $user_login_id
+                    ]
+                ],
+                'Update' => [
+                    'Blog' => [
+                        'owner' => $user_login_id,
+                    ]
+                ]
             ],
         ];
 
