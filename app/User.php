@@ -29,4 +29,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function create($name, $email, $password, $role)
+    {
+        $user = new User();
+        $user->full_name = $name;
+        $user->login_id = $user->email = $email;
+        $user->password = bcrypt($password);
+        $user->role = $role;
+        $user->owner = $email;
+        $user->last_updated_by = $email;
+        $user->save();
+    }
 }

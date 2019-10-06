@@ -33,25 +33,41 @@
             </div>
             <!-- Contact Form Area -->
             <div class="contact-form-area">
-              <form action="{{ route('send_mail') }}" method="post" id="registerForm" class="novalidate mb-30">
+              <form action="{{ route('submit.register') }}" method="post" id="registerForm" class="novalidate">
                 <div class="row">
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="name" id="regName" placeholder="Your Name">
+                  <div class="col-lg-6 @if ($errors->has('name')) has-error @endif">
+                    <input type="text" class="form-control" name="name" id="regName" placeholder="Your Name" value="{{ old('name') }}" />
+                    @if ($errors->has('name'))
+                    <span class="help-txt">{{ $errors->first('name') }}</span>
+                    @endif
+                    {{ csrf_field() }}
                   </div>
-                  <div class="col-lg-6">
-                    <input type="email" class="form-control" name="email" id="regEmail" placeholder="Your Email">
+                  <div class="col-lg-6 @if ($errors->has('email')) has-error @endif">
+                    <input type="email" class="form-control" name="email" id="regEmail" placeholder="Your Email" value="{{ old('email') }}" />
+                    @if ($errors->has('email'))
+                    <span class="help-txt">{{ $errors->first('email') }}</span>
+                    @endif
                   </div>
-                  <div class="col-lg-6">
-                    <input type="password" class="form-control" name="password" id="regPasword" placeholder="Password">
+                  <div class="col-lg-6 @if ($errors->has('password')) has-error @endif">
+                    <input type="password" class="form-control" name="password" id="regPasword" placeholder="Password"/>
+                    @if ($errors->has('password'))
+                    <span class="help-txt">{{ $errors->first('password') }}</span>
+                    @endif
                   </div>
-                  <div class="col-lg-6">
-                    <input type="password" class="form-control" name="confirm_password" id="regConfirmPasword" placeholder="Confirm Password">
+                  <div class="col-lg-6 @if ($errors->has('password_confirmation')) has-error @endif">
+                    <input type="password" class="form-control" name="password_confirmation" id="regConfirmPasword" placeholder="Confirm Password"/>
+                    @if ($errors->has('password_confirmation'))
+                    <span class="help-txt">{{ $errors->first('password_confirmation') }}</span>
+                    @endif
                   </div>
+                </div>
+                <div class="row">
                   <!-- <div class="col-12">
                     <textarea name="message" class="form-control" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
                   </div> -->
                   <div class="col-12">
-                    <button type="button" class="btn famie-btn" id="regSubmit">Submit</button>
+                    <button class="btn famie-btn mb-15" id="regSubmit">Sign up</button>
+                    <p>By clicking “Sign up”, you acknowledge that you have read and agree to our <a href="{{ route('terms') }}" target="_blank">terms of use</a> and <a href="{{ route('privacy_policy') }}" target="_blank">privacy policy</a></p>
                   </div>
                 </div>
               </form>

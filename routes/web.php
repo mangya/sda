@@ -17,6 +17,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'show.website', 'uses' => 'HomeController@showHome']);
     Route::get('/about', ['as' => 'about', 'uses' => 'HomeController@showAbout']);
+    Route::get('/terms-of-use', ['as' => 'terms', 'uses' => 'HomeController@showTerms']);
+    Route::get('/privacy-policy', ['as' => 'privacy_policy', 'uses' => 'HomeController@showPrivacyPolicy']);
     Route::get('/events', ['as' => 'events', 'uses' => 'HomeController@showEvents']);
     Route::get('/news', ['as' => 'news', 'uses' => 'HomeController@showNews']);
     Route::get('/directory', ['as' => 'directory', 'uses' => 'DirectoryController@showDirectory']);

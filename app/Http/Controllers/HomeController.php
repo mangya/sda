@@ -4,7 +4,9 @@ namespace SDA\Http\Controllers;
 
 use Mail;
 use Auth;
+use SDA\User;
 use SDA\Team;
+use Validator;
 use SDA\Quotes;
 use SDA\Messages;
 use SDA\Testimonials;
@@ -42,6 +44,16 @@ class HomeController extends Controller
     public function showNews()
     {
     	return view('website.news');
+    }
+
+    public function showTerms()
+    {
+        return view('website.terms');
+    }
+
+    public function showPrivacyPolicy()
+    {
+        return view('website.privacy_policy');
     }
 
     public function showContactUs()
@@ -86,8 +98,8 @@ class HomeController extends Controller
         $contact_no = $data['contact_no'] = trim($request->get('contact_no'));
         $message_txt = $data['message'] = trim($request->get('message'));
 
-        // Mail::to('swachhadombivli@gmail.com')
-        //     ->send(new ContactMessage($data));
+        Mail::to('swachhadombivli@gmail.com')
+             ->send(new ContactMessage($data));
 
         $message = new Messages();
         $message->create($name, $email, $contact_no, $message_txt);
@@ -105,5 +117,26 @@ class HomeController extends Controller
     {
         $quotes = Quotes::where('is_active',1)->get();
         return view('website.register', compact('quotes'));
+    }
+
+    public function register(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email|unique:oc_users',
+            'name' => 'required',
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('register')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
+        $user = new User();
+        $user->create($request->get('name'), $request->get('email'), $request->get('password'), 'Member');
+        return redirect()->back();
     }
 }

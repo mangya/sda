@@ -562,7 +562,7 @@ function beautifyListView(list_view) {
 	var label_bg = {
 		'is_active' : { '1' : {'value': 'Yes', 'label': 'label-success'}, '0' : {'value': 'No', 'label': 'label-danger'} }, 
 		'is_approved' : { '1' : {'value': 'Yes', 'label': 'label-success'}, '0' : {'value': 'No', 'label': 'label-danger'} }, 
-		'role' : { 'Administrator' : 'label-default', 'Guest' : 'label-info' }, 
+		'role' : { 'Administrator' : 'label-default', 'Member' : 'label-info', 'Author' : 'label-warning' }, 
 		'show_in_module_section' : { '1' : 'label-success', '0' : 'label-danger' }, 
 	}
 
