@@ -80,6 +80,8 @@
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
+			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="{{route('downloads')}}">Downloads</a></li>
+
 			</ul>
 			<!-- Search Icon -->
 			<!-- 

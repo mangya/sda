@@ -94,4 +94,9 @@ class HomeController extends Controller
 
         return redirect()->back();
     }
+
+    public function showDownloads()
+    {
+        return view('website.downloads');
+    }
 }
