@@ -1,4 +1,5 @@
 @extends('layouts.website_layout')
+@section('description', $blog->author->full_name)
 @section('title', $blog->title)
 @section('page_content')
   <!-- ##### Breadcrumb Area Start ##### -->

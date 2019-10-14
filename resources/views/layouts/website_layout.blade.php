@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Swachha Dombivli Abhiyan">
+	<meta name="description" content="@yield('description','Swachha Dombivli Abhiyan')">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta property="og:image" content="{{asset('website/img/core-img/logo.jpg')}}">
