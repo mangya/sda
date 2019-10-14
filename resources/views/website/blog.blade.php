@@ -1,5 +1,5 @@
 @extends('layouts.website_layout')
-@section('title','About us')
+@section('title', $blog->title)
 @section('page_content')
   <!-- ##### Breadcrumb Area Start ##### -->
   <div class="famie-breadcrumb">
