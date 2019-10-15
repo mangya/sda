@@ -93,6 +93,15 @@ class HomeController extends Controller
 
     public function sendContactMessage(Request $request)
     {
+
+        $messages = ['captcha.captcha'=>'Invalid captcha code.']; 
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'contact_no' => 'required|numeric|min:10',
+            'captcha' => 'required|captcha'
+        ],$messages);
+
         $email = $data['email'] = trim($request->get('email'));
         $name = $data['name'] = trim($request->get('name'));
         $contact_no = $data['contact_no'] = trim($request->get('contact_no'));
@@ -103,8 +112,14 @@ class HomeController extends Controller
 
         $message = new Messages();
         $message->create($name, $email, $contact_no, $message_txt);
+        return response()->json(['success'=>'Record is successfully added']);
 
-        return redirect()->back();
+        //return redirect()->back();
+    }
+
+    public function refreshCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img('flat')]);
     }
 
     public function showWebLogin()

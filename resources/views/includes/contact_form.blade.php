@@ -29,6 +29,10 @@
               <img src="website/img/core-img/decor.png" alt="">
             </div>
             <!-- Contact Form Area -->
+
+            <div id="errors-div"> </div>
+
+            
             <div class="contact-form-area">
               <form action="{{ route('send_mail') }}" method="post" id="contactForm" class="novalidate">
                 <div class="row">
@@ -44,6 +48,13 @@
                   <div class="col-12">
                     <textarea name="message" class="form-control txt-message" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
                   </div>
+                  <div class="captcha col-12" style="margin-bottom: 10px">
+                    <span>{!! captcha_img('flat') !!}</span>
+                    <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
+                  </div>
+                  <div class="col-12">
+                    <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+                  </div>  
                   <div class="col-12">
                     <button type="button" class="btn famie-btn" id="sendMsg">Send Message</button>
                   </div>
@@ -108,6 +119,12 @@
             $('#txtMessage').parent().append('<span class="help-txt">Please write a message</span>')
             is_valid = false;
         }
+        if($('#captcha').val() == '') {
+            $('#captcha').parent().addClass('has-error');
+            $('#captcha').focus();
+            $('#captcha').parent().append('<span class="help-txt">Please Enter Captcha</span>')
+            is_valid = false;
+        }
         if(is_valid) {
             var form = $('#contactForm');
             var url = form.attr('action');
@@ -119,12 +136,38 @@
                 data: form.serialize(), // serializes the form's elements.
                 success: function(data)
                 {
+                    $("#errors-div").empty();
                     $('.contact-form-area').html('<h4>Thank you we will get back to you soon!</h4>')
+                },
+                error: function(data) {
+                var obj = $.parseJSON(JSON.stringify(data));
+                var errors = obj.responseJSON.errors;
+                //console.log(obj.responseJSON.errors);
+                  $("#errors-div").empty();
+                  $("#errors-div").append('<h3>Please Correct The Following</h3>');
+                  $.each(errors, function(key, value){
+                      $("#errors-div").append('<span class="text-danger">'+ value +'</span> <br>');
+                  });
+                  $("#sendMsg").prop( "disabled", false );
+                  $("#sendMsg").html('Send Message'); //enable it back
                 }
             });
         } else {
             return false;
         }
-    })
+    });
+
+    $('#refresh').click(function(){
+    $.ajax({
+       type:'GET',
+       url:'refreshcaptcha',
+       success:function(data){
+          $(".captcha span").html(data.captcha);
+       }
+    });
+  });
+
+
   </script>
+
   @endpush
