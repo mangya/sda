@@ -80,7 +80,12 @@
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
-			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="{{route('downloads')}}">Downloads</a></li>
+			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="{{route('downloads')}}">Downloads</a>
+			  	<ul class="dropdown">
+				  <li><a href="{{route('downloads')}}">KDMC Documents</a></li>
+				  <li><a href="{{route('downloads')}}">Other Useful Documents</a></li>
+				</ul>
+			  </li>
 
 			</ul>
 			<!-- Search Icon -->

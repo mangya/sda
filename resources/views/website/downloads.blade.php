@@ -22,7 +22,7 @@
           <div class="about-us-content content mb-100">
             <!-- Section Heading -->
             <div class="section-heading">
-              <h2>Downloads</h2>
+              <h2><span>KDMC</span> Gazettes</h2>
               <img src="img/core-img/decor.png" alt="">
             </div>
             
@@ -33,9 +33,18 @@
                       <img src="website/img/core-img/pdf.png" alt="">
                     </div>
                     <div class="post-content">
-                      <h5>KDMC Document</h5>
-                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">US milk production continues its upward trajectory for 2018 asd adasd asdasda dads das dasd ada dasd ada da dasdad adada dad adadadadas adas dasdas daas da sdasda dad asdaaaaaas sda dasda dad a dada sda dadadadadadadadadadad</a>
-                      
+                      <h5>Construction and Demolition Waste Management Rules, 2016</h5>
+                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">
+                        <b>The Gazette of India
+                        Title - Construction and Demolition Waste Management Rules, 2016
+                        Published in the Gazette of India, part-II, Section-3, Sub-section (ii)
+                        </b>
+                       </br>
+                        <b>Summary -</b>
+                        The draft rules, provided a regulatory framework for Management of construction and Demolition Waste generated in the urban area of the country.
+                        The rules apply to every waste resulting from construction, remodeling, repair and demolition of any civil structure of individual or organisation or authority who generates construction and demolition waste such as building material, debris, rubble.
+                        The PDF describes duties, criterias, applications forms wth refernce to the activities covered under the Gazetted rule. 
+                      </a>
                     </div>
                   </div>
 
@@ -44,9 +53,18 @@
                       <img src="website/img/core-img/pdf.png" alt="">
                     </div>
                     <div class="post-content">
-                      <h5>KDMC Document</h5>
-                      <a href="storage/file-sample_150kB.pdf" class="post-title">US milk production continues its upward trajectory for 2018 asd adasd asdasda dads das dasd ada dasd ada da dasdad adada dad adadadadas adas dasdas daas da sdasda dad asdaaaaaas sda dasda dad a dada sda dadadadadadadadadadad</a>
-                      
+                      <h5>Construction and Demolition Waste Management Rules, 2016</h5>
+                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">
+                        <b>The Gazette of India
+                        Title - Construction and Demolition Waste Management Rules, 2016
+                        Published in the Gazette of India, part-II, Section-3, Sub-section (ii)
+                        </b>
+                       </br>
+                        <b>Summary -</b>
+                        The draft rules, provided a regulatory framework for Management of construction and Demolition Waste generated in the urban area of the country.
+                        The rules apply to every waste resulting from construction, remodeling, repair and demolition of any civil structure of individual or organisation or authority who generates construction and demolition waste such as building material, debris, rubble.
+                        The PDF describes duties, criterias, applications forms wth refernce to the activities covered under the Gazetted rule. 
+                      </a>
                     </div>
                   </div>
 
@@ -55,9 +73,18 @@
                       <img src="website/img/core-img/pdf.png" alt="">
                     </div>
                     <div class="post-content">
-                      <h5>KDMC Document</h5>
-                      <a href="storage/file-sample_150kB.pdf" class="post-title">US milk production continues its upward trajectory for 2018 asd adasd asdasda dads das dasd ada dasd ada da dasdad adada dad adadadadas adas dasdas daas da sdasda dad asdaaaaaas sda dasda dad a dada sda dadadadadadadadadadad</a>
-                      
+                      <h5>Construction and Demolition Waste Management Rules, 2016</h5>
+                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">
+                        <b>The Gazette of India
+                        Title - Construction and Demolition Waste Management Rules, 2016
+                        Published in the Gazette of India, part-II, Section-3, Sub-section (ii)
+                        </b>
+                       </br>
+                        <b>Summary -</b>
+                        The draft rules, provided a regulatory framework for Management of construction and Demolition Waste generated in the urban area of the country.
+                        The rules apply to every waste resulting from construction, remodeling, repair and demolition of any civil structure of individual or organisation or authority who generates construction and demolition waste such as building material, debris, rubble.
+                        The PDF describes duties, criterias, applications forms wth refernce to the activities covered under the Gazetted rule. 
+                      </a>
                     </div>
                   </div>
 
@@ -66,9 +93,18 @@
                       <img src="website/img/core-img/pdf.png" alt="">
                     </div>
                     <div class="post-content">
-                      <h5>KDMC Document</h5>
-                      <a href="storage/file-sample_150kB.pdf" class="post-title">US milk production continues its upward trajectory for 2018 asd adasd asdasda dads das dasd ada dasd ada da dasdad adada dad adadadadas adas dasdas daas da sdasda dad asdaaaaaas sda dasda dad a dada sda dadadadadadadadadadad</a>
-                      
+                      <h5>Construction and Demolition Waste Management Rules, 2016</h5>
+                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">
+                        <b>The Gazette of India
+                        Title - Construction and Demolition Waste Management Rules, 2016
+                        Published in the Gazette of India, part-II, Section-3, Sub-section (ii)
+                        </b>
+                       </br>
+                        <b>Summary -</b>
+                        The draft rules, provided a regulatory framework for Management of construction and Demolition Waste generated in the urban area of the country.
+                        The rules apply to every waste resulting from construction, remodeling, repair and demolition of any civil structure of individual or organisation or authority who generates construction and demolition waste such as building material, debris, rubble.
+                        The PDF describes duties, criterias, applications forms wth refernce to the activities covered under the Gazetted rule. 
+                      </a>
                     </div>
                   </div>
 
@@ -77,9 +113,18 @@
                       <img src="website/img/core-img/pdf.png" alt="">
                     </div>
                     <div class="post-content">
-                      <h5>KDMC Document</h5>
-                      <a href="storage/file-sample_150kB.pdf" class="post-title">US milk production continues its upward trajectory for 2018 asd adasd asdasda dads das dasd ada dasd ada da dasdad adada dad adadadadas adas dasdas daas da sdasda dad asdaaaaaas sda dasda dad a dada sda dadadadadadadadadadad</a>
-                      
+                      <h5>Construction and Demolition Waste Management Rules, 2016</h5>
+                      <a href="storage/file-sample_150kB.pdf" download="KDMC-Documnet" class="post-title">
+                        <b>The Gazette of India
+                        Title - Construction and Demolition Waste Management Rules, 2016
+                        Published in the Gazette of India, part-II, Section-3, Sub-section (ii)
+                        </b>
+                       </br>
+                        <b>Summary -</b>
+                        The draft rules, provided a regulatory framework for Management of construction and Demolition Waste generated in the urban area of the country.
+                        The rules apply to every waste resulting from construction, remodeling, repair and demolition of any civil structure of individual or organisation or authority who generates construction and demolition waste such as building material, debris, rubble.
+                        The PDF describes duties, criterias, applications forms wth refernce to the activities covered under the Gazetted rule. 
+                      </a>
                     </div>
                   </div>
 
