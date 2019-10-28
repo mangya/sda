@@ -38,7 +38,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/projects/forestation', ['as' => 'forestation', 'uses' => 'HomeController@showForestation']);
     
     Route::get('/contact-us', ['as' => 'contact_us', 'uses' => 'HomeController@showContactUs']);
-    Route::get('/downloads', ['as' => 'downloads', 'uses' => 'HomeController@showDownloads']);
+    Route::get('/kdmc-downloads', ['as' => 'kdmc_downloads', 'uses' => 'HomeController@showKdmcDownloads']);
     
     // Authentication routes...
     Route::get('/login', function() {

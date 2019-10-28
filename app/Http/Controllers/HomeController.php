@@ -95,8 +95,8 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function showDownloads()
+    public function showKdmcDownloads()
     {
-        return view('website.downloads');
+        return view('website.kdmc_downloads');
     }
 }
