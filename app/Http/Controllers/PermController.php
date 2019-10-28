@@ -76,17 +76,17 @@ trait PermController
             'Author' => [
                 'Create' => [
                     'Blog' => [
-                        'owner' => $user_login_id
+                        'user_id' => $user_id
                     ]
                 ],
                 'Read' => [
                     'Blog' => [
-                        'owner' => $user_login_id
+                        'user_id' => $user_id
                     ]
                 ],
                 'Update' => [
                     'Blog' => [
-                        'owner' => $user_login_id,
+                        'user_id' => $user_id,
                     ]
                 ]
             ],

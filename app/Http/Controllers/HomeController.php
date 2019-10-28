@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function showHome()
     {
         if (Auth::check()) {
-            if(auth()->user()->role == "System Administrator" || auth()->user()->role == "Administrator") {
+            if(auth()->user()->role == "System Administrator" || auth()->user()->role == "Administrator" || auth()->user()->role == "Author") {
                 return redirect()->route('show.app.modules');
             }
         }
@@ -140,6 +140,7 @@ class HomeController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:oc_users',
             'name' => 'required',
+            'mobile' => 'required',
             'password' => 'required|min:6|confirmed',
             'password_confirmation' => 'required',
         ]);
@@ -151,7 +152,7 @@ class HomeController extends Controller
         }
 
         $user = new User();
-        $user->create($request->get('name'), $request->get('email'), $request->get('password'), 'Member');
+        $user->create($request->get('name'), $request->get('email'), $request->get('mobile'), $request->get('password'), 'Member');
         return redirect()->back();
     }
 }

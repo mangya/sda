@@ -34,7 +34,7 @@ class BlogController extends Controller
 
     public function showBlogList()
     {
-        $blogs = Blog::where('is_active',1)->with('author')->get();
+        $blogs = Blog::where('is_active',1)->with('author')->orderBy('created_at','desc')->get();
         return view('website.blog_list',compact('blogs'));
     }
 

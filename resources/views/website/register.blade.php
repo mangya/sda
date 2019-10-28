@@ -60,6 +60,12 @@
                     <span class="help-txt">{{ $errors->first('password_confirmation') }}</span>
                     @endif
                   </div>
+                  <div class="col-lg-6 @if ($errors->has('mobile')) has-error @endif">
+                    <input type="text" class="form-control" name="mobile" id="regMobile" placeholder="Mobile"/>
+                    @if ($errors->has('mobile'))
+                    <span class="help-txt">{{ $errors->first('mobile') }}</span>
+                    @endif
+                  </div>
                 </div>
                 <div class="row">
                   <!-- <div class="col-12">
@@ -95,6 +101,7 @@
         var is_valid = true;
         var inpName = $('#regName');
         var inpEmail = $('#regEmail');
+        var inpMobile = $('#regMobile');
         var inpPwd = $('#regPasword');
         var inpCnfPwd = $('#regConfirmPasword');
         $('#registerForm input').removeClass('has-error');
@@ -136,6 +143,12 @@
             inpCnfPwd.parent().addClass('has-error');
             inpCnfPwd.focus();
             inpCnfPwd.parent().append('<span class="help-txt">Password do not match</span>');
+        }
+        if(inpMobile.val() == '') {
+            inpMobile.parent().addClass('has-error');
+            inpMobile.focus();
+            inpMobile.parent().append('<span class="help-txt">Mobile is required</span>');
+            is_valid = false;
         }
         if(is_valid) {
             var form = $('#registerForm');
