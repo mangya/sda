@@ -33,7 +33,7 @@
             <div class="section-heading mb-15">
               <p>Campaigns</p>
               <h2><span>Waste</span> Management</h2>
-              <img src="img/core-img/decor.png" alt="">
+              <img src="{{asset('img/core-img/decor.png')}}" alt="">
             </div>
             <p>Waste management is the activities and actions required to manage waste from its inception to its final disposal. This includes the collection, transport, treatment and disposal of waste, together with monitoring and regulation of the waste management process. Generally, waste is categorized within 5 categories: Liquid waste; Solid waste; Organic waste; Recyclable waste and Hazardous waste. We, have focused on the nearest and the possible waste that needs attention and can be looked into it.  Landfills are an increasingly pressing problem. Less and less land is available to deposit refuse, but the volume of waste is growing. As a result, segregating waste is not just of environmental importance, but also of economic concern.</p>
           </div>
@@ -99,7 +99,7 @@
           <div class="section-heading text-center">
             <p>HAVE A QUESTION?</p>
             <h2><span>Get answers</span> to FAQs about waste management</h2>
-            <img src="img/core-img/decor2.png" alt="">
+            <img src="{{ asset('img/core-img/decor2.png') }}" alt="">
           </div>
         </div>
       </div>

@@ -82,6 +82,7 @@
 				  </li>
 				</ul>
 			  </li>
+			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
 			</ul>
 			<!-- Search Icon -->

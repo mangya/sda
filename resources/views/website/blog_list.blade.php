@@ -26,7 +26,7 @@
               <a href="{{ route('show.blog',['code' => $blog->code]) }}" class="post-title">{{ $blog->title }}</a>
               <!-- <img src="img/bg-img/26.jpg" alt="" class="post-thumb"> -->
               <p class="post-excerpt">
-                {{ substr(strip_tags($blog->content),0,400).'...' }}
+                {{ mb_substr(strip_tags($blog->content),0,400).'...' }}
               </p>
             </div>
             @endforeach
