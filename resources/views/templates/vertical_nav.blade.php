@@ -60,6 +60,12 @@
                     <span>Settings</span>
                 </a>
             </li>
+            <li class="treeview" title="Settings">
+                <a href="{{ route('show.app.2fa') }}">
+                    <i class="fa fa-cogs"></i>
+                    <span>Google 2fa</span>
+                </a>
+            </li>
         </ul>
         @endif
     </section>

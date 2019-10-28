@@ -76,6 +76,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/app/reports', ['as' => 'show.app.reports', 'uses' => 'ReportController@show']);
         Route::get('/app/activities', ['as' => 'show.app.activities', 'uses' => 'ActivityController@show']);
         Route::get('/app/settings', ['as' => 'show.app.settings', 'uses' => 'SettingsController@show']);
+        Route::get('/app/2fa', ['as' => 'show.app.2fa', 'uses' => 'GoogleAuthenticatorController@showQrCode']);
         Route::post('/app/settings', ['as' => 'save.app.settings', 'uses' => 'SettingsController@save']);
         Route::post('/update_module_sequence', ['as' => 'update.module.sequence', 'uses' => 'ModuleController@updateSequence']);
         Route::post('/import_from_csv', ['as' => 'import.from.csv', 'uses' => 'ImportController@import']);
