@@ -4,13 +4,16 @@ namespace SDA\Http\Controllers;
 
 use Mail;
 use Auth;
+use SDA\OTP;
 use SDA\User;
 use SDA\Team;
+use SDA\Blog;
 use Validator;
 use SDA\Quotes;
 use SDA\Messages;
 use SDA\Testimonials;
 use SDA\Mail\ContactMessage;
+use SDA\Mail\OTPMessage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,9 +26,10 @@ class HomeController extends Controller
             }
         }
 
+        $blogs = Blog::where('is_active',1)->with('author')->orderBy('created_at','desc')->limit(2)->get();
         $quotes = Quotes::where('is_active',1)->get();
 
-        return view('website.home', compact('quotes'));
+        return view('website.home', compact('quotes','blogs'));
     }
 
     public function showAbout()
@@ -152,7 +156,37 @@ class HomeController extends Controller
         }
 
         $user = new User();
-        $user->create($request->get('name'), $request->get('email'), $request->get('mobile'), $request->get('password'), 'Member');
+        $user_id = $user->create($request->get('name'), $request->get('email'), $request->get('mobile'), $request->get('password'), 'Member');
+
+        if(!empty($user_id)) {
+
+            $data['otp'] = $this->generateOTP();
+
+            $otp = new OTP();
+            $otp->otp_for = $request->get('email');
+            $otp->otp = $data['otp'];
+            $otp->is_active = 1;
+            $otp->save();
+
+            Mail::to($request->get('email'))
+                ->send(new OTPMessage($data));
+            return response()->json(['status'=>'success','msg'=>'User is successfully registered']);
+        }
+
         return redirect()->back();
+        
+    }
+
+    protected function generateOTP()
+    {
+        $otp = '';
+        while(empty($otp)) {
+            $otp = generate_password(4, true);
+            $otp_exists = OTP::where(['otp' => $otp,'is_active' => 0])->pluck('otp')->first();
+            if(!empty($otp_exists)) {
+                $otp = '';
+            }
+        }
+        return $otp;
     }
 }

@@ -61,7 +61,7 @@
                     @endif
                   </div>
                   <div class="col-lg-6 @if ($errors->has('mobile')) has-error @endif">
-                    <input type="text" class="form-control" name="mobile" id="regMobile" placeholder="Mobile"/>
+                    <input type="text" class="form-control txt-only-number" maxlength="10" name="mobile" id="regMobile" placeholder="Mobile" value="{{ old('mobile') }}" />
                     @if ($errors->has('mobile'))
                     <span class="help-txt">{{ $errors->first('mobile') }}</span>
                     @endif
@@ -72,7 +72,7 @@
                     <textarea name="message" class="form-control" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
                   </div> -->
                   <div class="col-12">
-                    <button class="btn famie-btn mb-15" id="regSubmit">Sign up</button>
+                    <button type="button" class="btn famie-btn mb-15" id="regSubmit">Sign up</button>
                     <p>By clicking “Sign up”, you acknowledge that you have read and agree to our <a href="{{ route('terms') }}" target="_blank">terms of use</a> and <a href="{{ route('privacy_policy') }}" target="_blank">privacy policy</a></p>
                   </div>
                 </div>
@@ -161,7 +161,8 @@
                 data: form.serialize(), // serializes the form's elements.
                 success: function(data)
                 {
-                    $('.contact-form-area').html('<h4>Thank you we will get back to you soon!</h4>')
+                    //$('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><h4 class="text-primary">To verify your email we have sent a OTP on your email. Please verify your email by entering the OTP.</h4>');
+                    $('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><p class="text-primary">We will contact you soon to verify you account.</p>');
                 }
             });
         } else {

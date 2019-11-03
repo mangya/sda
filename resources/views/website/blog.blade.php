@@ -1,5 +1,11 @@
 @extends('layouts.website_layout')
 @section('description', $blog->author->full_name)
+@push('meta')
+<meta property="og:url"           content="{{ route('show.blog',['code' => $blog->code]) }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Swachha Dombivli Abhiyan" />
+    <meta property="og:description"   content="{{$blog->title}}" />
+@endpush
 @section('title', $blog->title)
 @section('page_content')
   <!-- ##### Breadcrumb Area Start ##### -->
@@ -33,6 +39,10 @@
                   <!-- <a href="#"><i class="fa fa-facebook"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a> -->
                   <a href="https://api.whatsapp.com/send?text={{ url('/blog').'/'.$blog->code }}" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                  <div class="fb-share-button" 
+                    data-href="{{ route('show.blog',['code' => $blog->code]) }}" 
+                    data-layout="button">
+                  </div>
                 </div>
               </div>
             </div>
@@ -43,3 +53,14 @@
   </section>
   <!-- ##### Blog Area End ##### -->
 @endsection
+@push('scripts')
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+@endpush

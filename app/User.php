@@ -41,5 +41,7 @@ class User extends Authenticatable
         $user->owner = $email;
         $user->last_updated_by = $email;
         $user->save();
+
+        return $user->id;
     }
 }

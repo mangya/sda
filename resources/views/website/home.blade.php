@@ -83,35 +83,52 @@
   </section>
   <section class="about-us-area section-padding-40-0">
     <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-heading">
-              <h2><span>Area</span> of Work</h2>
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-heading">
+                <h2><span>Area</span> of Work</h2>
+                <img src="website/img/core-img/decor.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-50" style="text-align: justify;">
+              <p>Understanding the problems and requirements of the city the team derived at the key cause of pollution – <strong>NO PROPER WASTE MANAGEMENT</strong>.  In order to create awareness among the people and provide different solutions to them the team focused on main two categories of waste management.</p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="100ms">
+                <div class="service-title mb-3 d-flex align-items-center">
+                  <h5>Wet Waste Management</h5>
+                </div>
+                <p style="text-align: justify;">Wet waste can be easily broken down and eliminated at its formation itself. Team SDA, strives to provide guidance through its seminars and individual consulting at different levels of the society. </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="300ms">
+                <div class="service-title mb-3 d-flex align-items-center">
+                  <h5>Dry waste management</h5>
+                </div>
+                <p style="text-align: justify;">The team conduct seminars that provide easy solutions for segregation of different types of dry household waste and its proper management. A key step towards dry waste manage is forming a chain of Scrap collector/ recyclers (Bhangarwala).</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 mb-50" style="text-align: justify;">
-            <p>Understanding the problems and requirements of the city the team derived at the key cause of pollution – <strong>NO PROPER WASTE MANAGEMENT</strong>.  In order to create awareness among the people and provide different solutions to them the team focused on main two categories of waste management.</p>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-              <div class="service-title mb-3 d-flex align-items-center">
-                <h5>Wet Waste Management</h5>
+        <div class="col-12 col-md-5">
+            <h5><span>Blogs</h5>
+            @foreach($blogs as $blog)
+            <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+              <div class="post-content">
+                <h6>Post on {{ date('d M Y', strtotime($blog->created_at)) }} / {{ $blog->author->full_name }}</h6>
+                <a href="{{ route('show.blog',['code' => $blog->code]) }}" class="post-title">{{ $blog->title }}</a>
+                <p class="post-excerpt">{{ mb_substr(strip_tags($blog->content),0,150).'...' }}</p>
               </div>
-              <p style="text-align: justify;">Wet waste can be easily broken down and eliminated at its formation itself. Team SDA, strives to provide guidance through its seminars and individual consulting at different levels of the society. </p>
             </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-              <div class="service-title mb-3 d-flex align-items-center">
-                <h5>Dry waste management</h5>
-              </div>
-              <p style="text-align: justify;">The team conduct seminars that provide easy solutions for segregation of different types of dry household waste and its proper management. A key step towards dry waste manage is forming a chain of Scrap collector/ recyclers (Bhangarwala).</p>
-            </div>
-          </div>
+            @endforeach
         </div>
       </div>
+    </div>
   </section>
   @include('includes.quotes')
   @include('includes.contact_form')
