@@ -40,6 +40,7 @@ mix.scripts([
     'resources/assets/plugins/trumbowyg/plugins/colors/trumbowyg.colors.min.js',
     'resources/assets/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js',
     'resources/assets/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js',
     'resources/assets/js/app.min.js',
     'resources/assets/js/origin/origin.js',
     'resources/assets/js/webfontloader.js',
@@ -112,3 +113,7 @@ mix.scripts([
     'resources/assets/website/js/jarallax-video.min.js',
     'resources/assets/website/js/active.js',
 ], 'public/js/vendor.js').version();
+
+mix.scripts([
+    'resources/assets/website/js/common.js'
+], 'public/js/common.js').version();

@@ -1,4 +1,7 @@
 <style type="text/css">
+	body { 
+	   overflow-x: hidden;
+	}
 	.brand-name {
 	  font-size: 27px !important;
 	  font-weight: 800 !important;
@@ -79,6 +82,7 @@
 				  </li>
 				</ul>
 			  </li>
+			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
 			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="#">Downloads</a>
 			  	<ul class="dropdown">

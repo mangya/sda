@@ -40,8 +40,10 @@
                   <img src="{{asset($item->image)}}" alt="">
                 </div>
                 <div class="post-content">
-                  <a href="#" class="post-title">{!!$item->short_info!!}</a>
+                  <div class="post-title">{!!$item->short_info!!}</div>
                   <div class="post-date">{{$item->address}}</div>
+                  <div class="post-date">{{$item->contact_person}}</div>
+                  <div class="post-date">{{$item->contact_no}}</div>
                 </div>
               </div>
               @endforeach

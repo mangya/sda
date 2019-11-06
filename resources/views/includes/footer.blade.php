@@ -19,7 +19,7 @@
                       <a href="https://twitter.com/SwachhaDombivli" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/swachhadombivliabhiyan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span> Instagram</span></a>
+                      <a href="https://www.instagram.com/swachha_dombivli_abhiyan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span> Instagram</span></a>
                     </li>
                   </ul>
                 </nav>

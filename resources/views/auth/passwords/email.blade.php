@@ -3,20 +3,26 @@
     <head>
         <title>Forgot Password - {{ config('app.brand.name') }}</title>
         @include('templates.headers')
+        <style type="text/css">
+            .lgnbox {
+                box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+                background: #3c8dbc63;
+            }
+        </style>
     </head>
-    <body class="hold-transition login-page">
+    <body class="hold-transition">
         <div class="login-box">
             <div class="login-logo">
                 <a href="{{ route('show.website') }}" title="{{ config('app.brand.name') }}">
                     @if (file_exists('img/logo.svg'))
-                        <img src="{{ asset('img/logo.svg') }}" alt="{{ config('app.brand.name') }}" width="100" height="100">
+                        <img src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.brand.name') }}" width="100" height="100">
                     @else
                         <b>{{ config('app.brand.abbr') }}</b>
                     @endif
                 </a>
             </div>
             <!-- /.login-logo -->
-            <div class="login-box-body">
+            <div class="login-box-body lgnbox">
                 <p class="login-box-msg">Forgot Password</p>
                 <form action="{{ route('password.email') }}" method="POST" name="password_email" id="password_email">
                     @if (session()->has('status'))

@@ -17,7 +17,7 @@
   <!-- ##### About Us Area Start ##### -->
   <section class="about-us-area">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center" style="text-align: justify;">
 
         <!-- About Us Thumbnail -->
         <div class="col-12 col-lg-6">
@@ -33,7 +33,7 @@
             <div class="section-heading mb-15">
               <p>Campaigns</p>
               <h2><span>Waste</span> Management</h2>
-              <img src="img/core-img/decor.png" alt="">
+              <img src="{{asset('img/core-img/decor.png')}}" alt="">
             </div>
             <p>Waste management is the activities and actions required to manage waste from its inception to its final disposal. This includes the collection, transport, treatment and disposal of waste, together with monitoring and regulation of the waste management process. Generally, waste is categorized within 5 categories: Liquid waste; Solid waste; Organic waste; Recyclable waste and Hazardous waste. We, have focused on the nearest and the possible waste that needs attention and can be looked into it.  Landfills are an increasingly pressing problem. Less and less land is available to deposit refuse, but the volume of waste is growing. As a result, segregating waste is not just of environmental importance, but also of economic concern.</p>
           </div>
@@ -62,7 +62,8 @@
             <p><strong>Dry waste Management</strong></p>
             <p>To influence residents through “Swachha Dombivli Abhiyan” we have conducted seminars that provide easy solutions for segregation of different types of household waste and its proper management. Through the seminars, the audiences were made realized about the seriousness of the current predicament in our city and the following repercussions that might occur if not dealt with. We have defined the dry and wet waste in simple words so that people could easily understand and able to recognize the differences between them.</p>
             <p>Till date we have visited 35 residential societies, social community groups, schools and colleges across the city and gave seminar to approximately 3500 people.</p>
-            <p>A key step towards dry waste manage id forming a chain of Scrap collector/ recyclers (Bhangarwala). While identifying the solutions for the increasing waste management problem, the team realized that the important and nearest person who can help in this mission is the nearest bhangarwala. This community has been an integral part of our society providing door step services and collecting all our household waste.  The team has connected all the bhangarwala and unified them in this mission by helping them to understand the different avenues available for recycling refurbishing and also tying them up with specific companies, providing a win-win solution for the bhangarwala and the society.  For eg: helping the bhangarwala understand the importance of plastic recycling; tying them with the plastic recyclers nearby, which will promote them to collect plastic from the public ultimately promoting proper management of plastics through household.</p>
+            <p>A key step towards dry waste management is forming a chain of Scrap collector/ recyclers (Bhangarwala). While identifying the solutions for the increasing waste management problem, the team realized that the important and nearest person who can help in this mission is the nearest bhangarwala. This community has been an integral part of our society providing door step services and collecting all our household waste.  The team has connected all the bhangarwala and unified them in this mission by helping them to understand the different avenues available for recycling refurbishing and also tying them up with specific companies, providing a win-win solution for the bhangarwala and the society.</p>
+            <p>For eg: helping the bhangarwala understand the importance of plastic recycling; tying them with the plastic recyclers nearby, which will promote them to collect plastic from the public ultimately promoting proper management of plastics through household.</p>
             <p>List of items accepted by Bhangarwala:
               <ul>
                 <li>Old cloths</li>
@@ -73,12 +74,12 @@
                 <li>E-waste</li>
               </ul>
               <br/>
-            <p>Note: These people are providing not only provide door to door service but also aid in proper management of waste, ultimately preventing waste going to dumping yards. Therefore, please do not expect anything in return from them.</p>
+            <p><strong>Note: These people are providing not only provide door to door service but also aid in proper management of waste, ultimately preventing waste going to dumping yards. Therefore, please do not expect anything in return from them.</strong></p>
           </div>
         </div>
         <div class="row mb-30">
           <div class="col-12 col-lg-6">
-            <p>The below is a practical application of wet waste management at household. The wet waste originating from the house is decomposed in a homemade composting bucket.</p>
+            <p>The below is a practical application of wet waste management at household. The wet waste originating from the house is decomposed in a homemade composting bucket. The residual can be used as fertilizers for plant.</p>
             <img src="{{asset('img/bg-img/home_composting.jpg')}}" class="img-responsive mb-15" style="margin: auto;" alt="">
           </div>
           <div class="col-12 col-lg-6"><p>A perfect example of how one can segregate house hold plastic waste. These images show segregation of different types of plastic waste like milk bags, wrappers of eatable items, water bottles etc. This waste is then given to the nearest Bhangarwala.</p>
@@ -98,7 +99,7 @@
           <div class="section-heading text-center">
             <p>HAVE A QUESTION?</p>
             <h2><span>Get answers</span> to FAQs about waste management</h2>
-            <img src="img/core-img/decor2.png" alt="">
+            <img src="{{ asset('img/core-img/decor2.png') }}" alt="">
           </div>
         </div>
       </div>

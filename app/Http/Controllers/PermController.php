@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 trait PermController
 {
     // get array of all app modules
-    public $modules = ['User','Event','Directory','Quotes','Team'];
+    public $modules = ['User','Event','Directory','Quotes','Team','Blog'];
 
     // restrict data to this roles
-    public $roles = ['Administrator', 'Guest'];
+    public $roles = ['Administrator', 'Author'];
 
     // set module actions
     public $actions = ['Read', 'Create', 'Update', 'Delete'];
@@ -34,10 +34,11 @@ trait PermController
                 'Update' => array_values(array_diff($this->modules, ['Module'])), 
                 'Delete' => array_values(array_diff($this->modules, ['Module']))
             ],
-            'Guest' => [
-                'Show' => ['User'], 
-                'Read' => ['User'],
-                'Update' => ['User']
+            'Author' => [
+                'Show' => ['Blog'], 
+                'Read' => ['Blog'],
+                'Create' => ['Blog'], 
+                'Update' => ['Blog']
             ],
         ];
 
@@ -72,17 +73,20 @@ trait PermController
                 'Create' => [], 
                 'Delete' => []
             ],
-            'Guest' => [
+            'Author' => [
+                'Create' => [
+                    'Blog' => [
+                        'user_id' => $user_id
+                    ]
+                ],
                 'Read' => [
-                    'User' => [
-                        'login_id' => $user_login_id
+                    'Blog' => [
+                        'user_id' => $user_id
                     ]
                 ],
                 'Update' => [
-                    'User' => [
-                        'id' => $user_id,
-                        'login_id' => $user_login_id,
-                        'role' => 'Guest'
+                    'Blog' => [
+                        'user_id' => $user_id,
                     ]
                 ]
             ],

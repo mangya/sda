@@ -344,7 +344,7 @@ img {
   padding: 10px 0; }
   .breakpoint-off .classynav ul li .dropdown li .dropdown {
     top: 10px;
-    left: 180px;
+    left: 80px;
     z-index: 200;
     opacity: 0;
     visibility: hidden; }

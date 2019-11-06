@@ -17,9 +17,15 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'show.website', 'uses' => 'HomeController@showHome']);
     Route::get('/about', ['as' => 'about', 'uses' => 'HomeController@showAbout']);
+    Route::get('/terms-of-use', ['as' => 'terms', 'uses' => 'HomeController@showTerms']);
+    Route::get('/privacy-policy', ['as' => 'privacy_policy', 'uses' => 'HomeController@showPrivacyPolicy']);
     Route::get('/events', ['as' => 'events', 'uses' => 'HomeController@showEvents']);
     Route::get('/news', ['as' => 'news', 'uses' => 'HomeController@showNews']);
     Route::get('/directory', ['as' => 'directory', 'uses' => 'DirectoryController@showDirectory']);
+
+    Route::get('/blog', ['as' => 'show.blog_list', 'uses' => 'BlogController@showBlogList']);
+    Route::get('/blog/{code}', ['as' => 'show.blog', 'uses' => 'BlogController@showBlog']);
+
     Route::post('/send-mail', ['as' => 'send_mail', 'uses' => 'HomeController@sendContactMessage']);
 
     Route::get('/campaigns/waste-management', ['as' => 'waste_management', 'uses' => 'HomeController@showWasteManagementAwareness']);
@@ -39,6 +45,7 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::get('/contact-us', ['as' => 'contact_us', 'uses' => 'HomeController@showContactUs']);
     Route::get('/kdmc-downloads', ['as' => 'kdmc_downloads', 'uses' => 'HomeController@showKdmcDownloads']);
+    Route::get('refreshcaptcha',['as' => 'refreshcaptcha', 'uses' => 'HomeController@refreshCaptcha']);
     
     // Authentication routes...
     Route::get('/login', function() {
@@ -47,9 +54,12 @@ Route::group(['middleware' => ['web']], function () {
 
     // Authentication routes...
     Route::get('/admin', ['as' => 'show.app.login', 'uses' => 'Auth\LoginController@getLogin']);
-    Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+    //Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+    Route::get('/login', ['as' => 'login', 'uses' => 'HomeController@showWebLogin']);
     Route::post('/login', ['as' => 'submit.login', 'uses' => 'Auth\LoginController@login']);
     Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
+    Route::get('/register', ['as' => 'register', 'uses' => 'HomeController@showWebRegister']);
+    Route::post('/register', ['as' => 'submit.register', 'uses' => 'HomeController@register']);
 
     // Password Reset routes...
     Route::get('/password/reset', ['as' => 'password.request', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);

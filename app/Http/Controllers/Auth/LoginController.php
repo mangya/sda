@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -59,7 +59,7 @@ class LoginController extends Controller
     public function getLogin()
     {
         if (Auth::check()) {
-            return redirect()->route('home');
+            return redirect()->route('show.website');
         } else {
             return view('auth.login');
         }
@@ -120,6 +120,6 @@ class LoginController extends Controller
 
         $request->session()->invalidate();
 
-        return redirect()->route('show.app.login');
+        return redirect()->route('show.website');
     }
 }
