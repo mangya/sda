@@ -189,4 +189,9 @@ class HomeController extends Controller
         }
         return $otp;
     }
+
+    public function showKdmcDownloads()
+    {
+        return view('website.kdmc_downloads');
+    }
 }

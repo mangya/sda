@@ -44,7 +44,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/projects/forestation', ['as' => 'forestation', 'uses' => 'HomeController@showForestation']);
     
     Route::get('/contact-us', ['as' => 'contact_us', 'uses' => 'HomeController@showContactUs']);
+    Route::get('/kdmc-downloads', ['as' => 'kdmc_downloads', 'uses' => 'HomeController@showKdmcDownloads']);
     Route::get('refreshcaptcha',['as' => 'refreshcaptcha', 'uses' => 'HomeController@refreshCaptcha']);
+    
     // Authentication routes...
     Route::get('/login', function() {
         return redirect()->route('show.app.login');

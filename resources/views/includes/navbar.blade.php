@@ -84,6 +84,13 @@
 			  </li>
 			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>
+			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="#">Downloads</a>
+			  	<ul class="dropdown">
+				  <li><a href="{{route('kdmc_downloads')}}">KDMC Documents</a></li>
+				  <!--<li><a href="#">Other Useful Documents</a></li>-->
+				</ul>
+			  </li>
+
 			</ul>
 			<!-- Search Icon -->
 			<!-- 
