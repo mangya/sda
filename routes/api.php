@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
+// Note : below middleware we will be using for authentication 
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+
+Route::get('test',function () {
+
+	//Note : use http://local.vsmsda.co.in/api/test to check output 
+
+	$test = array('name' => 'swaroop', 'surname' => 'Bhagwat');
+	return json_encode($test);
+});
