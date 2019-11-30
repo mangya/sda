@@ -155,16 +155,17 @@
             var url = form.attr('action');
             $(this).html('Please wait...');
             $(this).attr('disabled','disabled');
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: form.serialize(), // serializes the form's elements.
-                success: function(data)
-                {
-                    //$('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><h4 class="text-primary">To verify your email we have sent a OTP on your email. Please verify your email by entering the OTP.</h4>');
-                    $('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><p class="text-primary">We will contact you soon to verify you account.</p>');
-                }
-            });
+            form.submit();
+            // $.ajax({
+            //     type: "POST",
+            //     url: url,
+            //     data: form.serialize(), // serializes the form's elements.
+            //     success: function(data)
+            //     {
+            //         //$('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><h4 class="text-primary">To verify your email we have sent a OTP on your email. Please verify your email by entering the OTP.</h4>');
+            //         $('.contact-form-area').html('<h4 class="text-success">Thank you joining us!</h4><p class="text-primary">We will contact you soon to verify you account.</p>');
+            //     }
+            // });
         } else {
             return false;
         }
