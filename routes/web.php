@@ -48,9 +48,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('refreshcaptcha',['as' => 'refreshcaptcha', 'uses' => 'HomeController@refreshCaptcha']);
     
     // Authentication routes...
-    Route::get('/login', function() {
-        return redirect()->route('show.app.login');
-    })->name('login');
+    // Route::get('/login', function() {
+    //     return redirect()->route('show.app.login');
+    // })->name('login');
 
     // Authentication routes...
     Route::get('/admin', ['as' => 'show.app.login', 'uses' => 'Auth\LoginController@getLogin']);
@@ -60,6 +60,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
     Route::get('/register', ['as' => 'register', 'uses' => 'HomeController@showWebRegister']);
     Route::post('/register', ['as' => 'submit.register', 'uses' => 'HomeController@register']);
+    Route::get('/verify/otp', ['as' => 'otp.form', 'uses' => 'HomeController@showVerifyOTP']);
+    Route::post('/verify/otp', ['as' => 'verify.otp', 'uses' => 'HomeController@verifyOTP']);
 
     // Password Reset routes...
     Route::get('/password/reset', ['as' => 'password.request', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);
@@ -71,7 +73,14 @@ Route::group(['middleware' => ['web']], function () {
     // Request that requires authorization...
     Route::group(['middleware' => 'auth'], function () {
 
-        // App routes...
+        // Website routes...
+        Route::get('/new-blog', ['as' => 'show.blog_form', 'uses' => 'BlogController@showBlogForm']);
+        Route::post('/new-blog', ['as' => 'save.blog', 'uses' => 'BlogController@saveBlog']);
+
+        Route::get('/my-blogs', ['as' => 'show.user_blogs', 'uses' => 'BlogController@showUserBlogs']);
+
+        Route::get('/edit-blog/{code}', ['as' => 'show.blog_edit_form', 'uses' => 'BlogController@showBlogEditForm']);
+        Route::post('/edit-blog/{code}', ['as' => 'update.blog', 'uses' => 'BlogController@updateBlog']);
 
         // App Home page module routes...
         Route::get('/app/modules', ['as' => 'show.app.modules', 'uses' => 'ModuleController@show']);

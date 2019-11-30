@@ -97,6 +97,8 @@ mix.styles([
 
 mix.styles([
     'resources/assets/website/css/website.css',
+    'resources/assets/plugins/trumbowyg/trumbowyg.min.css',
+    'resources/assets/plugins/trumbowyg/trumbowyg.colors.min.css',
 ], 'public/css/website.css').version();
 
 mix.scripts([
@@ -112,6 +114,12 @@ mix.scripts([
     'resources/assets/website/js/jarallax.min.js',
     'resources/assets/website/js/jarallax-video.min.js',
     'resources/assets/website/js/active.js',
+    'resources/assets/plugins/trumbowyg/trumbowyg.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/upload/trumbowyg.upload.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/colors/trumbowyg.colors.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js',
+    'resources/assets/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js',
 ], 'public/js/vendor.js').version();
 
 mix.scripts([

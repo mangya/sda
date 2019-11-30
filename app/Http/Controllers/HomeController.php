@@ -21,8 +21,10 @@ class HomeController extends Controller
     public function showHome()
     {
         if (Auth::check()) {
-            if(auth()->user()->role == "System Administrator" || auth()->user()->role == "Administrator" || auth()->user()->role == "Author") {
+            if(auth()->user()->role == "System Administrator" || auth()->user()->role == "Administrator") {
                 return redirect()->route('show.app.modules');
+            } else if(auth()->user()->role == "Author") {
+                return redirect()->route('show.blog_list');
             }
         }
 
@@ -128,6 +130,12 @@ class HomeController extends Controller
 
     public function showWebLogin()
     {
+        if (Auth::check()) {
+            if(auth()->user()->role == "Author") {
+                return redirect()->route('show.user_blogs');
+            }
+        }
+
         $quotes = Quotes::where('is_active',1)->get();
         return view('website.login', compact('quotes'));
     }
@@ -170,11 +178,36 @@ class HomeController extends Controller
 
             Mail::to($request->get('email'))
                 ->send(new OTPMessage($data));
-            return response()->json(['status'=>'success','msg'=>'User is successfully registered']);
+
+            return redirect()->route('otp.form');
+            //return response()->json(['status'=>'success','msg'=>'User is successfully registered']);
         }
 
         return redirect()->back();
         
+    }
+
+    public function showVerifyOTP()
+    {
+        if (!Auth::check()) {
+            $quotes = Quotes::where('is_active',1)->get();
+            return view('website.verify_otp', compact('quotes'));
+        }
+        
+        return redirect()->route('show.website');         
+    }
+
+    public function verifyOTP(Request $request)
+    {
+        $email = OTP::where(['otp' => $request->get('otp'), 'is_active' => 1])->pluck('otp_for')->first();
+        if($email) {
+            $user = User::where('login_id', $email)->first();
+            Auth::login($user);
+            OTP::where(['otp' => $request->get('otp'), 'is_active' => 1])->update(['is_active' => 0]);
+            return redirect()->route('show.website');
+        } else {
+            return redirect()->back()->withInput()->withErrors(['error'=>'OTP is not valid']);
+        }
     }
 
     protected function generateOTP()

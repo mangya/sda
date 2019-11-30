@@ -1,6 +1,6 @@
   <!-- ##### Quotes Area Start ##### -->
   @if(count($quotes) > 0)
-  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url('img/bg-img/quotes_bg.jpg');">
+  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url({{ asset('img/bg-img/quotes_bg.jpg') }});">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -11,7 +11,7 @@
               <!-- Quote Text -->
               <div class="testi-text d-flex">
                 <div class="quote-icon">
-                  <img src="website/img/core-img/quote.png" alt="">
+                  <img src="{{ asset('website/img/core-img/quote.png') }}" alt="">
                 </div>
                 <h5>"{{ $quote->quote }}"</h5>
               </div>
