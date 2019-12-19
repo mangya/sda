@@ -97,6 +97,11 @@ class HomeController extends Controller
     	return view('website.magic_bucket');
     }
 
+    public function showRegistrationSuccess()
+    {
+        return view('website.registration_success');
+    }
+
     public function sendContactMessage(Request $request)
     {
 

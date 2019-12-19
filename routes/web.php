@@ -62,6 +62,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/register', ['as' => 'submit.register', 'uses' => 'HomeController@register']);
     Route::get('/verify/otp', ['as' => 'otp.form', 'uses' => 'HomeController@showVerifyOTP']);
     Route::post('/verify/otp', ['as' => 'verify.otp', 'uses' => 'HomeController@verifyOTP']);
+    Route::get('/registration-success', ['as' => 'registration-success', 'uses' => 'HomeController@showRegistrationSuccess']);
+
 
     // Password Reset routes...
     Route::get('/password/reset', ['as' => 'password.request', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);
