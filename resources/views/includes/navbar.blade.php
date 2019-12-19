@@ -62,7 +62,7 @@
 		  <!-- Navbar Start -->
 		  <div class="classynav">
 			<ul>
-			  <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('show.website')}}">Home</a></li>
+			  <!--<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('show.website')}}">Home</a></li>-->
 			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
 			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
 				<ul class="dropdown">
