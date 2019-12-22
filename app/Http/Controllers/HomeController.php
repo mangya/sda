@@ -182,8 +182,8 @@ class HomeController extends Controller
             $otp->is_active = 1;
             $otp->save();
 
-            // Mail::to($request->get('email'))
-            //     ->send(new OTPMessage($data));
+            Mail::to($request->get('email'))
+                ->send(new OTPMessage($data));
 
             return redirect()->route('otp.form');
             //return response()->json(['status'=>'success','msg'=>'User is successfully registered']);
