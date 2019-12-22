@@ -41,7 +41,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-lg-6">
                     <input type="password" class="form-control" name="password" id="lgnPassword" placeholder="Password">
                     @if (count($errors) > 0)
                         @foreach ($errors->all() as $error)
