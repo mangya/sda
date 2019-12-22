@@ -14,16 +14,20 @@
                 <h2><span>Thank You.</h2>
                 <h2><span>You Have Registered Successfully.</h2>  
                 <img src="website/img/core-img/decor.png" alt="">
-                <!--<button type="button" class="btn famie-btn mb-15" id="regSubmit">Go To Home</button>-->
               </center>
-              
             </div>
-            <!-- Contact Form Area -->
-            
           </div>
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-12">
+          <center>
+            <a class="btn famie-btn mb-50" href="{{ route('show.blog_list') }}">Read our blogs</a>
+            <a class="btn famie-btn mb-50" href="{{ route('show.website') }}">Go To Home</a>
+          </center>
         </div>
       </div>
     </div>
   </section>
-  
+  @include('includes.quotes')
   @endsection

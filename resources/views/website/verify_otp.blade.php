@@ -16,6 +16,16 @@
       .has-error {
         color: red;
       }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
     </style>
   @endpush
   <!-- ##### Contact Area Start ##### -->
@@ -34,7 +44,7 @@
               <form action="{{ route('verify.otp') }}" method="post" id="otpForm" class="novalidate mb-30">
                 <div class="row">
                   <div class="col-lg-6">
-                    <input type="email" class="form-control txt-only-number @if (count($errors) > 0) has-error @endif" name="otp" id="lgnOtp" placeholder="OTP" value="{{ old('otp') }}">
+                    <input type="number" class="form-control txt-only-number @if (count($errors) > 0) has-error @endif" name="otp" id="lgnOtp" placeholder="OTP" value="{{ old('otp') }}">
                     {{ csrf_field() }}
                     @if (count($errors) > 0)
                         @foreach ($errors->all() as $error)

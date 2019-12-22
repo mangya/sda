@@ -64,6 +64,7 @@
 			<ul>
 			  <!--<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('show.website')}}">Home</a></li>-->
 			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
+			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
 				<ul class="dropdown">
 				  <li class="{{ Request::is('campaigns/waste-management') ? 'active' : '' }}"><a href="{{route('waste_management')}}">Waste Management</a></li>
@@ -82,18 +83,19 @@
 				  </li>
 				</ul>
 			  </li>
-			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <!--<li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>-->
-			  <li class="{{ Request::is('register') ? 'active' : '' }}"><a href="{{route('register')}}">Register</a></li>
-			  <li class="{{ Request::is('login') ? 'active' : '' }}"><a href="{{route('login')}}">Login</a></li>
-
 			  <li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="#">Downloads</a>
 			  	<ul class="dropdown">
 				  <li><a href="{{route('kdmc_downloads')}}">KDMC Documents</a></li>
 				  <!--<li><a href="#">Other Useful Documents</a></li>-->
 				</ul>
 			  </li>
-
+			  @if (Auth::check())
+			  <li><a href="{{route('logout')}}">Logout</a></li>
+			  @else
+			  <li class="{{ Request::is('register') ? 'active' : '' }}"><a href="{{route('register')}}">Join us</a></li>
+			  <li class="{{ Request::is('login') ? 'active' : '' }}"><a href="{{route('login')}}">Login</a></li>
+			  @endif
 			</ul>
 			<!-- Search Icon -->
 			<!-- 

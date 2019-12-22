@@ -99,7 +99,8 @@ class HomeController extends Controller
 
     public function showRegistrationSuccess()
     {
-        return view('website.registration_success');
+        $quotes = Quotes::where('is_active',1)->get();
+        return view('website.registration_success',compact('quotes'));
     }
 
     public function sendContactMessage(Request $request)
@@ -181,8 +182,8 @@ class HomeController extends Controller
             $otp->is_active = 1;
             $otp->save();
 
-            Mail::to($request->get('email'))
-                ->send(new OTPMessage($data));
+            // Mail::to($request->get('email'))
+            //     ->send(new OTPMessage($data));
 
             return redirect()->route('otp.form');
             //return response()->json(['status'=>'success','msg'=>'User is successfully registered']);
@@ -207,9 +208,12 @@ class HomeController extends Controller
         $email = OTP::where(['otp' => $request->get('otp'), 'is_active' => 1])->pluck('otp_for')->first();
         if($email) {
             $user = User::where('login_id', $email)->first();
+            $user->is_active = 1;
+            $user->email_confirmed = 1;
+            $user->save();
             Auth::login($user);
             OTP::where(['otp' => $request->get('otp'), 'is_active' => 1])->update(['is_active' => 0]);
-            return redirect()->route('show.website');
+            return redirect()->route('registration-success');
         } else {
             return redirect()->back()->withInput()->withErrors(['error'=>'OTP is not valid']);
         }
