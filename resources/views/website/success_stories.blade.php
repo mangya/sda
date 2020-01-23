@@ -42,7 +42,7 @@
 
         <div class="col-12 col-lg-12">
           <div class="about-us-content content mb-100" style="text-align: justify;">
-            <img src="{{asset('img/bg-img/teachers_association.jpg')}}" class="img-responsive" style="" alt="">
+            <img src="{{asset('website/img/success_stories/surekha-joshi.jpeg')}}" class="img-responsive" style="" alt="">
             <p><b>“Initiative is doing the right thing without being told.”</b></p>
 
             <p>Amid increasing pollution in the city and society blaming the government authorities for it, a Samaritan was actively working towards cleaning our city. She is not only herself involved in the cleaning of the town but also inspired the neighbourhood, making them understand the importance of self-involvement rather than playing the blame game.</p> 
