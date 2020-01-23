@@ -36,6 +36,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/campaigns/role-model', ['as' => 'role_model', 'uses' => 'HomeController@showRoleModel']);
 
+    Route::get('/campaigns/success-stories', ['as' => 'success_stories', 'uses' => 'HomeController@showSuccessStory']);
+    
     Route::get('/solutions/magic-bucket', ['as' => 'magic_bucket', 'uses' => 'HomeController@showMagicBucket']);
 
     //Route::get('/projects/waste-management/campaigns', ['as' => 'waste_management_campaign', 'uses' => 'HomeController@showWasteManagementCampaign']);
