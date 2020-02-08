@@ -36,7 +36,17 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/campaigns/role-model', ['as' => 'role_model', 'uses' => 'HomeController@showRoleModel']);
 
-    Route::get('/campaigns/success-stories', ['as' => 'success_stories', 'uses' => 'HomeController@showSuccessStory']);
+    Route::get('/campaigns/success-stories', ['as' => 'success_stories_index', 'uses' => 'HomeController@showSuccessStoryIndex']);
+
+    Route::prefix('/campaigns/success-stories')->group(function () {
+        
+        Route::get('mrs-surekha-joshi', ['as' => 'success_stories_mrs_surekha_joshi', 'uses' => 'HomeController@showSuccessStorySurekhaJoshi']);
+
+        Route::get('mrs-aparna-kavi', ['as' => 'success_stories_mrs_aparna_kavi', 'uses' => 'HomeController@showSuccessStoryAparnaKavi']);
+        
+    });
+
+        
     
     Route::get('/solutions/magic-bucket', ['as' => 'magic_bucket', 'uses' => 'HomeController@showMagicBucket']);
 

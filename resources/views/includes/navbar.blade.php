@@ -72,7 +72,7 @@
 				  <li><a href="{{route('recycler_association')}}">Bhangarwala Association</a></li>
 				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
 				  <li><a href="{{route('role_model')}}">Role Model</a></li>
-				  <li><a href="{{route('success_stories')}}">Success Stories</a></li>
+				  <li><a href="{{route('success_stories_index')}}">Success Stories</a></li>
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('solutions/*') ? 'active' : '' }}"><a href="#">Solutions</a>
