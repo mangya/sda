@@ -31,14 +31,14 @@
       <div class="row align-items-center" style="text-align: justify;">
        <div class="row"  style="margin-bottom: 5px;">
           <!-- Image -->
-            <div class="col-12 col-lg-3">
+            <!--<div class="col-12 col-lg-3">
               <div class="about-us-thumbnail">
-                <img src="{{asset('website/img/success_stories/rsz_surekha-joshi.jpg')}}" alt="">
+                <img src="#" alt="">
               </div>
-            </div>
+            </div>-->
 
             <!-- Description -->
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-lg-12">
               <div class="about-us-content content">
                 <!-- Section Heading -->
                 <div class="section-heading mb-15">
@@ -60,14 +60,14 @@
 
       <div class="row" style="margin-bottom: 5px;">
           <!-- Image -->
-            <div class="col-12 col-lg-3">
+            <!--<div class="col-12 col-lg-3">
               <div class="about-us-thumbnail">
-                <img src="{{asset('website/img/success_stories/rsz_surekha-joshi.jpg')}}" alt="">
+                <img src="#" alt="">
               </div>
-            </div>
+            </div>-->
 
             <!-- Description -->
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-lg-12">
               <div class="about-us-content content">
                 <!-- Section Heading -->
                 <div class="section-heading mb-15">

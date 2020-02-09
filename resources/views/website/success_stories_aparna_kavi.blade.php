@@ -47,9 +47,7 @@
 
         <div class="col-12 col-lg-12">
           <div class="about-us-content content mb-100" style="text-align: justify;">
-            <img src="{{asset('website/img/success_stories/aparna-kavi.jpeg')}}" class="img-responsive" style="" alt="">
             
-
             <p>This is a story of a young and charming housewife and her passion for cleanliness drive and her voyage from a housewife to an authorised Swacchata Doot of Kalyan Dombivli Municipal corporation (KDMC). The voyage still continues. This story will be an inspiration to all the citizens and specially to the house wives and it has proven that though a housewife is on duty for 24 hrs 365 days taking care of house and her family members but simultaneously she can efficiently and effectively take care of her premises, her city.  Once she decides to do this then ‘sky is the limit’ for her.</p>
 
             <p>Along with all these activities another strong passion was getting developed in her and that was love towards keeping the surrounding clean or ‘cleaning maniac’ that’s what her family addresses it. This passion was first channelized via the social activities conducted by Inner Wheel club. She was grown up in the family having culture like ‘Reuse and recycle plastic’, ‘save water’. And this childhood culture bounced back and dominated all her other activities thereafter. She was so much engrossed in this which led her to became the president of Inner Wheel Club in the year 2014.</p>
