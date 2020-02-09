@@ -22,7 +22,7 @@
         <!-- About Us Thumbnail -->
         <div class="col-12 col-lg-6">
           <div class="about-us-thumbnail">
-            <img src="{{asset('img/bg-img/area_of_work.jpg')}}" alt="">
+            <img src="{{asset('img/bg-img/area_of_work.jpg')}}" class="img-responsive mb-15" style="margin: auto;" alt="">
           </div>
         </div>
 

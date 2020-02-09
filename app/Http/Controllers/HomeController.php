@@ -87,9 +87,20 @@ class HomeController extends Controller
         return view('website.role_model');
     }
 
-    public function showSuccessStory()
+    public function showSuccessStoryIndex()
     {
-        return view('website.success_stories');
+
+        return view('website.success_stories_index');
+    }
+
+    public function showSuccessStorySurekhaJoshi()
+    {
+        return view('website.success_stories_surekha_joshi');
+    }
+
+    public function showSuccessStoryAparnaKavi()
+    {
+        return view('website.success_stories_aparna_kavi');
     }
 
     public function showActivities()
