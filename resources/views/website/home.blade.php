@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a> <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>

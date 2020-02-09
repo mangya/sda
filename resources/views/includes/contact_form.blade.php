@@ -74,7 +74,7 @@
   </section>
   <!-- ##### Contact Area End ##### -->
   @push('scripts')
-  <script src="{{url(elixir('js/common.js'))}}"></script>
+  <script async defer src="{{url(elixir('js/common.js'))}}"></script>
   <script type="text/javascript">
     $('#contactForm input').on('keypress', function(){
         $(this).parent().removeClass('has-error');
