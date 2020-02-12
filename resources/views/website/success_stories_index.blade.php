@@ -27,17 +27,7 @@
           </div>
         </div>
       </div>
-
-      <div class="row align-items-center" style="text-align: justify;">
-       <div class="row"  style="margin-bottom: 5px;">
-          <!-- Image -->
-            <!--<div class="col-12 col-lg-3">
-              <div class="about-us-thumbnail">
-                <img src="#" alt="">
-              </div>
-            </div>-->
-
-            <!-- Description -->
+      <div class="row"  style="margin-bottom: 5px;text-align: justify;">
             <div class="col-12 col-lg-12">
               <div class="about-us-content content">
                 <!-- Section Heading -->
@@ -52,12 +42,8 @@
                       Read More
                 </a>
               </div>
-              
             </div>
-      
       </div>
-
-
       <div class="row" style="margin-bottom: 5px;">
           <!-- Image -->
             <!--<div class="col-12 col-lg-3">
@@ -65,7 +51,6 @@
                 <img src="#" alt="">
               </div>
             </div>-->
-
             <!-- Description -->
             <div class="col-12 col-lg-12">
               <div class="about-us-content content">
@@ -80,12 +65,6 @@
                 </a>
               </div>
             </div>
-      
-      </div>
-
-
-
-
       </div>
     </div>
   </section>
