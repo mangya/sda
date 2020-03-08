@@ -46,9 +46,33 @@ Route::group(['middleware' => ['web']], function () {
         
     });
 
+    Route::prefix('/waste')->group(function () {
+        
+        Route::get('dry-waste', ['as' => 'info_dry_waste', 'uses' => 'InfoController@showDryWaste']);
+
+        Route::get('wet-waste', ['as' => 'info_wet_waste', 'uses' => 'InfoController@showWetWaste']);
+
+        Route::get('e-waste', ['as' => 'info_e_waste', 'uses' => 'InfoController@showEWaste']);
+
+        Route::get('bio-medical-waste', ['as' => 'info_bio_medical_waste', 'uses' => 'InfoController@showBioMedicalWaste']);
+
+        Route::get('dry-hazardous-waste', ['as' => 'info_dry_hazardous_waste', 'uses' => 'InfoController@showDryHazardousWaste']);
+
+        Route::get('wet-hazardous-waste', ['as' => 'info_wet_hazardous_waste', 'uses' => 'InfoController@showWetHazardousWaste']);
+
+        Route::get('oil-waste', ['as' => 'info_oil_waste', 'uses' => 'InfoController@showOilWaste']);
+
+        Route::get('holistic-waste', ['as' => 'info_holistic_waste', 'uses' => 'InfoController@showHolisticWaste']);
+
+        Route::get('industrial-waste', ['as' => 'info_industrial_waste', 'uses' => 'InfoController@showIndustrialWaste']);
+        
+    });
+
         
     
     Route::get('/solutions/magic-bucket', ['as' => 'magic_bucket', 'uses' => 'HomeController@showMagicBucket']);
+
+    // Route::get('/solutions/waste-segregation', ['as' => 'segregation', 'uses' => 'HomeController@showSegregation']);
 
     //Route::get('/projects/waste-management/campaigns', ['as' => 'waste_management_campaign', 'uses' => 'HomeController@showWasteManagementCampaign']);
     Route::get('/activities', ['as' => 'activities', 'uses' => 'HomeController@showActivities']);

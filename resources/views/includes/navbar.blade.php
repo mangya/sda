@@ -62,7 +62,19 @@
 		  <!-- Navbar Start -->
 		  <div class="classynav">
 			<ul>
-			  <!--<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('show.website')}}">Home</a></li>-->
+				<li class="{{ Request::is('downloads') ? 'active' : '' }}"><a href="#">Waste</a>
+			  	<ul class="dropdown">
+					  <li><a href="{{route('info_wet_waste')}}">Wet Waste / ओला कचरा</a></li>
+					  <li><a href="{{route('info_dry_waste')}}">Dry Waste / सुका कचरा</a></li>
+					  <li><a href="{{route('info_dry_hazardous_waste')}}">Dry Hazardous / सुका घातक</a></li>
+					  <li><a href="{{route('info_wet_hazardous_waste')}}">Wet Hazardous / ओला घातक</a></li>
+					  <li><a href="{{route('info_bio_medical_waste')}}">Bio Medical / जैव वैद्यकीय</a></li>
+					  <li><a href="{{route('info_e_waste')}}">E-Waste</a></li>
+					  <li><a href="{{route('info_oil_waste')}}">Oil Waste/ तेल कचरा</a></li>
+					  <li><a href="{{route('info_industrial_waste')}}">Industrial/ औद्योगिक कचरा</a></li>
+					  <li><a href="{{route('info_holistic_waste')}}">Holistic Waste</a></li>
+					</ul>
+			  </li>
 			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
 			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
@@ -94,8 +106,8 @@
 			  @if (Auth::check())
 			  <li><a href="{{route('logout')}}">Logout</a></li>
 			  @else
-			  <li class="{{ Request::is('register') ? 'active' : '' }}"><a href="{{route('register')}}">Join us</a></li>
-			  <li class="{{ Request::is('login') ? 'active' : '' }}"><a href="{{route('login')}}">Login</a></li>
+			  <!-- <li class="{{ Request::is('register') ? 'active' : '' }}"><a href="{{route('register')}}">Join us</a></li>
+			  <li class="{{ Request::is('login') ? 'active' : '' }}"><a href="{{route('login')}}">Login</a></li> -->
 			  @endif
 			</ul>
 			<!-- Search Icon -->

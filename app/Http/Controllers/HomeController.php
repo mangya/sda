@@ -113,6 +113,11 @@ class HomeController extends Controller
     	return view('website.magic_bucket');
     }
 
+    public function showSegregation()
+    {
+        return view('website.segregation');
+    }
+
     public function showRegistrationSuccess()
     {
         $quotes = Quotes::where('is_active',1)->get();
