@@ -391,7 +391,7 @@
               </div>
             </div>
             <!--  -->
-            <div class="panel single-accordion">
+            <!-- <div class="panel single-accordion">
               <h6><a role="button" class="collapsed" aria-expanded="false" aria-controls="holisticWaste" data-toggle="collapse" data-parent="#accordion" href="#holisticWaste">Holistic Waste
                   <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
@@ -401,7 +401,7 @@
                   <tbody>
                     <tr>
                       <td width="5px"><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
-                      <td>Old God Idols / खराब झालेल्या देवतांच्या मुर्त्या</td>
+                      <td>Old God Idols / देवतांच्या खराब झालेल्या मुर्त्या</td>
                     </tr>
                     <tr>
                       <td width="5px"><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
@@ -418,7 +418,7 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
