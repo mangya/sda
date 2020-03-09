@@ -401,11 +401,11 @@
                   <tbody>
                     <tr>
                       <td width="5px"><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
-                      <td>God Idols / देवतांच्या मुर्त्या</td>
+                      <td>Old God Idols / खराब झालेल्या देवतांच्या मुर्त्या</td>
                     </tr>
                     <tr>
                       <td width="5px"><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
-                      <td>Plaster of Parisच्या मुर्त्या</td>
+                      <td>खराब झालेल्या Plaster of Parisच्या मुर्त्या</td>
                     </tr>
                     <tr>
                       <td width="5px"><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
