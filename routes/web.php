@@ -58,6 +58,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/contact-us', ['as' => 'contact_us', 'uses' => 'HomeController@showContactUs']);
     Route::get('/kdmc-downloads', ['as' => 'kdmc_downloads', 'uses' => 'HomeController@showKdmcDownloads']);
     Route::get('refreshcaptcha',['as' => 'refreshcaptcha', 'uses' => 'HomeController@refreshCaptcha']);
+
+    Route::get('/info/{slug}', ['as' => 'show_page', 'uses' => 'InfoController@showPage']);
+
     
     // Authentication routes...
     // Route::get('/login', function() {

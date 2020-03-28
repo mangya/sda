@@ -432,12 +432,17 @@ function enableDateTimepicker() {
 // enable simple text editor for all elements on page
 function enableTextEditor() {
 	$("body").find('.text-editor').trumbowyg({
+		svgPath: '/img/icons.svg',
+		semantic: {
+	        'div': 'div',
+	        'span': 'span'
+	    },
 		btns: [
 			['viewHTML'],
 			['formatting'],
-			'btnGrp-design',
+			['bold', 'italic','unorderedList', 'orderedList','justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull','horizontalRule','link'],
 			['image'],
-			'btnGrp-justify',
+			['table'],
 			['fullscreen']
 		]
 	}).on('tbwchange', function(){ 

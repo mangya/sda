@@ -1,6 +1,6 @@
 <div class="box form-section" id="blog-details">
     <div class="box-header">
-        <h5 class="box-title">Blog Details
+        <h5 class="box-title">Page Details
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
                     <i class="fa fa-minus"></i>
@@ -19,6 +19,17 @@
                     </div>
                 </div>
             </div>
+            @if (isset($form_data[$table_name]['slug']) && $form_data[$table_name]['slug'])
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label">URL</label>
+                    <div>
+                        <a href="{{config('app.url')}}/info/{{ $form_data[$table_name]['slug'] }}" target="_new">{{config('app.url')}}/info/{{ $form_data[$table_name]['slug'] }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endif
 			@if(Auth::user()->role == 'Administrator')
             <div class="col-md-3">
                 <div class="form-group">
@@ -42,37 +53,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="control-label">User</label>
-                    <div>
-                        <input type="text" name="user" id="user" class="form-control autocomplete" data-mandatory="yes" autocomplete="off" data-ac-field="full_name" data-ac-module="User">
-                        <input type="hidden" name="user_id" class="form-control" data-ac-module="User" data-ac-field="id" style="display: none;">
-                    </div>
-                </div>
-            </div>
             @endif
 	    </div>
-        <!-- <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label">Category</label>
-                    <div>
-                        <input type="text" name="category" id="category" class="form-control autocomplete" data-mandatory="yes" autocomplete="off" data-ac-field="name" data-ac-module="Category">
-                        <input type="hidden" name="category_id" class="form-control" data-ac-module="Category" data-ac-field="id" style="display: none;">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label">Sub Category</label>
-                    <div>
-                        <input type="text" name="sub_category" id="sub_category" class="form-control autocomplete" autocomplete="off" data-ac-field="name" data-ac-module="SubCategory">
-                        <input type="hidden" name="sub_category_id" class="form-control" data-ac-module="SubCategory" data-ac-field="id" style="display: none;">
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
