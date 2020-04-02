@@ -5,7 +5,7 @@
   <div class="hero-area">
     <div class="welcome-slides owl-carousel">
       <!-- Single Welcome Slides -->
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
