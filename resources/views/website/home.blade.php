@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a> <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a>
         </div>
       </div>
     </div>
@@ -134,3 +134,6 @@
   @include('includes.contact_form')
   @include('includes.vsm_banner')
 @endsection
+@push('scripts')
+<script async defer src="{{url(elixir('js/twitter-widgets.js'))}}" charset="utf-8"></script>
+@endpush
