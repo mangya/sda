@@ -1,6 +1,6 @@
   <!-- ##### Quotes Area Start ##### -->
   @if(count($quotes) > 0)
-  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url({{ asset('img/bg-img/quotes_bg.jpg') }});">
+  <section class="testimonial-area bg-img bg-overlay section-padding-100 jarallax" style="background-image: url({{ asset('img/bg-img/quotes_bg.webp') }});">
     <div class="container">
       <div class="row">
         <div class="col-12">
