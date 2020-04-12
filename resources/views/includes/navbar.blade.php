@@ -63,7 +63,15 @@
 		  <div class="classynav">
 			<ul>
 			  <li class="{{ Request::is('waste-classification') ? 'active' : '' }}"><a href="{{route('waste_classification')}}">Types of Waste</a></li>
-			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
+			  <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="#">About</a>
+			  	<ul class="dropdown">
+					  <li><a href="{{route('about')}}">About Us</a></li>
+					  @if (!Auth::check())
+					  <li class="{{ Request::is('register') ? 'active' : '' }}"><a href="{{route('register')}}">Join us</a></li>
+					  <li class="{{ Request::is('login') ? 'active' : '' }}"><a href="{{route('login')}}">Login</a></li>
+					  @endif
+					</ul>
+				</li>
 			  <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{route('show.blog_list')}}">Blog</a></li>
 			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
 				<ul class="dropdown">

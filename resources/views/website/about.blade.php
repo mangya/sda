@@ -43,6 +43,12 @@
               <li>Fostering Bhangarwala network for effective and efficient way of dry waste management.</li>
               <li>Increase participation of social groups and individuals with an opportunity to be actively involved in cleaning our city.</li>
             </ul>
+            @if (!Auth::check())
+              <div class="col-12 col-md-12 mt-30">
+                <a class="btn famie-btn" href="{{ route('register') }}">Join Us</a>
+                <a class="btn famie-btn" href="{{ route('login') }}">Login</a>
+              </div>
+            @endif
           </div>
         </div>
         <!-- Famie Video Play -->
