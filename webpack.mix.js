@@ -125,3 +125,7 @@ mix.scripts([
 mix.scripts([
     'resources/assets/website/js/common.js'
 ], 'public/js/common.js').version();
+
+mix.scripts([
+    'resources/assets/website/js/twitter-widgets.js'
+], 'public/js/twitter-widgets.js').version();

@@ -5,7 +5,7 @@
   <div class="hero-area">
     <div class="welcome-slides owl-carousel">
       <!-- Single Welcome Slides -->
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/information_booth.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/cleanliness_drive.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar.jpg);">
+      <div class="single-welcome-slides bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/seminar.webp);">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-lg-10">
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a> <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline" data-height="450" data-chrome="nofooter" href="https://twitter.com/SwachhaDombivli">Tweets by SDA</a>
         </div>
       </div>
     </div>
@@ -134,3 +134,6 @@
   @include('includes.contact_form')
   @include('includes.vsm_banner')
 @endsection
+@push('scripts')
+<script async defer src="{{url(elixir('js/twitter-widgets.js'))}}" charset="utf-8"></script>
+@endpush
