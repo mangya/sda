@@ -44,4 +44,17 @@ class User extends Authenticatable
 
         return $user->id;
     }
+
+    public function generateOTP()
+    {
+        $otp = '';
+        while(empty($otp)) {
+            $otp = generate_password(4, true);
+            $otp_exists = OTP::where(['otp' => $otp,'is_active' => 0])->pluck('otp')->first();
+            if(!empty($otp_exists)) {
+                $otp = '';
+            }
+        }
+        return $otp;
+    }
 }
