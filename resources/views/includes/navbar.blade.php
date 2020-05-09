@@ -87,7 +87,7 @@
 				<ul class="dropdown">
 				  <li class=""><a href="#">Domestic</a>
 				  	<ul class="dropdown">
-					  <li class="{{ Request::is('solutions/magic-bucket') ? 'active' : '' }}"><a href="{{route('magic_bucket')}}">Magic Bucket</a></li>
+					  <li class="{{ Request::is('info/magic-bucket') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'magic-bucket'])}}">Magic Bucket</a></li>
 					</ul>
 				  </li>
 				</ul>
