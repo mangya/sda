@@ -88,8 +88,10 @@
 				  <li class=""><a href="#">Domestic</a>
 				  	<ul class="dropdown">
 					  <li class="{{ Request::is('info/magic-bucket') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'magic-bucket'])}}">Magic Bucket</a></li>
+					  <li class="{{ Request::is('info/other-wet-waste-solutions') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'other-wet-waste-solutions'])}}">Wet Waste Solutions</a></li>
 					</ul>
 				  </li>
+				  <li class=""><a href="{{route('show_page',['slug'=>'nappies-disposal'])}}">Nappies Disposal</a>
 				</ul>
 			  </li>
 			  <!--<li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>-->

@@ -1,5 +1,5 @@
 @extends('layouts.website_layout')
-@section('title','Waste Classification')
+@section('title',$content->title)
 @push('styles')
 <style type="text/css">
   .content img {
