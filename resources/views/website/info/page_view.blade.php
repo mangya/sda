@@ -46,6 +46,31 @@
           @endif
         </div>
       </div>
+      <div class="share-tags d-flex flex-wrap align-items-center justify-content-between mb-30">
+        <div class="share-post d-flex align-items-center">
+          <span>Share This page:</span>
+          <div class="share-icons">
+            <!-- <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a> -->
+            <a href="https://api.whatsapp.com/send?text={{ url('/info').'/'.$content->slug }}" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <div class="fb-share-button" 
+              data-href="{{ route('show_page',['code' => $content->slug]) }}" 
+              data-layout="button">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   @endsection
+  @push('scripts')
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+@endpush

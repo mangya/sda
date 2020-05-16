@@ -440,6 +440,7 @@ function enableTextEditor() {
 		btns: [
 			['viewHTML'],
 			['formatting'],
+			['foreColor', 'backColor'],
 			['bold', 'italic','unorderedList', 'orderedList','justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull','horizontalRule','link'],
 			['image'],
 			['table'],
