@@ -79,7 +79,7 @@
 				  <li class="{{ Request::is('activities') ? 'active' : '' }}"><a href="{{route('activities')}}">Activities</a></li>
 				  <li><a href="{{route('recycler_association')}}">Bhangarwala Association</a></li>
 				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
-				  <li><a href="{{route('role_model')}}">Role Model</a></li>
+				  <li><a href="{{route('show_page',['slug'=>'sarvoday-nagar'])}}">Role Model</a></li>
 				  <li><a href="{{route('success_stories_index')}}">Success Stories</a></li>
 				</ul>
 			  </li>
@@ -93,6 +93,7 @@
 					</ul>
 				  </li>
 				  <li class=""><a href="{{route('show_page',['slug'=>'nappies-disposal'])}}">Nappies Disposal</a>
+				  <li class=""><a href="{{route('show_page',['slug'=>'nirmalya-composting'])}}">Nirmalya Composting</a>
 				</ul>
 			  </li>
 			  <!--<li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>-->

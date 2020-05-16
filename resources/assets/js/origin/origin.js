@@ -441,7 +441,9 @@ function enableTextEditor() {
 			['viewHTML'],
 			['formatting'],
 			['foreColor', 'backColor'],
-			['bold', 'italic','unorderedList', 'orderedList','justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull','horizontalRule','link'],
+			['bold', 'italic','underline','unorderedList', 'orderedList','justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull','horizontalRule','link'],
+			['fontfamily'],
+			['fontsize'],
 			['image'],
 			['table'],
 			['fullscreen']

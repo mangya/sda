@@ -41,6 +41,8 @@ mix.scripts([
     'resources/assets/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js',
     'resources/assets/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js',
     'resources/assets/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js',
+    'resources/assets/plugins/trumbowyg/plugins/fontfamily/trumbowyg.fontfamily.js',
+    'resources/assets/plugins/trumbowyg/plugins/fontsize/trumbowyg.fontsize.js',
     'resources/assets/js/app.min.js',
     'resources/assets/js/origin/origin.js',
     'resources/assets/js/webfontloader.js',
