@@ -81,6 +81,7 @@
 				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
 				  <li><a href="{{route('show_page',['slug'=>'sarvoday-nagar'])}}">Role Model</a></li>
 				  <li><a href="{{route('success_stories_index')}}">Success Stories</a></li>
+				  <li class="{{ Request::is('info/lectures-on-environment') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'lectures-on-environment'])}}">Lectures on Environment</a></li>
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('solutions/*') ? 'active' : '' }}"><a href="#">Solutions</a>
