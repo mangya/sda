@@ -76,12 +76,23 @@
 			  <li class="{{ Request::is('campaigns/waste-management*') ? 'active' : '' }}"><a href="#">Campaign</a>
 				<ul class="dropdown">
 				  <li class="{{ Request::is('campaigns/waste-management') ? 'active' : '' }}"><a href="{{route('waste_management')}}">Waste Management</a></li>
+				  <li class="{{ Request::is('info/plantation') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'plantation'])}}">Plantation</a></li>
 				  <li class="{{ Request::is('activities') ? 'active' : '' }}"><a href="{{route('activities')}}">Activities</a></li>
 				  <li><a href="{{route('recycler_association')}}">Bhangarwala Association</a></li>
 				  <li><a href="{{route('teachers_association')}}">Teachers Association</a></li>
-				  <li><a href="{{route('show_page',['slug'=>'sarvoday-nagar'])}}">Role Model</a></li>
+				  <li class=""><a href="#">Role Model</a>
+				  	<ul class="dropdownd">
+				  		<li><a href="{{route('show_page',['slug'=>'sarvoday-nagar'])}}">Sarvoday Nagar</a></li>
+				  		<li><a href="{{route('show_page',['slug'=>'sudama-vatika-society'])}}">Sudama Vatika Society</a></li>
+				  	</ul>
+				  </li>
 				  <li><a href="{{route('success_stories_index')}}">Success Stories</a></li>
 				  <li class="{{ Request::is('info/lectures-on-environment') ? 'active' : '' }}"><a href="{{route('show_page',['slug'=>'lectures-on-environment'])}}">Lectures on Environment</a></li>
+				  <li class=""><a href="#">Be Cautious</a>
+				  	<ul class="dropdownd">
+				  		<li><a href="{{route('show_page',['slug'=>'biodegradable-plastic'])}}">Biodegradable Plastic</a></li>
+				  	</ul>
+				  </li>
 				</ul>
 			  </li>
 			  <li class="{{ Request::is('solutions/*') ? 'active' : '' }}"><a href="#">Solutions</a>
