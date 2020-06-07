@@ -70,21 +70,54 @@
   <script type="text/javascript">
       var url = $("#pdf-viewer").data('src');
       var loadingTask = pdfjsLib.getDocument(url);
+      var scale = 1;
+      var currPage = 1;
       loadingTask.promise.then(function(pdf) {
-        pdf.getPage(1).then(function(page) {
-            var scale = 1;
-            var viewport = page.getViewport({ scale: scale, });
-            var canvas = document.getElementById('pdf-viewer');
-            var context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            var renderContext = {
-              canvasContext: context,
-              viewport: viewport
-            };
-            page.render(renderContext);
-        });
+        thePDF = pdf;
+        numPages = pdf.numPages;
+        pdf.getPage( 1 ).then( handlePages );
+        // pdf.getPage(1).then(function(page) {
+        //     var scale = 1;
+        //     var viewport = page.getViewport({ scale: scale, });
+        //     var canvas = document.getElementById('pdf-viewer');
+        //     var context = canvas.getContext('2d');
+        //     canvas.height = viewport.height;
+        //     canvas.width = viewport.width;
+        //     var renderContext = {
+        //       canvasContext: context,
+        //       viewport: viewport
+        //     };
+        //     page.render(renderContext);
+        // });
       });
+
+    function handlePages(page)
+    {
+        //This gives us the page's dimensions at full scale
+        var viewport = page.getViewport({ scale: scale, });
+
+        //We'll create a canvas for each page to draw it on
+        var canvas = document.createElement( "canvas" );
+        canvas.style.display = "block";
+        var context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        //Draw it on the canvas
+        page.render({canvasContext: context, viewport: viewport});
+
+        //Add it to the web page
+        //console.log();
+        $("#pdf-viewer").parent().append(canvas)
+        //document.body.appendChild( canvas );
+
+        //Move to next page
+        currPage++;
+        if ( thePDF !== null && currPage <= numPages )
+        {
+            thePDF.getPage( currPage ).then( handlePages );
+        }
+    }
   </script>
   @endif
   <!-- Load Facebook SDK for JavaScript -->
