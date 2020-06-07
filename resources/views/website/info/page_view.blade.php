@@ -64,6 +64,29 @@
   </section>
   @endsection
   @push('scripts')
+  @if(strpos($content->content, 'id="pdf-viewer"') !== false)
+  <script src="{{url(elixir('js/pdf.js'))}}"></script>
+  <script src="{{url(elixir('js/pdf.worker.js'))}}"></script>
+  <script type="text/javascript">
+      var url = $("#pdf-viewer").data('src');
+      var loadingTask = pdfjsLib.getDocument(url);
+      loadingTask.promise.then(function(pdf) {
+        pdf.getPage(1).then(function(page) {
+            var scale = 1;
+            var viewport = page.getViewport({ scale: scale, });
+            var canvas = document.getElementById('pdf-viewer');
+            var context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            var renderContext = {
+              canvasContext: context,
+              viewport: viewport
+            };
+            page.render(renderContext);
+        });
+      });
+  </script>
+  @endif
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {

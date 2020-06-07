@@ -11,5 +11,7 @@
     "/css/website.css": "/css/website.css?id=0f6b922f850bd59925d6",
     "/js/vendor.js": "/js/vendor.js?id=1ce3ad693e04c178505a",
     "/js/common.js": "/js/common.js?id=4e47f4e81d5f2d80e8b6",
-    "/js/twitter-widgets.js": "/js/twitter-widgets.js?id=3ce571864e8afdda3bc0"
+    "/js/twitter-widgets.js": "/js/twitter-widgets.js?id=3ce571864e8afdda3bc0",
+    "/js/pdf.js": "/js/pdf.js?id=e83eb3f34cb5acbed981",
+    "/js/pdf.worker.js": "/js/pdf.worker.js?id=b3c415adffc3ab488c39"
 }

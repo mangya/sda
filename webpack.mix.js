@@ -131,3 +131,11 @@ mix.scripts([
 mix.scripts([
     'resources/assets/website/js/twitter-widgets.js'
 ], 'public/js/twitter-widgets.js').version();
+
+mix.scripts([
+    'resources/assets/website/js/pdf.js'
+], 'public/js/pdf.js').version();
+
+mix.scripts([
+    'resources/assets/website/js/pdf.worker.js'
+], 'public/js/pdf.worker.js').version();
