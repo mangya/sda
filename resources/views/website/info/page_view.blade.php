@@ -50,13 +50,9 @@
         <div class="share-post d-flex align-items-center">
           <span>Share This page:</span>
           <div class="share-icons">
-            <!-- <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a> -->
+            <a href="https://www.facebook.com/sharer/sharer.php?app_id=2010407352341456&sdk=joey&u={{ route('show_page',['code' => $content->slug]) }}&display=popup&ref=plugin&src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')"><i class="fa fa-facebook"></i></a>
+            <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
             <a href="https://api.whatsapp.com/send?text={{ url('/info').'/'.$content->slug }}" target="_blank"><i class="fa fa-whatsapp"></i></a>
-            <div class="fb-share-button" 
-              data-href="{{ route('show_page',['code' => $content->slug]) }}" 
-              data-layout="button">
-            </div>
           </div>
         </div>
       </div>

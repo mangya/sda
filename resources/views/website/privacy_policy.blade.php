@@ -19,14 +19,14 @@
       <div class="row align-items-center">
         <!-- About Us Content -->
         <div class="col-12 col-md-12">
-          <div class="about-us-content content mb-30 style="text-align: justify;">
+          <div class="about-us-content content mb-30" style="text-align: justify;">
             <!-- Section Heading -->
             <div class="section-heading">
               <h2>Privacy Policy for <span>Swachha Dombivli Abhiyan</span></h2>
               <img src="img/core-img/decor.png" alt="">
             </div>
 
-            <p>At Swachha Dombivli Abhiyan, accessible from http://vsmsda.co.in, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Swachha Dombivli Abhiyan and how we use it.</p>
+            <p>At Swachha Dombivli Abhiyan, accessible from https://swachhadombivliabhiyan.in, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Swachha Dombivli Abhiyan and how we use it.</p>
 
             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at swachhadombivli@gmail.com </p>
 

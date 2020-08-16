@@ -28,7 +28,7 @@
 			<p>Last updated: September 29, 2019</p>
 
 
-			<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://vsmsda.co.in website (the "Service") operated by Swachha Dombivli Abhiyan ("us", "we", or "our").</p>
+			<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the https://swachhadombivliabhiyan.in website (the "Service") operated by Swachha Dombivli Abhiyan ("us", "we", or "our").</p>
 
 			<p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
 
