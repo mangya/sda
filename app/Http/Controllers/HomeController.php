@@ -118,6 +118,11 @@ class HomeController extends Controller
         return view('website.segregation');
     }
 
+    public function showEcoFriendlySolutions()
+    {
+        return view('website.eco_friendly_solutions');
+    }
+
     public function showRegistrationSuccess()
     {
         $quotes = Quotes::where('is_active',1)->get();
