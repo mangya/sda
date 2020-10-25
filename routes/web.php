@@ -60,7 +60,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('refreshcaptcha',['as' => 'refreshcaptcha', 'uses' => 'HomeController@refreshCaptcha']);
 
     Route::get('/info/{slug}', ['as' => 'show_page', 'uses' => 'InfoController@showPage']);
-    Route::get('/eco-friendly-solutions', ['as' => 'eco_friendly_solutions', 'uses' => 'HomeController@showEcoFriendlySolutions']);
+    Route::get('/eco-friendly-products', ['as' => 'eco_friendly_products', 'uses' => 'ProductController@showProducts']);
 
     
     // Authentication routes...
