@@ -16,7 +16,7 @@ class ProductController extends Controller
 
     public function showProducts()
     {
-        $products = Product::where('is_active',1)->orderBy('created_at','desc')->get();
+        $products = Product::where('is_active',1)->orderBy('created_at','desc')->paginate(6);;
         return view('website.eco_friendly_products',compact('products'));
     }
 }

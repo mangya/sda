@@ -61,6 +61,13 @@
           </div>
         </div>
         @endforeach
+        <div class="col-12 col-lg-12">
+        <nav>
+        <ul class="pagination mb-30">
+          {{ $products->links('website.pagination') }}
+        </ul>
+        </nav>
+        </div>
       </div>
   </div>
   @endsection
