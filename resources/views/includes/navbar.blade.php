@@ -106,6 +106,7 @@
 				  </li>
 				  <li class=""><a href="{{route('show_page',['slug'=>'nappies-disposal'])}}">Nappies Disposal</a>
 				  <li class=""><a href="{{route('show_page',['slug'=>'nirmalya-composting'])}}">Nirmalya Composting</a>
+				  <li class="{{ Request::is('eco-friendly-products') ? 'active' : '' }}"><a href="{{route('eco_friendly_products')}}">Eco Friendly Products</a>
 				</ul>
 			  </li>
 			  <!--<li class="{{ Request::is('contact-us') ? 'active' : '' }}"><a href="{{route('contact_us')}}">Contact</a></li>-->
