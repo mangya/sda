@@ -43,6 +43,7 @@
 			display: block;
 			font-size: 20px;
 			margin-top: 10px;
+			text-align: center;
 		}
 	}
 </style>
