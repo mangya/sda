@@ -13,7 +13,7 @@
 		margin: auto;
 		text-align: center;
 	}
-	.sponsor-area span{
+	.vsmbanner span{
 		font-family: "Times New Roman", Times, serif;
 		font-size: 32px;
 		letter-spacing: 2px;
@@ -22,6 +22,9 @@
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: none;
+	}
+	.vsmbanner a{
+		margin-left: 22%;
 	}
 	.sponsor-area p{
 		font-size: 20px;
@@ -33,9 +36,13 @@
 		.brand-name {
 		  font-size: 16px !important;
 		}
-		.sponsor-area span{
+		.vsmbanner a{
+			margin-left: 40%;
+		}
+		.vsmbanner span{
 			display: block;
-			font-size: 21px;
+			font-size: 20px;
+			margin-top: 10px;
 		}
 	}
 </style>
