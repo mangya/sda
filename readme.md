@@ -2,27 +2,21 @@
     <img src="/public/img/logo.jpg">
 </div>
 
+### Prerequisites
+
+1. ```Composer```
+2. ```PHP >= 7.1```
+3. ```MySQL```
+
 ## Steps to setup up on local
-  
-1. `git clone -b master https://github.com/mangya/sda.git`
 
-2. `composer install`
+1. Clone the repository with `https://github.com/mangya/sda.git <your_project_folder_name>`
+2. Change directory to your project folder `cd <your_project_folder_name>`
+3. Install the dependencies with `composer install`
+4. Create database in MySQL.
+5. Update the your database name and credentials in the `.env` file.
+6. Set permissions for the folders in (Optional only for Linux)
 
-3. `cp .env.example .env`
-
-4. `php artisan key:generate`
-
-5. Create a database and set database credentials in '.env' file
-
-6. `composer dumpautoload -o`
-
-7. `php artisan migrate:refresh --seed`
-
-8. `php artisan storage:link`
-  
-  
-## Permissions
-  
 ```
 sudo chown -R :www-data bootstrap/cache
 sudo chmod -R ug+rwx bootstrap/cache
@@ -31,13 +25,9 @@ sudo chmod -R ug+rwx storage/framework
 sudo chown -R :www-data storage/logs
 sudo chmod -R ug+rwx storage/logs
 ```
-
-  
-Now, you've completed the configuration step :v:
-
-11. Serve it on your local server, `php artisan serve --port=8081`
-  
-12. Hit the URL: http://localhost:8081  
+7. Create database tables and sample data with `php artisan migrate:refresh --seed`
+8. Run the application with `php artisan serve` (MySQL service should be up and running).
+9. Access `http://localhost:8000` and you're ready to go!
   
 ## Login Credentials:
   
@@ -46,3 +36,6 @@ Administrator
 **Login URL**: http://localhost:8081/admin  
 **Login ID**: mangesh  
 **Password**: vsmsda@111
+
+<img alt="Laravel" src="https://img.shields.io/badge/laravel-%23FF2D20.svg?&style=for-the-badge&logo=laravel&logoColor=white"/>
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=288ca5498ee0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
