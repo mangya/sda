@@ -8,6 +8,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use SDA\Http\Controllers\CommonController;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ReportController extends Controller
 {
@@ -29,8 +30,8 @@ class ReportController extends Controller
         $user_role = auth()->user()->role;
 
         if (in_array($user_role, ["System Administrator", "Administrator"])) {
-            if (isset(config('reports')[studly_case($report_name)])) {
-                $report_config = config('reports')[studly_case($report_name)];
+            if (isset(config('reports')[Str::studly($report_name)])) {
+                $report_config = config('reports')[Str::studly($report_name)];
             } else {
                 session()->flash('success', false);
                 return redirect()->route('home')->with('msg', 'No such report found');
@@ -44,9 +45,9 @@ class ReportController extends Controller
                 $report_data = $this->getData($request, $report_name, true);
 
                 if ($request->has('format') && $request->get('format')) {
-                    return $this->downloadReport(studly_case($report_name), $report_data['columns'], $report_data['rows'], $request->get('format'));
+                    return $this->downloadReport(Str::studly($report_name), $report_data['columns'], $report_data['rows'], $request->get('format'));
                 } else {
-                    return $this->downloadReport(studly_case($report_name), $report_data['columns'], $report_data['rows']);
+                    return $this->downloadReport(Str::studly($report_name), $report_data['columns'], $report_data['rows']);
                 }
             } else {
                 if ($request->ajax()) {
@@ -71,7 +72,7 @@ class ReportController extends Controller
 
     public function getData($request, $report_name, $download = false)
     {
-        $report_controller = app("SDA\\Http\\Controllers\\Reports\\" . studly_case($report_name));
+        $report_controller = app("SDA\\Http\\Controllers\\Reports\\" . Str::studly($report_name));
 
         if ($request->has('per_page') && $request->get('per_page')) {
             $per_page = (int) $request->get('per_page');

@@ -2,6 +2,7 @@
 
 namespace SDA;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
 class SubCategory extends Model
@@ -16,7 +17,7 @@ class SubCategory extends Model
     public function beforeSave($request)
     {
     	if(empty($request->get('slug'))){
-            $request->request->add(['slug' => str_slug($request->get('name'))]);
+            $request->request->add(['slug' => Str::slug($request->get('name'))]);
         }
     }
 }

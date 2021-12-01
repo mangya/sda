@@ -5,7 +5,7 @@
 ### Prerequisites
 
 1. ```Composer```
-2. ```PHP >= 7.1```
+2. ```PHP >= 7.2.5```
 3. ```MySQL```
 
 ## Steps to setup up on local

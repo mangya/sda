@@ -5,6 +5,7 @@ namespace SDA\Http\Controllers;
 use DB;
 use File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 trait FormController
 {
@@ -767,7 +768,7 @@ trait FormController
                     // check if generated no is already present in record
                     $valid_slug = false;
                     do {
-                        $generated_slug = str_slug($data[$table][$module['slug_source']], "-");
+                        $generated_slug = Str::slug($data[$table][$module['slug_source']], "-");
 
                         $existing_slug = DB::table($table)
                             ->where($parent_field_name, $generated_slug)

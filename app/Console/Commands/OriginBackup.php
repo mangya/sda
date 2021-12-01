@@ -3,6 +3,7 @@
 namespace SDA\Console\Commands;
 
 use DB;
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -34,7 +35,7 @@ class OriginBackup extends Command
     {
         parent::__construct();
 
-        $this->backup_name = str_random(40);
+        $this->backup_name = Str::random(40);
 
         $this->process = new Process(sprintf(
             'mysqldump -u%s -p%s %s > %s',

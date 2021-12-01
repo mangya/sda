@@ -3,6 +3,7 @@
 namespace SDA\Http\Controllers;
 
 use SDA\Product;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -10,7 +11,7 @@ class ProductController extends Controller
     public function beforeSave($request)
     {
     	if(empty($request->get('slug'))){
-            $request->request->add(['slug' => str_slug($request->get('title'),'-')]);
+            $request->request->add(['slug' => Str::slug($request->get('title'),'-')]);
         }
     }
 

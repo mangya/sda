@@ -10,6 +10,7 @@ use SDA\Module;
 use SDA\Http\Controllers\CommonController;
 use SDA\Http\Controllers\PermController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ModuleController extends Controller
 {
@@ -147,7 +148,7 @@ class ModuleController extends Controller
         $file_text .= "\t}\r";
         $file_text .= "}\r";
 
-        $file_name = date('Y_m_d_His') . "_seed_" . strtolower($data['name']) . "_" . snake_case($id_numbering) . "_module";
+        $file_name = date('Y_m_d_His') . "_seed_" . strtolower($data['name']) . "_" . Str::snake($id_numbering) . "_module";
         File::put(database_path('migrations/' . $file_name . '.php'), $file_text);
 
         $max_migration_batch = DB::table('migrations')->max('batch');
@@ -178,7 +179,7 @@ class ModuleController extends Controller
         $file_text .= "\t}\r";
         $file_text .= "}\r";
 
-        $file_name = date('Y_m_d_His') . "_delete_" . strtolower($module_name) . "_" . snake_case($id_numbering) . "_module";
+        $file_name = date('Y_m_d_His') . "_delete_" . strtolower($module_name) . "_" . Str::snake($id_numbering) . "_module";
         File::put(database_path('migrations/' . $file_name . '.php'), $file_text);
 
         $max_migration_batch = DB::table('migrations')->max('batch');

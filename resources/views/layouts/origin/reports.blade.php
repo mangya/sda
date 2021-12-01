@@ -10,11 +10,11 @@
                 @continue
             @endif
 
-            <div class="col-md-3 col-xs-12 report" data-href="{{ route('show.report', snake_case($report_name)) }}">
+            <div class="col-md-3 col-xs-12 report" data-href="{{ route('show.report', \Illuminate\Support\Str::snake($report_name)) }}">
                 <div class="box">
                     <div class="box-body">
                         <div class="report-body">
-                            <a href="{{ route('show.report', snake_case($report_name)) }}" class="btn btn-app report-btn" style="background-color: {{ $report['bg_color'] }}; border-color: {{ $report['bg_color'] }}; color: {{ $report['icon_color'] }};">
+                            <a href="{{ route('show.report', \Illuminate\Support\Str::snake($report_name)) }}" class="btn btn-app report-btn" style="background-color: {{ $report['bg_color'] }}; border-color: {{ $report['bg_color'] }}; color: {{ $report['icon_color'] }};">
                                 <i class="{{ $report['icon'] }}"></i>
                             </a>
                         </div>

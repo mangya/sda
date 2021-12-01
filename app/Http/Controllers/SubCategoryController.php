@@ -2,6 +2,7 @@
 
 namespace SDA\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class SubCategoryController extends Controller
@@ -24,7 +25,7 @@ class SubCategoryController extends Controller
     public function beforeSave($request)
     {
     	if(empty($request->get('slug'))){
-            $request->request->add(['slug' => str_slug($request->get('name'))]);
+            $request->request->add(['slug' => Str::slug($request->get('name'))]);
         }
     }
 }
