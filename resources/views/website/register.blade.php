@@ -91,7 +91,7 @@
   @include('includes.quotes')
   <!-- ##### Contact Area End ##### -->
   @push('scripts')
-  <script src="{{url(elixir('js/common.js'))}}"></script>
+  <script src="{{url(mix('js/common.js'))}}"></script>
   <script type="text/javascript">
     $('#registerForm input').on('keypress', function(){
         $(this).parent().removeClass('has-error');

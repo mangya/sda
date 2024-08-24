@@ -29,8 +29,8 @@
 	<meta name="msapplication-TileImage" content="{{asset('/ms-icon-144x144.png')}}">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Core Stylesheet -->
-	<link rel="stylesheet" rel="preload" href="{{url(elixir('css/vendor.css'))}}">
-	<link rel="stylesheet" rel="preload" href="{{url(elixir('css/website.css'))}}">
+	<link rel="stylesheet" rel="preload" href="{{url(mix('css/vendor.css'))}}">
+	<link rel="stylesheet" rel="preload" href="{{url(mix('css/website.css'))}}">
 	@stack('styles')
 </head>
 <body>
@@ -42,7 +42,7 @@
 	@yield('page_content')
 	@include('includes.footer')
 	<!-- ##### All Javascript Files ##### -->
-	<script src="{{url(elixir('js/vendor.js'))}}"></script>
+	<script src="{{url(mix('js/vendor.js'))}}"></script>
 	@stack('scripts')
 	@if (App::environment()=='production')
 	<!-- Global site tag (gtag.js) - Google Analytics -->

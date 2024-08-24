@@ -135,5 +135,5 @@
   @include('includes.vsm_banner')
 @endsection
 @push('scripts')
-<script async defer src="{{url(elixir('js/twitter-widgets.js'))}}" charset="utf-8"></script>
+<script async defer src="{{url(mix('js/twitter-widgets.js'))}}" charset="utf-8"></script>
 @endpush

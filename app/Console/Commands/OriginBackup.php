@@ -37,13 +37,13 @@ class OriginBackup extends Command
 
         $this->backup_name = Str::random(40);
 
-        $this->process = new Process(sprintf(
-            'mysqldump -u%s -p%s %s > %s',
-            config('database.connections.mysql.username'),
-            config('database.connections.mysql.password'),
-            config('database.connections.mysql.database'),
-            storage_path('app/backups/' . $this->backup_name . '.sql')
-        ));
+        // $this->process = new Process(sprintf(
+        //     'mysqldump -u%s -p%s %s > %s',
+        //     config('database.connections.mysql.username'),
+        //     config('database.connections.mysql.password'),
+        //     config('database.connections.mysql.database'),
+        //     storage_path('app/backups/' . $this->backup_name . '.sql')
+        // ));
     }
 
     /**
