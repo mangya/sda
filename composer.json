@@ -9,9 +9,10 @@
     "type": "project",
     "require": {
         "php": "^8.1",
-        "doctrine/dbal": "^4.1.0",
+        "doctrine/dbal": "^4.1",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "laravel/ui": "^4.5",
         "maatwebsite/excel": "^3.1.56",
         "mews/captcha": "^3.4.0"
     },
