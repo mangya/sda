@@ -202,21 +202,19 @@ trait CommonController
     // returns table column name and column type
     public function getTableSchema($table, $get_nullable = false)
     {
-        $columns = DB::connection()
-            ->getDoctrineSchemaManager()
-            ->listTableColumns($table);
+        $columns = DB::select("SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?", [$table]);
 
         $table_schema = [];
 
         foreach($columns as $column) {
             if ($get_nullable) {
-                $table_schema[$column->getName()] = [
-                    'datatype' => $column->getType()->getName(), 
-                    'nullable' => !$column->getNotnull(),
+                $table_schema[$column->COLUMN_NAME] = [
+                    'datatype' => $column->DATA_TYPE, 
+                    'nullable' => ($column->IS_NULLABLE == 'YES') ? true : false,
                     // 'default' => $column->getDefault()
                 ];
             } else {
-                $table_schema[$column->getName()] = $column->getType()->getName();
+                $table_schema[$column->COLUMN_NAME] = $column->DATA_TYPE;
             }
         }
 
