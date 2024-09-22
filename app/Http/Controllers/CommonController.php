@@ -204,10 +204,8 @@ trait CommonController
     // returns table column name and column type
     public function getTableSchema($table, $get_nullable = false)
     {
-        $columns = DB::select("SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT 
-        FROM INFORMATION_SCHEMA.COLUMNS 
-        WHERE TABLE_NAME = ?", [$table]);
-        
+        $columns = DB::select("SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?", [$table]);
+
         $table_schema = [];
         
         foreach($columns as $column) {
