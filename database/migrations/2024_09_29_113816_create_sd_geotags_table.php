@@ -21,8 +21,12 @@ return new class extends Migration
             $table->integer('tree_plantaton_drive_id')->nullable();
             $table->integer('tree_plantaton_site_id')->nullable();
             $table->tinyInteger('tree_status')->nullable()->comment('1:alive,0:dead');
+            $table->boolean('is_active')->default('0');
+            $table->string('approved_by')->nullable();
+            $table->boolean('is_approved')->default('0');
+            $table->string('owner');
+            $table->string('last_updated_by');
             $table->timestamps();
-            $table->timestamp('deleted_at')->nullable();
         });
 
     }

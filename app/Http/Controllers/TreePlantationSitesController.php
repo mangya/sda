@@ -11,7 +11,7 @@ class TreePlantationSitesController extends Controller
     public function beforeSave($request)
     {
     	if(empty($request->get('slug'))){
-            $request->request->add(['slug' => Str::slug($request->get('title'),'-')]);
+            $request->request->add(['slug' => Str::slug($request->get('name'),'-')]);
         }
     }
 

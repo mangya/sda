@@ -15,10 +15,15 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->string('slug', 200)->unique();
-            $table->longText('scientific_name')->nullable();
+            $table->string('scientific_name')->nullable();
+            $table->longText('info')->nullable();
             $table->string('image', 1000)->nullable();
+            $table->boolean('is_active')->default('0');
+            $table->string('approved_by')->nullable();
+            $table->boolean('is_approved')->default('0');
+            $table->string('owner');
+            $table->string('last_updated_by');
             $table->timestamps();
-            $table->timestamp('deleted_at')->nullable();
         });
     }
 

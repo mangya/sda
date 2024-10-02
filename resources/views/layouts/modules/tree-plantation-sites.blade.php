@@ -18,6 +18,32 @@
                     </div>
                 </div>
             </div>
+
+            @if(Auth::user()->role == 'Administrator')
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Is Active</label>
+                    <div>
+                        <select name="is_active" id="is_active" class="form-control" data-mandatory="yes">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Is Approved</label>
+                    <div>
+                        <select name="is_approved" id="is_approved" class="form-control" data-mandatory="yes">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            @endif
+
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="control-label">Site Address</label>

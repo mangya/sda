@@ -33,7 +33,7 @@
                 <textarea name="content" id="blogContent" class="text-editor"></textarea>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn famie-btn" id="blogSave">Save</button>
+                <button type="submit" class="btn famie-btn" id="blogSave">Savesss</button>
               </div>
             </div>
           </form>

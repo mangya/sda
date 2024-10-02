@@ -15,9 +15,13 @@ return new class extends Migration
             $table->increments('id');
             $table->string('slug', 200)->unique();
             $table->string('name', 255);
-            $table->text('address', 1000);
+            $table->text('address', 500);
+            $table->boolean('is_active')->default('0');
+            $table->string('approved_by')->nullable();
+            $table->boolean('is_approved')->default('0');
+            $table->string('owner');
+            $table->string('last_updated_by');
             $table->timestamps();
-            $table->timestamp('deleted_at')->nullable();
         });
     }
 

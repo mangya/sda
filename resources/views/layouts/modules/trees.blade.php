@@ -1,6 +1,6 @@
 <div class="box form-section" id="blog-details">
     <div class="box-header">
-        <h5 class="box-title">Page Details
+        <h5 class="box-title">Tree Details
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
                     <i class="fa fa-minus"></i>
@@ -12,7 +12,7 @@
 	    <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="control-label">Avatar</label>
+                    <label class="control-label">Tree Image</label>
                     <div class="media">
                         <div class="pull-left text-center avatar-box">
                         @if (isset($form_data[$table_name]['image']) && $form_data[$table_name]['image'])
@@ -32,9 +32,17 @@
             </div>
 	    	<div class="col-md-6">
                 <div class="form-group">
-                    <label class="control-label">Title</label>
+                    <label class="control-label">Name</label>
                     <div>
-                        <input type="text" name="title" id="title" class="form-control" data-mandatory="yes" autocomplete="off">
+                        <input type="text" name="name" id="name" class="form-control" data-mandatory="yes" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Scientific Name</label>
+                    <div>
+                        <input type="text" name="scientific_name" id="scientific_name" class="form-control" data-mandatory="yes" autocomplete="off">
                     </div>
                 </div>
             </div>
@@ -63,15 +71,5 @@
             </div>
             @endif
 	    </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label class="control-label">Description</label>
-                    <div>
-                        <textarea id="description" name="description" class="form-control text-editor"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
+    </div>
 </div>

@@ -6,6 +6,7 @@ use DB;
 use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
 trait FormController
 {
@@ -678,7 +679,6 @@ trait FormController
 
         // get the table schema
         $table_schema = $this->getTableSchema($module['table_name'], true);
-
         foreach ($form_data as $column => $value) {
             if (isset($table_schema[$column]) && $table_schema[$column]['datatype'] == "date" && $value) {
                 $value = date('Y-m-d', strtotime($value));
@@ -728,11 +728,11 @@ trait FormController
     {
         if ($type_name == "decimal") {
             $type_name = "float";
-        } elseif ($type_name == "text") {
+        } elseif ($type_name == "text" || $type_name == 'varchar') {
             $type_name = "string";
         }
-
-        settype($value, $type_name);
+        Log::info("$value - $type_name");
+        //settype($value, $type_name);
     }
 
     // Returns the array of data from request with some common data and child data
