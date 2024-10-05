@@ -9,36 +9,69 @@
         </h5>
     </div>
     <div class="box-body form-content">
-	    <div class="row">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label class="control-label">Avatar</label>
-                    <div class="media">
-                        <div class="pull-left text-center avatar-box">
-                        @if (isset($form_data[$table_name]['image']) && $form_data[$table_name]['image'])
-                            <img src="{{ getImage($form_data[$table_name]['image'], 100, 100) }}" alt="{{ $form_data[$table_name]['title'] }}">
-                        @else
-                            <i class="fa fa-picture-o fa-2x avatar"></i>
-                        @endif
-                        </div>
-                        <div class="media-body">
-                            <label title="Upload image file" for="image" class="btn btn-primary btn-sm">
-                                <input type="file" accept="image/*" name="image" id="image" class="hide">
-                                Change
-                            </label>
-                        </div>
-                    </div>
+                    <select name="tree_id" class="form-control activity-filter">
+                        <option value="" default selected>Select Tree</option>
+                        @foreach(SDA\Tree::getDropdownList() as $id => $name)
+                            <option value="{{ $id }}">
+                                {{ $name }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
-	    	<div class="col-md-6">
+            
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label class="control-label">Title</label>
+                    <select name="tree_plantation_drive_id" class="form-control activity-filter">
+                        <option value="" default selected>Select Drive</option>
+                        @foreach(SDA\TreePlantationDrive::getDropdownList() as $id => $name)
+                            <option value="{{ $id }}">
+                                {{ $name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <select name="tree_plantation_site_id" class="form-control activity-filter">
+                        <option value="" default selected>Select Site</option>
+                        @foreach(SDA\TreePlantationSite::getDropdownList() as $id => $name)
+                            <option value="{{ $id }}">
+                                {{ $name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+
+	    <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Date of Plantation</label>
                     <div>
-                        <input type="text" name="title" id="title" class="form-control" data-mandatory="yes" autocomplete="off">
+                        <input type="date" name="date_of_plantation" id="date_of_plantation" class="form-control" data-mandatory="yes" autocomplete="off">
                     </div>
                 </div>
             </div>
 			@if(Auth::user()->role == 'Administrator')
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Tree Status</label>
+                    <div>
+                        <select name="tree_status" id="tree_status" class="form-control" data-mandatory="yes">
+                            <option value="1">Alive</option>
+                            <option value="0">Dead</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">Is Active</label>
@@ -64,14 +97,24 @@
             @endif
 	    </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label class="control-label">Description</label>
+                    <label class="control-label">Tree Longitude</label>
                     <div>
-                        <textarea id="description" name="description" class="form-control text-editor"></textarea>
+                        <input type="text" name="tree_longitude" id="tree_longitude" class="form-control" data-mandatory="yes" autocomplete="off">
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Tree Lattitude</label>
+                    <div>
+                        <input type="text" name="tree_lattitude" id="tree_lattitude" class="form-control" data-mandatory="yes" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+
         </div>
 	</div>
 </div>

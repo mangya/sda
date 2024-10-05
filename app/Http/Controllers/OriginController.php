@@ -39,7 +39,7 @@ class OriginController extends Controller
 
         $this->module['link_field_value'] = $id;
         $show_response = $this->showDoc($this->module);
-
+        
         if ($request->is('api/*')) {
             // Send JSON response to API
             return response()->json($show_response, $show_response['status_code']);
@@ -208,12 +208,14 @@ class OriginController extends Controller
     {
         $module_slug = $this->module['slug'];
         $form_data = isset($response['data']['form_data']) ? $response['data']['form_data'] : [];
-
+        
         if (isset($response['status_code']) && $response['status_code'] == 200) {
             if ($view_type && $view_type == 'list_view') {
+                //dd(1);
                 return redirect()->route('show.list', array('slug' => $module_slug))
                     ->with(['msg' => $response['message']]);
             } elseif ($view_type && $view_type == 'form_view') {
+                //dd(2);
                 $form_link_field_value = $form_data[$this->module['table_name']][$this->module['link_field']];
 
                 return redirect()->route('show.doc', array('slug' => $module_slug, 'id' => $form_link_field_value))
@@ -237,13 +239,15 @@ class OriginController extends Controller
                         }
                     }
                 }
-
+                //dd($response['data']);
                 return view('templates.form_view')->with($response['data']);
             }
         } elseif (isset($response['status_code']) && $response['status_code'] == 400) {
+            //dd(4);
             session()->flash('success', false);
             return back()->withInput()->with(['msg' => $response['message']]);
         } elseif (isset($response['status_code']) && $response['status_code'] == 401) {
+            //dd(5);
             session()->flash('success', false);
 
             if ($view_type && $view_type == 'list_view') {
@@ -255,6 +259,7 @@ class OriginController extends Controller
                 return redirect()->route('home')->with('msg', $response['message']);
             }
         } elseif (isset($response['status_code']) && $response['status_code'] == 404) {
+            //dd(6);
             session()->flash('success', false);
 
             if ($view_type && $view_type == 'list_view') {
@@ -269,6 +274,7 @@ class OriginController extends Controller
                 return redirect()->route('home')->with('msg', $response['message']);
             }
         } elseif (isset($response['status_code']) && $response['status_code'] == 500) {
+            //dd(7);
             session()->flash('success', false);
 
             if ($view_type && $view_type == 'list_view') {

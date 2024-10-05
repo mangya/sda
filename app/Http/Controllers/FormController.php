@@ -294,15 +294,15 @@ trait FormController
                 'icon' => $module['icon'],
                 'form_id' => $module['link_field_value']
             ];
-
+            
             if (isset($module['form_title']) && $data[$module['form_title']]) {
                 $activity_data['form_title'] = $data[$module['form_title']];
             } else {
                 $activity_data['form_title'] = $data['id'];
             }
-
+            
             $this->saveActivity($activity_data, ucwords($action));
-
+            
             // create user if modules come under user_via_modules
             if (in_array($module['name'], $this->user_via_modules)) {
                 $this->userFormAction($request, $module['name'], $action, isset($data['avatar']) ? $data['avatar'] : null);
