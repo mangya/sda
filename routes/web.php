@@ -62,6 +62,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/info/{slug}', ['as' => 'show_page', 'uses' => 'InfoController@showPage']);
     Route::get('/eco-friendly-products', ['as' => 'eco_friendly_products', 'uses' => 'ProductController@showProducts']);
 
+    // Geotagging info / QR Code Landing page
+    Route::get('/geotags/{id}', ['as' => 'show_geotag_details', 'uses' => 'GeotagsController@showGeotagDetails']);
+
     
     // Authentication routes...
     // Route::get('/login', function() {
