@@ -4,6 +4,7 @@ namespace SDA\Http\Controllers;
 
 
 use Illuminate\Support\Str;
+use SDA\Geotag;
 use SDA\Tree;
 
 class GeotagsController extends Controller
@@ -16,6 +17,8 @@ class GeotagsController extends Controller
     }
 
     public function showGeotagDetails($id){
-        return view('website.geotags');
+        $data = Geotag::getGeotagDetails($id);
+
+        return view('website.geotags')->with('details',$data);
     }
 }

@@ -25,17 +25,17 @@
             <img src="{{asset('img/geotag.jpg')}}" class="img-responsive mb-15" style="margin: auto;" alt="">
           </div>
         </div>
-
+        
         <!-- About Us Content -->
         <div class="col-12 col-lg-6">
           <div class="about-us-content content">
             <!-- Section Heading -->
             <div class="section-heading mb-15">
               <p>Tree Details</p>
-              <h2> Tree Name : <span>Mango Tree</span></h2>
+              <h2> Tree Name : <span>{{$details[0]->treeName}}</span></h2>
               <img src="{{asset('img/core-img/decor.png')}}" alt="">
             </div>
-            <p>Mango trees are deep-rooted, symmetrical evergreens that attain heights of 90 feet and widths of 80 feet. Mango trees have simple alternate lanceolate leaves that are 12 to 16 inches in length and yellow-green, purple, or copper in color when young. Mature leaves are leathery, glossy, and deep green in color.</p>
+            <p>{{$details[0]->treeInfo}}</p>
           </div>
         </div>
         
@@ -69,7 +69,7 @@
                   <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
                 </a></h6>
               <div id="collapseOne" class="accordion-content collapse show">
-                <p class="ml-30">This tree is planted in tree plantation drive 2024.</p>
+                <p class="ml-30">{{$details[0]->summary}}</p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@
                 </a>
               </h6>
               <div id="collapseTwo" class="accordion-content collapse">
-                <p class="ml-30">Tree plantation site address is nilaje</p>
+                <p class="ml-30">{{$details[0]->address}}</p>
               </div>
             </div>
             
