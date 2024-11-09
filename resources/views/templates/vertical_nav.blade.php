@@ -60,6 +60,12 @@
                     <span>Settings</span>
                 </a>
             </li>
+            <li class="treeview" title="Settings">
+                <a href="{{ route('show.app.geotags') }}">
+                    <i class="fa fa-cogs"></i>
+                    <span>Print Geotags</span>
+                </a>
+            </li>
         </ul>
         @endif
     </section>

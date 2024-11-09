@@ -112,6 +112,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('/app/settings', ['as' => 'save.app.settings', 'uses' => 'SettingsController@save']);
         Route::post('/update_module_sequence', ['as' => 'update.module.sequence', 'uses' => 'ModuleController@updateSequence']);
         Route::post('/import_from_csv', ['as' => 'import.from.csv', 'uses' => 'ImportController@import']);
+        Route::get('/app/geotags', ['as' => 'show.app.geotags', 'uses' => 'GeotagsController@printList']);
+        Route::get('/app/geotags/printQRCode/{geotagPk}', ['as' => 'show.app.printQRCode', 'uses' => 'GeotagsController@printQRCode']);
 
         // Backup routes...
         Route::get('/app/backups', ['as' => 'show.app.backups', 'uses' => 'BackupController@show']);

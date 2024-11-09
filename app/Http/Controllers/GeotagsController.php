@@ -18,7 +18,16 @@ class GeotagsController extends Controller
 
     public function showGeotagDetails($id){
         $data = Geotag::getGeotagDetails($id);
-
         return view('website.geotags')->with('details',$data);
+    }
+
+    public function printList(){
+        $tagList = Geotag::getGeotagDetails();
+        return view('layouts.modules.print_geotag_list_view')->with('tagList',$tagList);
+    }
+
+    public function printQRCode($geotagPk){
+        $details = Geotag::getGeotagDetails($geotagPk);
+        return view('layouts.modules.printQR')->with('details',$details);
     }
 }
