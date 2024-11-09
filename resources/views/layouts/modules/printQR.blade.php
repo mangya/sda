@@ -53,7 +53,7 @@
 <div class="printable-area">
     <center><img src="{{asset('website/img/core-img/logo.jpg')}}" alt=""></center></br>
     <span class="brand-name">Swachha Dombivli Abhiyan</span></br></br>
-    <img src="your-qr-code-url.png" alt="QR Code" /></br>
+    <img height="300px" width="300px" src="{{$qrcode}}" alt="QR Code"/></br>
     <h3>Tree Name: <span id="treeName">{{$details[0]->treeName}}</span></h3></br>
     <p>ID: <span id="treeID">{{$details[0]->id}}</span></p></br>
 </div>

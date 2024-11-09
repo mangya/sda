@@ -6,6 +6,7 @@ namespace SDA\Http\Controllers;
 use Illuminate\Support\Str;
 use SDA\Geotag;
 use SDA\Tree;
+use SDA\Http\Controllers\QRCodeController;
 
 class GeotagsController extends Controller
 {
@@ -28,6 +29,7 @@ class GeotagsController extends Controller
 
     public function printQRCode($geotagPk){
         $details = Geotag::getGeotagDetails($geotagPk);
-        return view('layouts.modules.printQR')->with('details',$details);
+        return QRCodeController::generate("swaroop test qr");
+        //return view('layouts.modules.printQR',compact('details','qrcode'));
     }
 }
