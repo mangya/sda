@@ -15,7 +15,7 @@
         }
         .printable-area {
             width: 4in;
-            height: 4in;
+            height: 4.5in;
             border: 1px solid #ccc;
             background-color: #fff;
             padding: 10px;
@@ -53,9 +53,9 @@
 <div class="printable-area">
     <center><img src="{{asset('website/img/core-img/logo.jpg')}}" alt=""></center></br>
     <span class="brand-name">Swachha Dombivli Abhiyan</span></br></br>
-    <img height="300px" width="300px" src="{{$qrcode}}" alt="QR Code"/></br>
-    <h3>Tree Name: <span id="treeName">{{$details[0]->treeName}}</span></h3></br>
-    <p>ID: <span id="treeID">{{$details[0]->id}}</span></p></br>
+    <img src="{!! $qrcode !!}" alt="QR Code"></br>
+    <h3>Tree Name: {{$details[0]->treeName}}</h3>
+    <h3>UIN: <span id="treeID">{{$details[0]->id}}</h3></br>
 </div>
 <!--<div>
     <center><button class="print-button" onclick="window.print();">Print</button></center>

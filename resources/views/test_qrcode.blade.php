@@ -20,7 +20,8 @@
 </head>
 <body>
     <h1>Your QR Code</h1>
-    <img src="{{ $qrcode }}" alt="QR Code">
+    <!-- <img width="100px" height="100px" src="data:image/gif;base64,R0lGODdhAQABAPAAAP8AAAAAACwAAAAAAQABAAACAkQBADs=" alt="QR Code"> -->
+    <img src="{!! $qrcode !!}" alt="QR Code">
     <p>Scan this QR code or visit the link: <a href="https://example.com">https://example.com</a></p>
 </body>
 </html>

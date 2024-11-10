@@ -29,7 +29,8 @@ class GeotagsController extends Controller
 
     public function printQRCode($geotagPk){
         $details = Geotag::getGeotagDetails($geotagPk);
-        return QRCodeController::generate("swaroop test qr");
-        //return view('layouts.modules.printQR',compact('details','qrcode'));
+        $qrData = url("/geotags/$geotagPk");
+        $qrcode = QRCodeController::generate($qrData);
+        return view('layouts.modules.printQR',compact('details','qrcode'));
     }
 }
