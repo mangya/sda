@@ -49,7 +49,7 @@
                     <textarea name="message" class="form-control txt-message" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
                   </div>
                   <div class="captcha col-12" style="margin-bottom: 10px">
-                    <span>{!! captcha_img('flat') !!}</span>
+                    <span>{!! Captcha::img() !!}</span>
                     <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
                   </div>
                   <div class="col-12">
