@@ -4,6 +4,7 @@ namespace SDA\Http\Controllers;
 
 use Mail;
 use Auth;
+use Captcha;
 use SDA\OTP;
 use SDA\User;
 use SDA\Team;
