@@ -7,6 +7,8 @@ use Exception;
 use File;
 use SDA\Module;
 use SDA\Activity;
+use Illuminate\Support\Facades\Schema;
+use Doctrine\DBAL\Schema\AbstractSchemaManager;
 
 trait CommonController
 {
@@ -205,7 +207,7 @@ trait CommonController
         $columns = DB::select("SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?", [$table]);
 
         $table_schema = [];
-
+        
         foreach($columns as $column) {
             if ($get_nullable) {
                 $table_schema[$column->COLUMN_NAME] = [
@@ -217,7 +219,6 @@ trait CommonController
                 $table_schema[$column->COLUMN_NAME] = $column->DATA_TYPE;
             }
         }
-
         return $table_schema;
     }
 }
