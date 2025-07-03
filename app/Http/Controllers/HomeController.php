@@ -181,14 +181,15 @@ class HomeController extends Controller
 
     public function register(Request $request)
     {
-
+        $messages = ['captcha.captcha'=>'Invalid captcha code.'];
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:oc_users',
             'name' => 'required',
             'mobile' => 'required',
             'password' => 'required|min:6|confirmed',
             'password_confirmation' => 'required',
-        ]);
+            'captcha' => 'required|captcha'
+        ],$messages);
 
         if ($validator->fails()) {
             return redirect('register')

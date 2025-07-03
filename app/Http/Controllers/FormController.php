@@ -2,10 +2,9 @@
 
 namespace SDA\Http\Controllers;
 
-use DB;
-use File;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 trait FormController
 {
@@ -382,7 +381,9 @@ trait FormController
 
                         session()->flash('newly_created', true);
                     } else {
-                        list($column_name, $column_value) = array_divide($unsatisfied_rule);
+                        // list($column_name, $column_value) = array_divide($unsatisfied_rule);
+                        $column_name = array_keys($unsatisfied_rule);
+                        $column_value = array_values($unsatisfied_rule);
                         $message = 'You are not authorized to create "'. ucwords($column_value[0]) . '" ' . ucwords($column_name[0]);
 
                         return $this->sendResponse(401, $message);
@@ -434,7 +435,9 @@ trait FormController
                             ->where($module['link_field'], $module['link_field_value'])
                             ->update($form_table_data);
                     } else {
-                        list($column_name, $column_value) = array_divide($unsatisfied_rule);
+                        // list($column_name, $column_value) = array_divide($unsatisfied_rule);
+                        $column_name = array_keys($unsatisfied_rule);
+                        $column_value = array_values($unsatisfied_rule);
                         $message = 'You are not authorized to update "'. ucwords($column_name[0]) . '" as "' . ucwords($column_value[0]) . '"';
 
                         return $this->sendResponse(401, $message);
