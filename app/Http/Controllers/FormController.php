@@ -2,6 +2,7 @@
 
 namespace SDA\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -727,15 +728,36 @@ trait FormController
     }
 
     // converts the type of request value to the type to be inserted in db
-    public function convertDataType($value, $type_name)
+    public function convertDataType(& $value, $type_name)
     {
         if ($type_name == "decimal") {
             $type_name = "float";
         } elseif ($type_name == "text") {
             $type_name = "string";
         }
+        $type = null;
 
-        settype($value, $type_name);
+        $t = strtolower($type_name);
+        if (in_array($t, ['decimal', 'double', 'float', 'real'])) {
+            $type = 'float';
+        } elseif (in_array($t, ['int', 'integer', 'smallint', 'mediumint', 'bigint', 'tinyint'])) {
+            $type = 'integer';
+        } elseif (in_array($t, ['varchar', 'char', 'text', 'mediumtext', 'longtext', 'enum', 'set'])) {
+            $type = 'string';
+        } elseif (in_array($t, ['boolean', 'bool', 'bit'])) {
+            $type = 'boolean';
+        } elseif ($t === 'json') {
+            $decoded = json_decode($value, true);
+            if (json_last_error() === JSON_ERROR_NONE) {
+                $value = $decoded;
+                return;
+            }
+            $type = 'string';
+        } else {
+            return;
+        }
+
+        settype($value, $type);
     }
 
     // Returns the array of data from request with some common data and child data
