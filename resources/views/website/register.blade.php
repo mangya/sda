@@ -66,11 +66,18 @@
                     <span class="help-txt">{{ $errors->first('mobile') }}</span>
                     @endif
                   </div>
+                  <div class="captcha col-12" style="margin-bottom: 10px">
+                    <span>{!! Captcha::img() !!}</span>
+                    <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
+                  </div>
+                  <div class="col-12 @if ($errors->has('captcha')) has-error @endif">
+                    <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+                    @if ($errors->has('captcha'))
+                    <span class="help-txt">{{ $errors->first('captcha') }}</span>
+                    @endif
+                  </div>
                 </div>
                 <div class="row">
-                  <!-- <div class="col-12">
-                    <textarea name="message" class="form-control" cols="30" rows="5" id="txtMessage" maxlength="300" placeholder="Your Message"></textarea>
-                  </div> -->
                   <div class="col-12">
                     <button type="button" class="btn famie-btn mb-15" id="regSubmit">Sign up</button>
                     <p>By clicking “Sign up”, you acknowledge that you have read and agree to our <a href="{{ route('terms') }}" target="_blank">terms of use</a> and <a href="{{ route('privacy_policy') }}" target="_blank">privacy policy</a></p>
@@ -91,7 +98,7 @@
   @include('includes.quotes')
   <!-- ##### Contact Area End ##### -->
   @push('scripts')
-  <script src="{{url(elixir('js/common.js'))}}"></script>
+  <script src="{{url(mix('js/common.js'))}}"></script>
   <script type="text/javascript">
     $('#registerForm input').on('keypress', function(){
         $(this).parent().removeClass('has-error');
@@ -148,6 +155,12 @@
             inpMobile.parent().addClass('has-error');
             inpMobile.focus();
             inpMobile.parent().append('<span class="help-txt">Mobile is required</span>');
+            is_valid = false;
+        }
+        if($('#captcha').val() == '') {
+            $('#captcha').parent().addClass('has-error');
+            $('#captcha').focus();
+            $('#captcha').parent().append('<span class="help-txt">Please Enter Captcha</span>')
             is_valid = false;
         }
         if(is_valid) {

@@ -61,8 +61,8 @@
   @endsection
   @push('scripts')
   @if(strpos($content->content, 'id="pdf-viewer"') !== false)
-  <script src="{{url(elixir('js/pdf.js'))}}"></script>
-  <script src="{{url(elixir('js/pdf.worker.js'))}}"></script>
+  <script src="{{url(mix('js/pdf.js'))}}"></script>
+  <script src="{{url(mix('js/pdf.worker.js'))}}"></script>
   <script type="text/javascript">
       var url = $("#pdf-viewer").data('src');
       var loadingTask = pdfjsLib.getDocument(url);

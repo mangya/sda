@@ -4,6 +4,7 @@ namespace SDA\Http\Controllers;
 
 use Mail;
 use Auth;
+use Captcha;
 use SDA\OTP;
 use SDA\User;
 use SDA\Team;
@@ -157,7 +158,7 @@ class HomeController extends Controller
 
     public function refreshCaptcha()
     {
-        return response()->json(['captcha'=> captcha_img('flat')]);
+        return response()->json(['captcha'=> Captcha::img()]);
     }
 
     public function showWebLogin()
@@ -180,14 +181,15 @@ class HomeController extends Controller
 
     public function register(Request $request)
     {
-
+        $messages = ['captcha.captcha'=>'Invalid captcha code.'];
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:oc_users',
             'name' => 'required',
             'mobile' => 'required',
             'password' => 'required|min:6|confirmed',
             'password_confirmation' => 'required',
-        ]);
+            'captcha' => 'required|captcha'
+        ],$messages);
 
         if ($validator->fails()) {
             return redirect('register')
